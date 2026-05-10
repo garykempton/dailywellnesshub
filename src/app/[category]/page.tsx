@@ -10,8 +10,9 @@ import {
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ArticleCard } from "@/components/ArticleCard";
-import { AdSlot } from "@/components/AdSlot";
+import { AdSlot, InArticleAd } from "@/components/AdSlot";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { NewsletterInlineBlock } from "@/components/NewsletterInlineBlock";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -108,11 +109,27 @@ export default async function CategoryPage({ params }: Props) {
         <AdSlot slot={`cat-${cat.slug}-top`} format="horizontal" />
 
         {articles.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} {...article} />
-            ))}
-          </div>
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              {articles.map((article, i) => (
+                <>{/* In-feed ad after every 6th card */}
+                  <ArticleCard key={article.slug} {...article} />
+                  {i === 5 && articles.length > 6 && (
+                    <div key="in-feed-ad" className="md:col-span-2 lg:col-span-3">
+                      <InArticleAd slot={`cat-${cat.slug}-infeed`} />
+                    </div>
+                  )}
+                </>
+              ))}
+            </div>
+
+            {/* Newsletter block after articles */}
+            <NewsletterInlineBlock
+              heading={`Want more ${cat.name.toLowerCase()} tips?`}
+              body={`Subscribe for weekly ${cat.name.toLowerCase()} guides and practical advice.`}
+              className="mt-8"
+            />
+          </>
         ) : (
           <div className="text-center py-16 text-muted">
             <p className="text-lg mb-2">Articles coming soon!</p>

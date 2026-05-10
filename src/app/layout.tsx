@@ -71,6 +71,13 @@ export default function RootLayout({
             crossOrigin="anonymous"
           />
         )}
+        {process.env.NEXT_PUBLIC_EZOIC && (
+          <script
+            async
+            src="https://the.gatekeeperconsent.com/cmp.min.js"
+            data-cfasync="false"
+          />
+        )}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <script

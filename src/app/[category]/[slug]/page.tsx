@@ -16,8 +16,12 @@ import {
   ArticleDisclaimer,
   AffiliateDisclosure,
 } from "@/components/Disclaimer";
-import { AdSlot } from "@/components/AdSlot";
+import { AdSlot, InArticleAd } from "@/components/AdSlot";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { NewsletterInlineBlock } from "@/components/NewsletterInlineBlock";
+import { AffiliateProductBlock } from "@/components/AffiliateProductBlock";
+import { PrintableDownloadCTA } from "@/components/PrintableDownloadCTA";
+import { ArticleSidebar } from "@/components/ArticleSidebar";
 
 interface Props {
   params: Promise<{ category: string; slug: string }>;
@@ -31,6 +35,19 @@ async function getArticle(categorySlug: string, slug: string) {
     });
   } catch {
     return null;
+  }
+}
+
+async function getRelatedArticles(slugs: string[]) {
+  if (!slugs.length) return [];
+  try {
+    return await prisma.article.findMany({
+      where: { slug: { in: slugs }, status: "PUBLISHED" },
+      select: { slug: true, categorySlug: true, title: true },
+      take: 5,
+    });
+  } catch {
+    return [];
   }
 }
 
@@ -65,9 +82,17 @@ export default async function ArticlePage({ params }: Props) {
     ? JSON.parse(article.sources)
     : [];
 
+  const affiliateProducts: { url: string; label: string; vendor: string; description?: string; price?: string }[] =
+    article.affiliateLinks ? JSON.parse(article.affiliateLinks) : [];
+
+  const relatedArticles = await getRelatedArticles(article.relatedArticles || []);
+
   // Auto-extract FAQ from article headings
   const faqItems = extractFaqFromHtml(article.body);
   const faqData = faqJsonLd(faqItems);
+
+  // Detect printable-style articles (slug contains "checklist", "template", "printable", "tracker", "planner")
+  const isPrintable = /checklist|template|printable|tracker|planner/i.test(article.slug);
 
   return (
     <>
@@ -105,107 +130,148 @@ export default async function ArticlePage({ params }: Props) {
       {/* Medical disclaimer schema */}
       <JsonLd data={medicalDisclaimerJsonLd()} />
 
-      <article className="max-w-3xl mx-auto px-4 py-8">
-        <Breadcrumbs
-          items={[
-            { label: cat.name, href: `/${cat.slug}` },
-            { label: article.title },
-          ]}
-        />
+      {/* Two-column layout: article + sidebar */}
+      <div className="max-w-6xl mx-auto px-4 py-8 flex gap-8">
+        <article className="flex-1 min-w-0 max-w-3xl">
+          <Breadcrumbs
+            items={[
+              { label: cat.name, href: `/${cat.slug}` },
+              { label: article.title },
+            ]}
+          />
 
-        {/* Header */}
-        <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">
-            {article.title}
-          </h1>
-          {article.excerpt && (
-            <p className="text-lg text-muted">{article.excerpt}</p>
-          )}
-          <div className="flex items-center gap-3 mt-4 text-sm text-muted">
-            <span className="font-medium text-foreground">
-              {article.author}
-            </span>
-            <span>&middot;</span>
-            <span>{article.readTime} min read</span>
-            {article.publishedAt && (
-              <>
-                <span>&middot;</span>
-                <time dateTime={article.publishedAt.toISOString()}>
-                  {article.publishedAt.toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </time>
-              </>
+          {/* Header */}
+          <header className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">
+              {article.title}
+            </h1>
+            {article.excerpt && (
+              <p className="text-lg text-muted">{article.excerpt}</p>
             )}
-          </div>
-          {article.tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-3">
-              {article.tags.map((tag) => (
-                <span
-                  key={tag.id}
-                  className="text-xs bg-stone-100 text-muted px-2 py-1 rounded-full"
-                >
-                  {tag.name}
-                </span>
-              ))}
+            <div className="flex items-center gap-3 mt-4 text-sm text-muted">
+              <span className="font-medium text-foreground">
+                {article.author}
+              </span>
+              <span>&middot;</span>
+              <span>{article.readTime} min read</span>
+              {article.publishedAt && (
+                <>
+                  <span>&middot;</span>
+                  <time dateTime={article.publishedAt.toISOString()}>
+                    {article.publishedAt.toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </time>
+                </>
+              )}
+            </div>
+            {article.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-3">
+                {article.tags.map((tag) => (
+                  <span
+                    key={tag.id}
+                    className="text-xs bg-stone-100 text-muted px-2 py-1 rounded-full"
+                  >
+                    {tag.name}
+                  </span>
+                ))}
+              </div>
+            )}
+          </header>
+
+          {/* Cover image */}
+          {article.coverImage && (
+            <img
+              src={article.coverImage}
+              alt={article.coverAlt || article.title}
+              className="w-full rounded-xl mb-8"
+              loading="eager"
+            />
+          )}
+
+          {/* Top ad */}
+          <AdSlot slot={`${category}-article-top`} format="horizontal" />
+
+          {/* Body */}
+          <div
+            className="article-body"
+            dangerouslySetInnerHTML={{ __html: article.body }}
+          />
+
+          {/* In-article ad (mid-content) */}
+          <InArticleAd slot={`${category}-article-mid`} />
+
+          {/* Inline newsletter block */}
+          <NewsletterInlineBlock
+            heading={`Want more ${cat.name.toLowerCase()} tips?`}
+            body={`Get practical, evidence-based ${cat.name.toLowerCase()} advice delivered to your inbox.`}
+            className="my-8"
+          />
+
+          {/* Printable download CTA for checklist/template articles */}
+          {isPrintable && (
+            <PrintableDownloadCTA
+              title={article.title}
+              description="Download this as a printable PDF to use offline."
+              comingSoon
+              className="my-8"
+            />
+          )}
+
+          {/* Affiliate product block */}
+          {affiliateProducts.length > 0 && (
+            <AffiliateProductBlock
+              products={affiliateProducts}
+              className="my-8"
+            />
+          )}
+
+          {/* Bottom ad */}
+          <AdSlot slot={`${category}-article-bottom`} format="rectangle" />
+
+          {/* Sources */}
+          {sources.length > 0 && (
+            <div className="mt-8 pt-6 border-t border-border">
+              <h2 className="font-semibold mb-2">Sources</h2>
+              <ul className="text-sm text-muted space-y-1">
+                {sources.map((src, i) => (
+                  <li key={i}>
+                    <a
+                      href={src}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="hover:text-primary underline break-all"
+                    >
+                      {src}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
-        </header>
 
-        {/* Cover image */}
-        {article.coverImage && (
-          <img
-            src={article.coverImage}
-            alt={article.coverAlt || article.title}
-            className="w-full rounded-xl mb-8"
-            loading="eager"
-          />
-        )}
+          {/* Affiliate disclosure (if any affiliate content) */}
+          {(article.affiliateNote || affiliateProducts.length > 0) && (
+            <AffiliateDisclosure />
+          )}
 
-        <AdSlot slot="article-top" format="horizontal" />
+          {/* Disclaimer */}
+          <ArticleDisclaimer />
 
-        {/* Body */}
-        <div
-          className="article-body"
-          dangerouslySetInnerHTML={{ __html: article.body }}
-        />
-
-        <AdSlot slot="article-bottom" format="rectangle" />
-
-        {/* Sources */}
-        {sources.length > 0 && (
-          <div className="mt-8 pt-6 border-t border-border">
-            <h2 className="font-semibold mb-2">Sources</h2>
-            <ul className="text-sm text-muted space-y-1">
-              {sources.map((src, i) => (
-                <li key={i}>
-                  <a
-                    href={src}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="hover:text-primary underline break-all"
-                  >
-                    {src}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {/* Bottom newsletter CTA */}
+          <div className="mt-8">
+            <NewsletterForm variant="full" />
           </div>
-        )}
+        </article>
 
-        {/* Affiliate disclosure */}
-        {article.affiliateNote && <AffiliateDisclosure />}
-
-        {/* Disclaimer */}
-        <ArticleDisclaimer />
-
-        {/* Newsletter CTA */}
-        <div className="mt-8">
-          <NewsletterForm variant="full" />
-        </div>
-      </article>
+        {/* Desktop sidebar with ads, related articles, newsletter */}
+        <ArticleSidebar
+          categorySlug={category}
+          relatedArticles={relatedArticles}
+        />
+      </div>
     </>
   );
 }
