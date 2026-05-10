@@ -41,6 +41,12 @@ export default async function sitemap({
       { url: `${SITE_URL}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/terms-of-service`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/cookie-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+      { url: `${SITE_URL}/tools`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools/bmi-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools/hydration-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools/sleep-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools/calorie-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools/heart-rate-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     ];
 
     const categoryPages: MetadataRoute.Sitemap = CATEGORIES.map((cat) => ({

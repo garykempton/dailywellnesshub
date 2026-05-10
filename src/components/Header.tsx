@@ -36,6 +36,12 @@ export function Header() {
             </div>
           </div>
           <Link
+            href="/tools"
+            className="hover:text-primary transition-colors"
+          >
+            Tools
+          </Link>
+          <Link
             href="/about"
             className="hover:text-primary transition-colors"
           >
@@ -103,6 +109,9 @@ export function Header() {
             ))}
           </div>
           <div className="flex flex-col gap-2 pt-2 border-t border-border">
+            <Link href="/tools" onClick={() => setMenuOpen(false)}>
+              Tools
+            </Link>
             <Link href="/about" onClick={() => setMenuOpen(false)}>
               About
             </Link>
