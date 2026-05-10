@@ -5,8 +5,10 @@ export function SiteDisclaimer() {
       <p>
         The content on DailyWellnessHub is for informational and educational
         purposes only. It is not intended as medical advice, diagnosis, or
-        treatment. Always consult a qualified healthcare professional before
-        making changes to your diet, exercise, or wellness routine.
+        treatment. Information here may help inform your decisions, but it is
+        not a substitute for professional guidance. Always speak to a qualified
+        healthcare provider before making changes to your diet, exercise, or
+        wellness routine.
       </p>
     </div>
   );
@@ -24,9 +26,10 @@ export function ArticleDisclaimer() {
         This article is for general informational purposes only and does not
         constitute professional medical advice. The information provided is
         based on general wellness research and should not be used as a
-        substitute for consultation with a licensed healthcare provider. Always
-        seek the advice of your physician or other qualified health provider
-        with any questions you may have regarding a medical condition.
+        substitute for consultation with a licensed healthcare provider.
+        Individual results may vary. Always seek the advice of your physician
+        or other qualified health provider with any questions you may have
+        regarding a medical condition. This is not medical advice.
       </p>
     </aside>
   );
@@ -38,7 +41,7 @@ export function AffiliateDisclosure() {
       Some links in this article may be affiliate links. If you make a purchase
       through these links, we may earn a small commission at no extra cost to
       you. This helps support our editorial work. We only recommend products we
-      genuinely believe can support your wellness journey.
+      genuinely believe may support your wellness journey.
     </p>
   );
 }

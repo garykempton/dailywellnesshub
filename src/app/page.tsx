@@ -23,8 +23,8 @@ export default function HomePage() {
             <span className="text-primary">Healthier Living</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mx-auto mb-8">
-            Evidence-based wellness tips, practical self-improvement strategies,
-            and lifestyle guides — written for real people, not textbooks.
+            Factual wellness guides, practical lifestyle tips, and simple health
+            tools — written for real people. Educational only, not medical advice.
           </p>
           <div className="max-w-md mx-auto">
             <NewsletterForm variant="inline" />
@@ -72,10 +72,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-3">📚</div>
-              <h3 className="font-semibold mb-1">Research-Backed</h3>
+              <h3 className="font-semibold mb-1">Factual & Cautious</h3>
               <p className="text-sm text-muted">
-                Every article is based on published research and reviewed for
-                accuracy before publication.
+                We say &ldquo;may help&rdquo; and &ldquo;research suggests&rdquo;
+                — never miracle cures. Every article is reviewed before publication.
               </p>
             </div>
             <div className="text-center">
@@ -90,8 +90,8 @@ export default function HomePage() {
               <div className="text-3xl mb-3">🤝</div>
               <h3 className="font-semibold mb-1">Honest & Transparent</h3>
               <p className="text-sm text-muted">
-                We clearly disclose affiliate links and never make miracle-cure
-                claims. Your trust matters.
+                We clearly disclose affiliate links and always recommend speaking
+                to a qualified professional. Your trust matters.
               </p>
             </div>
           </div>

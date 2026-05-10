@@ -12,8 +12,9 @@ export function Footer() {
           <div>
             <p className="text-white font-bold text-lg mb-2">{SITE_NAME}</p>
             <p className="text-sm">
-              Science-backed wellness tips and lifestyle guidance for everyday
-              life. Educational content only — not medical advice.
+              Factual wellness guides and lifestyle tips for everyday life.
+              Educational content only — this is not medical advice. Always
+              speak to a qualified professional.
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import { SiteDisclaimer } from "@/components/Disclaimer";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${SITE_NAME} — our mission, editorial standards, and commitment to evidence-based wellness content.`,
+  description: `Learn about ${SITE_NAME} — our mission, editorial standards, and commitment to factual, helpful wellness content.`,
 };
 
 export default function AboutPage() {
@@ -21,10 +21,11 @@ export default function AboutPage() {
 
         <h2 className="text-xl font-semibold text-foreground">Our Mission</h2>
         <p>
-          We create educational content that helps people make informed
-          decisions about their well-being. From nutrition and fitness to mental
-          wellness and healthy habits, our goal is to translate complex research
-          into advice you can actually use.
+          We create educational content that may help people make more informed
+          decisions about their well-being. From sleep and nutrition to stress
+          management and healthy ageing, our goal is to share what research
+          suggests in plain, useful language — while always being honest about
+          what is and isn&apos;t well-established.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground">
@@ -32,18 +33,19 @@ export default function AboutPage() {
         </h2>
         <ul className="list-disc pl-5 space-y-2">
           <li>
-            <strong>Evidence-based:</strong> We reference published studies and
-            expert guidance wherever possible. Sources are cited at the bottom
-            of each article.
+            <strong>Factual and cautious:</strong> We use hedging language like
+            &ldquo;may help&rdquo;, &ldquo;is associated with&rdquo;, and
+            &ldquo;research suggests&rdquo;. We never promise cures or
+            guaranteed results.
           </li>
           <li>
             <strong>Reviewed before publication:</strong> Every article goes
             through an editorial review process before it goes live.
           </li>
           <li>
-            <strong>No miracle claims:</strong> We never promise cures,
-            guaranteed results, or overnight transformations. Wellness is a
-            journey, and we respect that.
+            <strong>Sources cited:</strong> We reference published studies and
+            expert guidance wherever possible. Sources are listed at the bottom
+            of each article.
           </li>
           <li>
             <strong>Transparent affiliates:</strong> Some articles contain
@@ -59,7 +61,7 @@ export default function AboutPage() {
           {SITE_NAME} is <strong>not</strong> a medical website. We do not
           diagnose, treat, or prescribe. Our content is educational and should
           never replace professional medical advice. If you have a health
-          concern, please consult a qualified healthcare provider.
+          concern, please speak to a qualified healthcare provider.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground">Contact</h2>
