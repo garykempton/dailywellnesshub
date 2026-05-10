@@ -181,3 +181,78 @@ enum JobStatus {
   COMPLETED
   FAILED
 }
+
+// ─── Admin Dashboard ────────────────────────────────────────────────
+
+model SiteAudit {
+  id          String      @id @default(cuid())
+  articleId   String?
+  slug        String?
+  type        AuditType
+  severity    AuditSeverity @default(INFO)
+  message     String        @db.Text
+  details     String?       @db.Text   // JSON payload with context
+  resolved    Boolean       @default(false)
+  resolvedAt  DateTime?
+  resolvedBy  String?
+  createdAt   DateTime      @default(now())
+
+  @@index([type, resolved])
+  @@index([articleId])
+  @@index([severity, resolved])
+}
+
+enum AuditType {
+  MISSING_META_TITLE
+  MISSING_META_DESC
+  MISSING_EXCERPT
+  MISSING_COVER_IMAGE
+  MISSING_FAQ
+  MISSING_SOURCES
+  MISSING_KEYWORDS
+  SHORT_CONTENT
+  BROKEN_LINK
+  BROKEN_IMAGE
+  ORPHAN_PAGE
+  DUPLICATE_SLUG
+  SEO_ISSUE
+  AFFILIATE_OPPORTUNITY
+  MONETISATION_GAP
+  REVIEW_OVERDUE
+  GENERAL
+}
+
+enum AuditSeverity {
+  CRITICAL
+  WARNING
+  INFO
+}
+
+model TrafficNote {
+  id          String    @id @default(cuid())
+  articleId   String?
+  slug        String?
+  note        String    @db.Text
+  source      String?              // "gsc", "analytics", "manual", "ai-agent"
+  metric      String?              // "impressions", "clicks", "ctr", "position"
+  value       String?              // the metric value
+  createdAt   DateTime  @default(now())
+  createdBy   String    @default("system")
+
+  @@index([articleId])
+  @@index([createdAt])
+}
+
+model AdminAction {
+  id          String    @id @default(cuid())
+  action      String                // "publish", "review", "generate", "audit", "flag"
+  entity      String?               // "article", "category", "site"
+  entityId    String?
+  details     String?   @db.Text    // JSON payload
+  actor       String    @default("admin")  // "admin", "ai-agent", "cron"
+  createdAt   DateTime  @default(now())
+
+  @@index([action])
+  @@index([entity, entityId])
+  @@index([createdAt])
+}
