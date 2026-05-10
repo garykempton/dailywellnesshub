@@ -82,11 +82,16 @@ export function validateArticle(
   const faqCount = article.faqSection?.length || 0;
   const internalLinkCount = article.internalLinks?.length || 0;
 
-  // Check disclaimer
+  // Check disclaimer (accept various common phrasings)
   const hasDisclaimer =
     /not (a )?substitute for (professional )?medical advice/i.test(plainText) ||
     /informational purposes only/i.test(plainText) ||
-    /not medical advice/i.test(plainText);
+    /not medical advice/i.test(plainText) ||
+    /does not constitute (medical|professional|health) advice/i.test(plainText) ||
+    /not intended (as|to replace|to be) (a )?(substitute|replacement) for.*(medical|professional)/i.test(plainText) ||
+    /consult.*(doctor|physician|healthcare|health care|medical professional|GP|qualified professional)/i.test(plainText) ||
+    /speak (to|with).*(doctor|physician|healthcare|health care|medical professional|GP|qualified professional)/i.test(plainText) ||
+    /seek (professional|medical) advice/i.test(plainText);
 
   // Check key takeaways
   const hasTakeaways = /key takeaway/i.test(article.body);
@@ -252,7 +257,43 @@ export function parseAiResponse(rawText: string): GeneratedArticle {
     throw new Error("Could not extract JSON from AI response.");
   }
 
-  const parsed = JSON.parse(jsonMatch[0]);
+  let jsonStr = jsonMatch[0];
+
+  // Try parsing directly first
+  let parsed;
+  try {
+    parsed = JSON.parse(jsonStr);
+  } catch {
+    // Attempt to fix common JSON issues from AI responses:
+    // 1. Fix unescaped newlines inside string values
+    jsonStr = jsonStr.replace(/(?<=:\s*"[^"]*)\n/g, "\\n");
+    // 2. Fix unescaped control characters
+    jsonStr = jsonStr.replace(/[\x00-\x1f]/g, (ch) => {
+      if (ch === "\n" || ch === "\r" || ch === "\t") return ch;
+      return `\\u${ch.charCodeAt(0).toString(16).padStart(4, "0")}`;
+    });
+
+    try {
+      parsed = JSON.parse(jsonStr);
+    } catch {
+      // Last resort: try to extract field by field using regex
+      const bodyMatch = jsonStr.match(/"body"\s*:\s*"([\s\S]*?)"\s*,\s*"tags"/);
+      if (bodyMatch) {
+        // Escape problematic characters in body
+        const safeBody = bodyMatch[1]
+          .replace(/\\/g, "\\\\")
+          .replace(/"/g, '\\"')
+          .replace(/\n/g, "\\n")
+          .replace(/\r/g, "\\r")
+          .replace(/\t/g, "\\t");
+        jsonStr = jsonStr.replace(
+          bodyMatch[0],
+          `"body": "${safeBody}", "tags"`,
+        );
+      }
+      parsed = JSON.parse(jsonStr);
+    }
+  }
 
   return {
     title: parsed.title || "",

@@ -19,7 +19,8 @@ STRICT LANGUAGE RULES:
 - ALWAYS use cautious hedging language:
   * "may help", "is associated with", "research suggests", "some studies indicate"
   * "many people find", "could support", "is often recommended by professionals"
-- ALWAYS include a clear statement that this is not medical advice and readers should speak to a qualified professional before making health changes.
+- ALWAYS end the article body with this EXACT disclaimer paragraph:
+  <p><em>This article is for informational purposes only and is not a substitute for professional medical advice. Always consult a qualified healthcare provider before making changes to your health routine.</em></p>
 - For sensitive topics (menopause, weight loss, mental wellness), be especially careful with claims.
 - Be honest about what is and isn't well-established in research. When evidence is limited, say so plainly.
 
