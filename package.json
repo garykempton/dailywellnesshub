@@ -12,7 +12,9 @@
     "db:seed": "npx tsx prisma/seed.ts",
     "db:studio": "prisma studio",
     "db:migrate": "prisma migrate dev",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "content:generate": "npx tsx scripts/batch-generate.ts",
+    "content:dry-run": "npx tsx scripts/batch-generate.ts --dry-run"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

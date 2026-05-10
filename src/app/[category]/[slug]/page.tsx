@@ -87,8 +87,14 @@ export default async function ArticlePage({ params }: Props) {
 
   const relatedArticles = await getRelatedArticles(article.relatedArticles || []);
 
-  // Auto-extract FAQ from article headings
-  const faqItems = extractFaqFromHtml(article.body);
+  // Use stored FAQ if available, otherwise extract from headings
+  const storedFaq = article.faqSection
+    ? JSON.parse(article.faqSection)
+    : null;
+  const faqItems =
+    storedFaq && storedFaq.length > 0
+      ? storedFaq
+      : extractFaqFromHtml(article.body);
   const faqData = faqJsonLd(faqItems);
 
   // Detect printable-style articles (slug contains "checklist", "template", "printable", "tracker", "planner")
