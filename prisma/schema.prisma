@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── Content ────────────────────────────────────────────────────────
+
+model Article {
+  id            String        @id @default(cuid())
+  slug          String        @unique
+  title         String
+  metaTitle     String?
+  metaDesc      String?       @db.VarChar(320)
+  excerpt       String?       @db.VarChar(500)
+  body          String        @db.Text
+  category      Category      @relation(fields: [categorySlug], references: [slug])
+  categorySlug  String
+  tags          Tag[]
+  coverImage    String?
+  coverAlt      String?
+  author        String        @default("DailyWellnessHub Editorial")
+  authorBio     String?       @db.VarChar(500)
+  status        ArticleStatus @default(DRAFT)
+  reviewedBy    String?
+  reviewedAt    DateTime?
+  publishedAt   DateTime?
+  featured      Boolean       @default(false)
+  affiliateNote String?       @db.Text
+  sources       String?       @db.Text
+  wordCount     Int           @default(0)
+  readTime      Int           @default(0)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  aiGenerated   Boolean       @default(false)
+  aiModel       String?
+  aiPrompt      String?       @db.Text
+
+  @@index([categorySlug])
+  @@index([status, publishedAt])
+  @@index([featured, status])
+}
+
+enum ArticleStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+}
+
+model Category {
+  slug        String    @id
+  name        String
+  description String?   @db.VarChar(500)
+  metaTitle   String?
+  metaDesc    String?   @db.VarChar(320)
+  icon        String?
+  sortOrder   Int       @default(0)
+  articles    Article[]
+
+  @@index([sortOrder])
+}
+
+model Tag {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  slug     String    @unique
+  articles Article[]
+
+  @@index([slug])
+}
+
+// ─── Newsletter ─────────────────────────────────────────────────────
+
+model Subscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  confirmed      Boolean   @default(false)
+  interests      String[]
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+
+  @@index([confirmed])
+}
+
+// ─── Contact ────────────────────────────────────────────────────────
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+// ─── AI Content Pipeline ────────────────────────────────────────────
+
+model ContentJob {
+  id          String    @id @default(cuid())
+  topic       String
+  category    String
+  keywords    String[]
+  targetSlug  String?
+  status      JobStatus @default(PENDING)
+  articleId   String?
+  error       String?   @db.Text
+  createdAt   DateTime  @default(now())
+  completedAt DateTime?
+}
+
+enum JobStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
