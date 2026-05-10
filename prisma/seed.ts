@@ -1,6 +1,9 @@
+import "dotenv/config";
 import { PrismaClient } from "@prisma/client";
+import { PrismaNeon } from "@prisma/adapter-neon";
 
-const prisma = new PrismaClient();
+const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL! });
+const prisma = new PrismaClient({ adapter });
 
 const CATEGORIES = [
   { slug: "nutrition", name: "Nutrition", description: "Evidence-based guides to healthy eating, meal planning, and understanding nutrients.", icon: "🥗", sortOrder: 1 },
