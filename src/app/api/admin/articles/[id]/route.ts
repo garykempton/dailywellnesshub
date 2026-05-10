@@ -39,16 +39,35 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
     "metaTitle",
     "metaDesc",
     "excerpt",
+    "summary",
     "body",
+    "keywords",
     "coverImage",
     "coverAlt",
     "author",
     "authorBio",
     "status",
-    "reviewedBy",
     "featured",
+    // Review & fact-check
+    "healthSensitive",
+    "factCheckStatus",
+    "factCheckedBy",
+    "factCheckNotes",
+    "reviewStatus",
+    "reviewedBy",
+    "reviewNotes",
+    // Affiliate
+    "affiliateStatus",
     "affiliateNote",
+    "affiliateLinks",
+    // Sources & references
     "sources",
+    "sourceNotes",
+    // FAQ & links
+    "faqSection",
+    "internalLinks",
+    "relatedTools",
+    "relatedArticles",
   ];
 
   const data: Record<string, unknown> = {};
@@ -56,12 +75,38 @@ export async function PATCH(req: NextRequest, { params }: Ctx) {
     if (key in body) data[key] = body[key];
   }
 
-  // Auto-set timestamps on status transitions
-  if (data.status === "APPROVED" || data.status === "IN_REVIEW") {
+  // --- Publish guard: block health-sensitive articles without review + fact-check ---
+  if (data.status === "PUBLISHED") {
+    const existing = await prisma.article.findUnique({
+      where: { id },
+      select: { healthSensitive: true, reviewStatus: true, factCheckStatus: true },
+    });
+
+    if (existing?.healthSensitive) {
+      const reviewOk = (data.reviewStatus || existing.reviewStatus) === "APPROVED";
+      const factCheckOk = ["VERIFIED", "NOT_APPLICABLE"].includes(
+        (data.factCheckStatus as string) || existing.factCheckStatus,
+      );
+
+      if (!reviewOk || !factCheckOk) {
+        return NextResponse.json(
+          {
+            error: "Health-sensitive articles require reviewStatus=APPROVED and factCheckStatus=VERIFIED or NOT_APPLICABLE before publishing.",
+          },
+          { status: 422 },
+        );
+      }
+    }
+
+    data.publishedAt = new Date();
+  }
+
+  // Auto-set timestamps on review transitions
+  if (data.reviewStatus) {
     data.reviewedAt = new Date();
   }
-  if (data.status === "PUBLISHED") {
-    data.publishedAt = new Date();
+  if (data.factCheckStatus) {
+    data.factCheckedAt = new Date();
   }
 
   // Recalculate word count if body changed

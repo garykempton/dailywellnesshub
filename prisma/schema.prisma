@@ -15,25 +15,59 @@ model Article {
   metaTitle     String?
   metaDesc      String?       @db.VarChar(320)
   excerpt       String?       @db.VarChar(500)
+  summary       String?       @db.Text     // longer editorial summary (internal use + display)
   body          String        @db.Text
   category      Category      @relation(fields: [categorySlug], references: [slug])
   categorySlug  String
   tags          Tag[]
+  keywords      String[]                   // target SEO keywords
   coverImage    String?
   coverAlt      String?
   author        String        @default("DailyWellnessHub Editorial")
   authorBio     String?       @db.VarChar(500)
+
+  // ─── Publishing workflow ────────────────────────────────────────
   status        ArticleStatus @default(DRAFT)
-  reviewedBy    String?
-  reviewedAt    DateTime?
   publishedAt   DateTime?
   featured      Boolean       @default(false)
-  affiliateNote String?       @db.Text
-  sources       String?       @db.Text
+
+  // ─── Review & fact-check ────────────────────────────────────────
+  healthSensitive  Boolean          @default(false)  // blocks auto-publish
+  factCheckStatus  FactCheckStatus  @default(UNCHECKED)
+  factCheckedBy    String?
+  factCheckedAt    DateTime?
+  factCheckNotes   String?          @db.Text
+  reviewStatus     ReviewStatus     @default(UNREVIEWED)
+  reviewedBy       String?
+  reviewedAt       DateTime?
+  reviewNotes      String?          @db.Text
+
+  // ─── Affiliate ─────────────────────────────────────────────────
+  affiliateStatus  AffiliateStatus  @default(NONE)
+  affiliateNote    String?          @db.Text   // disclosure text
+  affiliateLinks   String?          @db.Text   // JSON array of {url, label, vendor}
+
+  // ─── Sources & references ──────────────────────────────────────
+  sources          String?       @db.Text   // JSON array of source URLs
+  sourceNotes      String?       @db.Text   // editorial notes on sourcing
+
+  // ─── FAQ section ───────────────────────────────────────────────
+  faqSection       String?       @db.Text   // JSON array of {question, answer}
+
+  // ─── Internal links & related ──────────────────────────────────
+  internalLinks    String?       @db.Text   // JSON array of {slug, anchor}
+  relatedTools     String[]                 // slugs of related calculator/tool pages
+  relatedArticles  String[]                 // slugs of related articles
+
+  // ─── Metrics ───────────────────────────────────────────────────
   wordCount     Int           @default(0)
   readTime      Int           @default(0)
+
+  // ─── Timestamps ────────────────────────────────────────────────
   createdAt     DateTime      @default(now())
   updatedAt     DateTime      @updatedAt
+
+  // ─── AI generation metadata ────────────────────────────────────
   aiGenerated   Boolean       @default(false)
   aiModel       String?
   aiPrompt      String?       @db.Text
@@ -41,6 +75,9 @@ model Article {
   @@index([categorySlug])
   @@index([status, publishedAt])
   @@index([featured, status])
+  @@index([healthSensitive, status])
+  @@index([factCheckStatus])
+  @@index([reviewStatus])
 }
 
 enum ArticleStatus {
@@ -51,15 +88,39 @@ enum ArticleStatus {
   ARCHIVED
 }
 
+enum FactCheckStatus {
+  UNCHECKED
+  PENDING
+  VERIFIED
+  DISPUTED
+  NOT_APPLICABLE
+}
+
+enum ReviewStatus {
+  UNREVIEWED
+  PENDING_REVIEW
+  CHANGES_REQUESTED
+  APPROVED
+  REJECTED
+}
+
+enum AffiliateStatus {
+  NONE
+  HAS_LINKS
+  DISCLOSED
+  PENDING_APPROVAL
+}
+
 model Category {
-  slug        String    @id
-  name        String
-  description String?   @db.VarChar(500)
-  metaTitle   String?
-  metaDesc    String?   @db.VarChar(320)
-  icon        String?
-  sortOrder   Int       @default(0)
-  articles    Article[]
+  slug            String    @id
+  name            String
+  description     String?   @db.VarChar(500)
+  metaTitle       String?
+  metaDesc        String?   @db.VarChar(320)
+  icon            String?
+  sortOrder       Int       @default(0)
+  healthSensitive Boolean   @default(false)  // auto-flags articles in this category
+  articles        Article[]
 
   @@index([sortOrder])
 }

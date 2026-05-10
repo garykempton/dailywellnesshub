@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { isAdminAuthorized } from "@/lib/admin";
+import { HEALTH_SENSITIVE_CATEGORIES } from "@/lib/constants";
 
 /**
  * AI Content Generation endpoint.
@@ -82,9 +83,15 @@ Return JSON with these fields:
 - metaTitle: SEO meta title (50-60 chars)
 - metaDesc: SEO meta description (140-160 chars)
 - excerpt: Short excerpt (1-2 sentences, under 200 chars)
+- summary: Editorial summary (2-4 sentences, for internal use and display)
 - slug: URL slug (lowercase, hyphens, no special chars)
 - body: Full article HTML
-- tags: Array of 3-5 relevant tag names`;
+- tags: Array of 3-5 relevant tag names
+- keywords: Array of 3-7 target SEO keywords
+- faqSection: Array of 3-5 objects with "question" and "answer" fields — common questions about the topic
+- sourceNotes: Brief editorial note about what sources informed this article
+- relatedTools: Array of slugs for related calculator/tool pages (e.g. "bmi-calculator") — leave empty if none
+- relatedArticles: Array of slugs for related articles — leave empty if none`;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
@@ -149,6 +156,9 @@ Return JSON with these fields:
       tagRecords.push(tag);
     }
 
+    // Auto-flag health-sensitive articles based on category
+    const isHealthSensitive = HEALTH_SENSITIVE_CATEGORIES.includes(category);
+
     // Create article as DRAFT
     const article = await prisma.article.create({
       data: {
@@ -157,10 +167,17 @@ Return JSON with these fields:
         metaTitle: articleData.metaTitle,
         metaDesc: articleData.metaDesc,
         excerpt: articleData.excerpt,
+        summary: articleData.summary || null,
         body: articleData.body,
         categorySlug: category,
+        keywords: articleData.keywords || keywords,
+        faqSection: articleData.faqSection ? JSON.stringify(articleData.faqSection) : null,
+        sourceNotes: articleData.sourceNotes || null,
+        relatedTools: articleData.relatedTools || [],
+        relatedArticles: articleData.relatedArticles || [],
         wordCount,
         readTime: Math.max(1, Math.ceil(wordCount / 250)),
+        healthSensitive: isHealthSensitive,
         aiGenerated: true,
         aiModel: "claude-haiku-4-5-20251001",
         aiPrompt: userPrompt,
