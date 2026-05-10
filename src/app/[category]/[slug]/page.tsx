@@ -2,9 +2,20 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { CATEGORIES, SITE_URL } from "@/lib/constants";
 import { prisma } from "@/lib/db";
-import { articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import {
+  buildMetadata,
+  articleJsonLd,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  extractFaqFromHtml,
+  medicalDisclaimerJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ArticleDisclaimer, AffiliateDisclosure } from "@/components/Disclaimer";
+import {
+  ArticleDisclaimer,
+  AffiliateDisclosure,
+} from "@/components/Disclaimer";
 import { AdSlot } from "@/components/AdSlot";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
@@ -28,19 +39,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await getArticle(category, slug);
   if (!article) return {};
 
-  return {
+  return buildMetadata({
     title: article.metaTitle || article.title,
-    description: article.metaDesc || article.excerpt || undefined,
-    alternates: { canonical: `${SITE_URL}/${category}/${slug}` },
-    openGraph: {
-      type: "article",
-      title: article.metaTitle || article.title,
-      description: article.metaDesc || article.excerpt || undefined,
-      publishedTime: article.publishedAt?.toISOString(),
-      modifiedTime: article.updatedAt.toISOString(),
-      ...(article.coverImage && { images: [article.coverImage] }),
-    },
-  };
+    description: article.metaDesc || article.excerpt || "",
+    path: `/${category}/${slug}`,
+    ogType: "article",
+    ogImage: article.coverImage || undefined,
+    publishedTime: article.publishedAt?.toISOString(),
+    modifiedTime: article.updatedAt.toISOString(),
+    authors: [article.author],
+    tags: article.tags.map((t) => t.name),
+  });
 }
 
 export default async function ArticlePage({ params }: Props) {
@@ -56,39 +65,45 @@ export default async function ArticlePage({ params }: Props) {
     ? JSON.parse(article.sources)
     : [];
 
+  // Auto-extract FAQ from article headings
+  const faqItems = extractFaqFromHtml(article.body);
+  const faqData = faqJsonLd(faqItems);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            articleJsonLd({
-              title: article.title,
-              description: article.metaDesc || article.excerpt || "",
-              slug: `${category}/${slug}`,
-              publishedAt: article.publishedAt?.toISOString() || "",
-              updatedAt: article.updatedAt.toISOString(),
-              author: article.author,
-              coverImage: article.coverImage || undefined,
-            }),
-          ),
-        }}
+      {/* Article schema */}
+      <JsonLd
+        data={articleJsonLd({
+          title: article.title,
+          description: article.metaDesc || article.excerpt || "",
+          slug: `${category}/${slug}`,
+          publishedAt: article.publishedAt?.toISOString() || "",
+          updatedAt: article.updatedAt.toISOString(),
+          author: article.author,
+          coverImage: article.coverImage || undefined,
+          wordCount: article.wordCount,
+          tags: article.tags.map((t) => t.name),
+          categoryName: cat.name,
+        })}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([
-              { name: "Home", url: SITE_URL },
-              { name: cat.name, url: `${SITE_URL}/${cat.slug}` },
-              {
-                name: article.title,
-                url: `${SITE_URL}/${category}/${slug}`,
-              },
-            ]),
-          ),
-        }}
+
+      {/* Breadcrumb schema */}
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE_URL },
+          { name: cat.name, url: `${SITE_URL}/${cat.slug}` },
+          {
+            name: article.title,
+            url: `${SITE_URL}/${category}/${slug}`,
+          },
+        ])}
       />
+
+      {/* FAQ schema (auto-generated from H2 headings) */}
+      <JsonLd data={faqData} />
+
+      {/* Medical disclaimer schema */}
+      <JsonLd data={medicalDisclaimerJsonLd()} />
 
       <article className="max-w-3xl mx-auto px-4 py-8">
         <Breadcrumbs

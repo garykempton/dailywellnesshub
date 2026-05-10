@@ -1,8 +1,13 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { CATEGORIES, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { CATEGORIES, SITE_URL } from "@/lib/constants";
 import { prisma } from "@/lib/db";
-import { breadcrumbJsonLd } from "@/lib/seo";
+import {
+  buildMetadata,
+  breadcrumbJsonLd,
+  collectionPageJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ArticleCard } from "@/components/ArticleCard";
 import { AdSlot } from "@/components/AdSlot";
@@ -21,15 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = findCategory(category);
   if (!cat) return {};
 
-  return {
-    title: `${cat.name} — Wellness Tips & Guides`,
+  return buildMetadata({
+    title: `${cat.name} — Tips, Guides & Research`,
     description: cat.description,
-    alternates: { canonical: `${SITE_URL}/${cat.slug}` },
-    openGraph: {
-      title: `${cat.name} | ${SITE_NAME}`,
-      description: cat.description,
-    },
-  };
+    path: `/${cat.slug}`,
+  });
 }
 
 export function generateStaticParams() {
@@ -75,16 +76,22 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(
-            breadcrumbJsonLd([
-              { name: "Home", url: SITE_URL },
-              { name: cat.name, url: `${SITE_URL}/${cat.slug}` },
-            ]),
-          ),
-        }}
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", url: SITE_URL },
+          { name: cat.name, url: `${SITE_URL}/${cat.slug}` },
+        ])}
+      />
+      <JsonLd
+        data={collectionPageJsonLd({
+          name: cat.name,
+          description: cat.description,
+          slug: cat.slug,
+          articles: articles.map((a) => ({
+            title: a.title,
+            url: `${SITE_URL}/${cat.slug}/${a.slug}`,
+          })),
+        })}
       />
 
       <div className="max-w-6xl mx-auto px-4 py-8">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CATEGORIES, SITE_NAME } from "@/lib/constants";
-import { websiteJsonLd } from "@/lib/seo";
+import { websiteJsonLd, organizationJsonLd } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { AdSlot } from "@/components/AdSlot";
 import { SiteDisclaimer } from "@/components/Disclaimer";
@@ -8,12 +9,8 @@ import { SiteDisclaimer } from "@/components/Disclaimer";
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteJsonLd()),
-        }}
-      />
+      <JsonLd data={websiteJsonLd()} />
+      <JsonLd data={organizationJsonLd()} />
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-green-50 to-background py-16 md:py-24">
