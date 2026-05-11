@@ -50,6 +50,37 @@ const BANNED_PHRASES = [
   "scientifically proven",
 ];
 
+/** Phrases that flag content as AI-generated. Detected as warnings. */
+const AI_TELL_PHRASES = [
+  "the good news is",
+  "here's the good news",
+  "it's worth noting",
+  "it is worth noting",
+  "it bears mentioning",
+  "in today's world",
+  "in today's fast-paced",
+  "in this day and age",
+  "let's explore",
+  "let's dive in",
+  "let's take a look",
+  "comprehensive guide",
+  "comprehensive overview",
+  "in conclusion",
+  "in summary",
+  "to sum up",
+  "game-changer",
+  "game changer",
+  "plays a crucial role",
+  "plays a vital role",
+  "plays an important role",
+  "one size fits all",
+  "not a one-size-fits-all",
+  "it's not just about",
+  "tapestry",
+  "myriad",
+  "realm",
+];
+
 const REQUIRED_HEDGING_PATTERNS = [
   /may help/i,
   /research suggests/i,
@@ -212,6 +243,17 @@ export function validateArticle(
 
   if (!hasDisclaimer) {
     errors.push("Missing medical disclaimer in article body.");
+  }
+
+  // ── AI-tell detection ───────────────────────────────────────────
+  const aiTellsFound: string[] = [];
+  for (const phrase of AI_TELL_PHRASES) {
+    if (lowerBody.includes(phrase.toLowerCase())) {
+      aiTellsFound.push(phrase);
+    }
+  }
+  if (aiTellsFound.length > 0) {
+    warnings.push(`AI-tell phrases detected (${aiTellsFound.length}): ${aiTellsFound.slice(0, 3).join(", ")}`);
   }
 
   // Check for at least some hedging language
