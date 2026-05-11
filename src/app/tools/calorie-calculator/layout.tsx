@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+import { getToolBySlug, toolJsonLd } from "@/lib/tools";
 
-export const metadata: Metadata = {
-  title: "Calorie & TDEE Calculator — Estimate Daily Energy Needs",
-  description:
-    "Calculate your BMR and Total Daily Energy Expenditure using the Mifflin-St Jeor equation. Free calorie calculator with weight loss and gain estimates.",
-};
+const tool = getToolBySlug("calorie-calculator")!;
+
+export const metadata: Metadata = buildMetadata({
+  title: tool.name,
+  description: tool.description,
+  path: `/tools/${tool.slug}`,
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {toolJsonLd(tool).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </>
+  );
 }

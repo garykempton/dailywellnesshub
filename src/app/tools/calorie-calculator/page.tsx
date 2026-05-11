@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { ToolPageLayout } from "@/components/ToolPageLayout";
+import { getToolBySlug } from "@/lib/tools";
+
+const tool = getToolBySlug("calorie-calculator")!;
 
 type ActivityLevel = "sedentary" | "light" | "moderate" | "active" | "very-active";
 
@@ -55,17 +58,7 @@ export default function CalorieCalculatorPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <Link href="/tools" className="text-sm text-primary hover:underline mb-4 inline-block">
-        &larr; All Tools
-      </Link>
-      <h1 className="text-3xl font-bold mb-2">Calorie & TDEE Calculator</h1>
-      <p className="text-stone-500 mb-6">
-        Estimate your Basal Metabolic Rate (BMR) and Total Daily Energy
-        Expenditure (TDEE) using the Mifflin-St Jeor equation. Results are
-        estimates only.
-      </p>
-
+    <ToolPageLayout tool={tool}>
       <div className="bg-white border border-stone-200 rounded-xl p-6 space-y-4">
         {/* Unit toggle */}
         <div className="flex gap-2">
@@ -193,17 +186,6 @@ export default function CalorieCalculatorPage() {
           </div>
         </div>
       )}
-
-      <div className="mt-8 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-stone-500">
-        <p className="font-semibold text-stone-700 mb-2">Disclaimer</p>
-        <p>
-          This calculator uses the Mifflin-St Jeor equation, which provides an
-          estimate. Actual caloric needs vary by individual. Do not use this tool
-          to create extreme calorie deficits. Always consult a registered
-          dietitian or healthcare professional before making significant dietary
-          changes.
-        </p>
-      </div>
-    </div>
+    </ToolPageLayout>
   );
 }

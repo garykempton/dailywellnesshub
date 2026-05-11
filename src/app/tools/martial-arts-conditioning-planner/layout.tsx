@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { getToolBySlug, toolJsonLd } from "@/lib/tools";
 
-const tool = getToolBySlug("hydration-calculator")!;
+const tool = getToolBySlug("martial-arts-conditioning-planner")!;
 
 export const metadata: Metadata = buildMetadata({
   title: tool.name,

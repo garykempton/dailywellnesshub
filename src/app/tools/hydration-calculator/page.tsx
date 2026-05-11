@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { ToolPageLayout } from "@/components/ToolPageLayout";
+import { getToolBySlug } from "@/lib/tools";
+
+const tool = getToolBySlug("hydration-calculator")!;
 
 export default function HydrationCalculatorPage() {
   const [weight, setWeight] = useState("");
@@ -41,16 +44,7 @@ export default function HydrationCalculatorPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <Link href="/tools" className="text-sm text-primary hover:underline mb-4 inline-block">
-        &larr; All Tools
-      </Link>
-      <h1 className="text-3xl font-bold mb-2">Hydration Calculator</h1>
-      <p className="text-stone-500 mb-6">
-        Estimate how much water you should aim to drink daily based on your
-        weight, activity level, and climate. Individual needs vary.
-      </p>
-
+    <ToolPageLayout tool={tool}>
       <div className="bg-white border border-stone-200 rounded-xl p-6 space-y-4">
         <div className="flex gap-3 items-end">
           <div className="flex-1">
@@ -124,16 +118,6 @@ export default function HydrationCalculatorPage() {
           </p>
         </div>
       )}
-
-      <div className="mt-8 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-stone-500">
-        <p className="font-semibold text-stone-700 mb-2">Disclaimer</p>
-        <p>
-          This calculator provides a rough estimate only. Water needs vary
-          significantly based on individual health, diet, medications, and
-          conditions. This is not medical advice. Consult a healthcare
-          professional for personalised hydration guidance.
-        </p>
-      </div>
-    </div>
+    </ToolPageLayout>
   );
 }

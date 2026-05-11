@@ -1,11 +1,26 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+import { getToolBySlug, toolJsonLd } from "@/lib/tools";
 
-export const metadata: Metadata = {
-  title: "Sleep Calculator — Find Your Ideal Bedtime & Wake Time",
-  description:
-    "Calculate optimal bedtimes and wake-up times based on 90-minute sleep cycles. Wake between cycles to feel more rested.",
-};
+const tool = getToolBySlug("sleep-calculator")!;
+
+export const metadata: Metadata = buildMetadata({
+  title: tool.name,
+  description: tool.description,
+  path: `/tools/${tool.slug}`,
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      {toolJsonLd(tool).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+    </>
+  );
 }

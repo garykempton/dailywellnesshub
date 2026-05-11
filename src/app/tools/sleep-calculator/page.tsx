@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { ToolPageLayout } from "@/components/ToolPageLayout";
+import { getToolBySlug } from "@/lib/tools";
+
+const tool = getToolBySlug("sleep-calculator")!;
 
 const CYCLE_MINUTES = 90;
 const FALL_ASLEEP_MINUTES = 15;
@@ -59,16 +62,7 @@ export default function SleepCalculatorPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <Link href="/tools" className="text-sm text-primary hover:underline mb-4 inline-block">
-        &larr; All Tools
-      </Link>
-      <h1 className="text-3xl font-bold mb-2">Sleep Calculator</h1>
-      <p className="text-stone-500 mb-6">
-        Find the best times to go to sleep or wake up based on 90-minute sleep
-        cycles. Waking between cycles can help you feel more rested.
-      </p>
-
+    <ToolPageLayout tool={tool}>
       <div className="bg-white border border-stone-200 rounded-xl p-6 space-y-4">
         <div className="flex gap-2">
           {(["wake", "bedtime"] as const).map((m) => (
@@ -153,6 +147,6 @@ export default function SleepCalculatorPage() {
           only.
         </p>
       </div>
-    </div>
+    </ToolPageLayout>
   );
 }
