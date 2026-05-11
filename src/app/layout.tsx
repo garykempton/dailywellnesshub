@@ -48,8 +48,9 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: SITE_URL },
   verification: {
-    // Add Google Search Console verification when available
-    // google: "your-verification-code",
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
   },
 };
 
