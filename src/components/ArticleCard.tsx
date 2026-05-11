@@ -26,41 +26,41 @@ export function ArticleCard({
   const href = `/${categorySlug}/${slug}`;
 
   return (
-    <article className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+    <article className="card-hover bg-card border border-border/60 rounded-2xl overflow-hidden group">
       {coverImage && (
         <Link href={href}>
           <div className="aspect-video bg-stone-100 overflow-hidden">
             <img
               src={coverImage}
               alt={coverAlt || title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
           </div>
         </Link>
       )}
-      <div className="p-5">
+      <div className="p-5 md:p-6">
         <Link
           href={`/${categorySlug}`}
-          className="text-xs font-medium text-primary uppercase tracking-wide"
+          className="inline-block text-[11px] font-semibold text-primary uppercase tracking-widest"
         >
           {categorySlug.replace(/-/g, " ")}
         </Link>
-        <h3 className="mt-1 font-semibold text-lg leading-snug">
+        <h3 className="mt-1.5 font-semibold text-lg leading-snug text-stone-800">
           <Link href={href} className="hover:text-primary transition-colors">
             {title}
           </Link>
         </h3>
         {excerpt && (
-          <p className="mt-2 text-sm text-muted line-clamp-2">{excerpt}</p>
+          <p className="mt-2 text-sm text-muted line-clamp-2 leading-relaxed">{excerpt}</p>
         )}
-        <div className="mt-3 flex items-center gap-3 text-xs text-muted">
-          <span>{author}</span>
-          <span>&middot;</span>
+        <div className="mt-4 flex items-center gap-2 text-xs text-muted">
+          <span className="font-medium text-stone-600">{author}</span>
+          <span className="w-1 h-1 rounded-full bg-stone-300" />
           <span>{readTime} min read</span>
           {publishedAt && (
             <>
-              <span>&middot;</span>
+              <span className="w-1 h-1 rounded-full bg-stone-300" />
               <time dateTime={publishedAt.toISOString()}>
                 {publishedAt.toLocaleDateString("en-US", {
                   month: "short",

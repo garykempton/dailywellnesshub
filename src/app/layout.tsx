@@ -93,7 +93,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full flex flex-col font-sans text-[15px] leading-relaxed">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf9;
-  --foreground: #1c1917;
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
   --primary: #16a34a;
   --primary-dark: #15803d;
+  --primary-light: #dcfce7;
   --accent: #f59e0b;
-  --muted: #78716c;
+  --muted: #6b7280;
   --card: #ffffff;
-  --border: #e7e5e4;
+  --border: #e5e7eb;
+  --surface: #f8faf8;
 }
 
 @theme inline {
@@ -16,10 +18,12 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
+  --color-surface: var(--surface);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -29,67 +33,106 @@ body {
   color: var(--foreground);
 }
 
-/* Prose-like article styling */
+/* Premium article prose styling */
 .article-body h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   color: var(--foreground);
+  letter-spacing: -0.01em;
 }
 
 .article-body h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
+  color: #1f2937;
 }
 
 .article-body p {
-  margin-bottom: 1rem;
-  line-height: 1.75;
-  color: #44403c;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #374151;
 }
 
 .article-body ul,
 .article-body ol {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   padding-left: 1.5rem;
 }
 
 .article-body li {
-  margin-bottom: 0.25rem;
-  line-height: 1.75;
+  margin-bottom: 0.375rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.article-body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(22, 163, 74, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+
+.article-body a:hover {
+  text-decoration-color: var(--primary);
 }
 
 .article-body blockquote {
-  border-left: 4px solid var(--primary);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
+  border-left: 3px solid var(--primary);
+  padding-left: 1.25rem;
+  margin: 1.75rem 0;
   font-style: italic;
-  color: var(--muted);
+  color: #6b7280;
 }
 
-/* Ad container styling (dev mode only — hidden in production when no ad provider) */
+.article-body strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+/* Smooth card hover transitions */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.08), 0 4px 10px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* Soft gradient backgrounds */
+.gradient-calm {
+  background: linear-gradient(180deg, #f0fdf4 0%, var(--background) 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(180deg, #fefce8 0%, var(--background) 100%);
+}
+
+/* Ad container styling (dev mode only) */
 .ad-slot {
   min-height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f4;
-  border: 1px dashed #d6d3d1;
-  border-radius: 0.5rem;
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.75rem;
   margin: 1.5rem 0;
   font-size: 0.75rem;
-  color: #a8a29e;
+  color: #9ca3af;
 }
 
-/* Ezoic placeholder — hidden until populated by Ezoic script */
+/* Ezoic placeholder */
 [id^="ezoic-pub-ad-placeholder-"] {
   min-height: 0;
 }
 
-/* Print styles — hide ads, nav, and monetisation blocks when printing */
+/* Print styles */
 @media print {
   .ad-slot,
   [id^="ezoic-pub-ad-placeholder-"],

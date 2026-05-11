@@ -9,32 +9,23 @@ interface RelatedArticle {
 }
 
 interface Props {
-  /** Related articles to cross-link */
   relatedArticles?: RelatedArticle[];
-  /** Ad slot prefix, e.g. "sleep" for "sleep-sidebar-top" */
   categorySlug: string;
 }
 
-/**
- * Sticky sidebar for article pages (desktop only).
- *
- * Contains: ad slot, related articles, newsletter CTA, and a
- * second ad slot. Designed to sit alongside the article body
- * in a 2-column layout.
- */
 export function ArticleSidebar({ relatedArticles = [], categorySlug }: Props) {
   return (
     <aside className="hidden lg:block w-72 shrink-0 space-y-6">
-      <div className="sticky top-8 space-y-6">
+      <div className="sticky top-24 space-y-6">
         <AdSlot
           slot={`${categorySlug}-sidebar-top`}
           format="rectangle"
         />
 
         {relatedArticles.length > 0 && (
-          <div className="border border-border rounded-xl p-4">
-            <h4 className="font-semibold text-sm mb-3">Related Articles</h4>
-            <ul className="space-y-2">
+          <div className="border border-border/60 rounded-2xl p-5">
+            <h4 className="font-bold text-sm mb-4 text-stone-800">Related Articles</h4>
+            <ul className="space-y-3">
               {relatedArticles.map((a) => (
                 <li key={a.slug}>
                   <Link
@@ -49,9 +40,9 @@ export function ArticleSidebar({ relatedArticles = [], categorySlug }: Props) {
           </div>
         )}
 
-        <div className="border border-primary/20 bg-primary/5 rounded-xl p-4 text-center">
-          <p className="font-semibold text-sm mb-2">Weekly Tips</p>
-          <p className="text-xs text-muted mb-3">
+        <div className="border border-primary/15 bg-gradient-to-b from-green-50/80 to-white rounded-2xl p-5 text-center">
+          <p className="font-bold text-sm mb-1 text-stone-800">Weekly Tips</p>
+          <p className="text-xs text-muted mb-4">
             Free wellness advice in your inbox.
           </p>
           <NewsletterForm variant="inline" />

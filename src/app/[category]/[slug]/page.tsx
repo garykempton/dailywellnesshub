@@ -137,8 +137,8 @@ export default async function ArticlePage({ params }: Props) {
       <JsonLd data={medicalDisclaimerJsonLd()} />
 
       {/* Two-column layout: article + sidebar */}
-      <div className="max-w-6xl mx-auto px-4 py-8 flex gap-8">
-        <article className="flex-1 min-w-0 max-w-3xl">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 lg:flex lg:gap-10">
+        <article className="flex-1 min-w-0 max-w-3xl mx-auto lg:mx-0">
           <Breadcrumbs
             items={[
               { label: cat.name, href: `/${cat.slug}` },
@@ -147,22 +147,22 @@ export default async function ArticlePage({ params }: Props) {
           />
 
           {/* Header */}
-          <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-3">
+          <header className="mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight mb-4">
               {article.title}
             </h1>
             {article.excerpt && (
-              <p className="text-lg text-muted">{article.excerpt}</p>
+              <p className="text-lg text-muted leading-relaxed">{article.excerpt}</p>
             )}
-            <div className="flex items-center gap-3 mt-4 text-sm text-muted">
-              <span className="font-medium text-foreground">
+            <div className="flex items-center gap-2 mt-5 text-sm text-muted">
+              <span className="font-semibold text-stone-700">
                 {article.author}
               </span>
-              <span>&middot;</span>
+              <span className="w-1 h-1 rounded-full bg-stone-300" />
               <span>{article.readTime} min read</span>
               {article.publishedAt && (
                 <>
-                  <span>&middot;</span>
+                  <span className="w-1 h-1 rounded-full bg-stone-300" />
                   <time dateTime={article.publishedAt.toISOString()}>
                     {article.publishedAt.toLocaleDateString("en-US", {
                       month: "long",
@@ -174,11 +174,11 @@ export default async function ArticlePage({ params }: Props) {
               )}
             </div>
             {article.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-3">
+              <div className="flex flex-wrap gap-2 mt-4">
                 {article.tags.map((tag) => (
                   <span
                     key={tag.id}
-                    className="text-xs bg-stone-100 text-muted px-2 py-1 rounded-full"
+                    className="text-xs bg-green-50 text-green-700 px-2.5 py-1 rounded-full font-medium"
                   >
                     {tag.name}
                   </span>
@@ -192,7 +192,7 @@ export default async function ArticlePage({ params }: Props) {
             <img
               src={article.coverImage}
               alt={article.coverAlt || article.title}
-              className="w-full rounded-xl mb-8"
+              className="w-full rounded-2xl mb-10"
               loading="eager"
             />
           )}
@@ -239,9 +239,9 @@ export default async function ArticlePage({ params }: Props) {
 
           {/* Sources */}
           {sources.length > 0 && (
-            <div className="mt-8 pt-6 border-t border-border">
-              <h2 className="font-semibold mb-2">Sources</h2>
-              <ul className="text-sm text-muted space-y-1">
+            <div className="mt-10 pt-8 border-t border-border/60">
+              <h2 className="font-bold text-lg mb-3">Sources</h2>
+              <ul className="text-sm text-muted space-y-2">
                 {sources.map((src, i) => (
                   <li key={i}>
                     <a

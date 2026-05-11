@@ -27,18 +27,17 @@ export function ToolShareBar({ url, title, description }: Props) {
   }
 
   const buttonClass =
-    "inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors";
+    "inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium border transition-all hover:shadow-sm";
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm text-stone-500 font-medium mr-1">Share:</span>
+      <span className="text-sm text-muted font-medium mr-1">Share:</span>
 
-      {/* Pinterest */}
       <a
         href={pinterestUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${buttonClass} border-red-200 text-red-600 hover:bg-red-50`}
+        className={`${buttonClass} border-red-200/60 text-red-600 hover:bg-red-50`}
         aria-label="Share on Pinterest"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -47,12 +46,11 @@ export function ToolShareBar({ url, title, description }: Props) {
         Pin It
       </a>
 
-      {/* Twitter / X */}
       <a
         href={twitterUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${buttonClass} border-stone-200 text-stone-600 hover:bg-stone-50`}
+        className={`${buttonClass} border-stone-200/60 text-stone-600 hover:bg-stone-50`}
         aria-label="Share on X"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -61,12 +59,11 @@ export function ToolShareBar({ url, title, description }: Props) {
         Post
       </a>
 
-      {/* Facebook */}
       <a
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${buttonClass} border-blue-200 text-blue-600 hover:bg-blue-50`}
+        className={`${buttonClass} border-blue-200/60 text-blue-600 hover:bg-blue-50`}
         aria-label="Share on Facebook"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -75,10 +72,9 @@ export function ToolShareBar({ url, title, description }: Props) {
         Share
       </a>
 
-      {/* Copy link */}
       <button
         onClick={copyLink}
-        className={`${buttonClass} border-stone-200 text-stone-600 hover:bg-stone-50`}
+        className={`${buttonClass} border-stone-200/60 text-stone-600 hover:bg-stone-50`}
         aria-label="Copy link"
       >
         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

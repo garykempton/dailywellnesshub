@@ -95,22 +95,22 @@ export default async function CategoryPage({ params }: Props) {
         })}
       />
 
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
         <Breadcrumbs items={[{ label: cat.name }]} />
 
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">
-            <span className="mr-2">{cat.icon}</span>
-            {cat.name}
-          </h1>
-          <p className="text-muted max-w-2xl">{cat.description}</p>
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-4xl">{cat.icon}</span>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{cat.name}</h1>
+          </div>
+          <p className="text-muted max-w-2xl leading-relaxed">{cat.description}</p>
         </div>
 
         <AdSlot slot={`cat-${cat.slug}-top`} format="horizontal" />
 
         {articles.length > 0 ? (
           <>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
               {articles.map((article, i) => (
                 <>{/* In-feed ad after every 6th card */}
                   <ArticleCard key={article.slug} {...article} />
