@@ -3500,6 +3500,59 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     affiliateHeading: "Heart Rate Monitoring",
     affiliateText: "Heart rate monitors, fitness watches, chest straps, and cardio training guides.",
   },
+  // ─── Legacy tools migrated to registry ───────────────────────────
+  {
+    slug: "bmi-calculator",
+    name: "BMI Calculator - Free Body Mass Index Tool",
+    shortName: "BMI Calculator",
+    description:
+      "Calculate your Body Mass Index instantly with our free BMI calculator. Supports metric and imperial units. Understand what your BMI result means.",
+    longDescription:
+      "Body Mass Index (BMI) is a simple screening measure that uses your height and weight to estimate whether you are underweight, normal weight, overweight, or obese. While BMI does not measure body fat directly and has known limitations, it remains one of the most widely used health indicators worldwide.",
+    icon: "ruler",
+    category: "body-composition",
+    keywords: [
+      "bmi calculator", "body mass index", "bmi chart", "calculate bmi",
+      "bmi formula", "healthy bmi", "what is my bmi", "bmi categories",
+      "bmi metric", "bmi imperial",
+    ],
+    faqs: [
+      { question: "What is BMI?", answer: "Body Mass Index (BMI) is a numerical value calculated from your weight and height. The formula is weight (kg) divided by height (m) squared. It is used as a screening tool to identify possible weight problems in adults." },
+      { question: "What are the BMI categories?", answer: "Underweight: below 18.5. Normal weight: 18.5 to 24.9. Overweight: 25 to 29.9. Obese: 30 and above. These ranges apply to most adults but may not be accurate for athletes, pregnant women, or the elderly." },
+      { question: "Is BMI accurate?", answer: "BMI is a rough screening tool and does not distinguish between muscle mass and body fat. A muscular athlete may have a high BMI but low body fat. For a more complete picture, consider combining BMI with waist-to-height ratio, body fat percentage, or a DEXA scan." },
+      { question: "How often should I check my BMI?", answer: "Checking BMI once every few months is sufficient for most people tracking general trends. More important than any single reading is the direction of change over time. Always pair BMI with other health markers for the full picture." },
+    ],
+    relatedTools: ["body-fat-calculator", "ideal-weight-calculator", "waist-to-height-ratio-calculator", "waist-hip-ratio-calculator"],
+    relatedArticles: [{ title: "BMI vs Body Fat: Which Matters More?", href: "/fitness/bmi-vs-body-fat" }],
+    affiliateHeading: "Body Composition Tools",
+    affiliateText: "Smart scales, body fat calipers, and measuring tapes for tracking your body composition beyond BMI.",
+  },
+  {
+    slug: "heart-rate-calculator",
+    name: "Heart Rate Zones Calculator - Training Zone Tool",
+    shortName: "Heart Rate Zones Calculator",
+    description:
+      "Calculate your target heart rate training zones using the Karvonen method or simple percentage formula. Free tool for planning cardio workouts and optimising training intensity.",
+    longDescription:
+      "Heart rate zone training helps you exercise at the right intensity for your goals. Whether you want to burn fat, build aerobic endurance, or push your lactate threshold, knowing your personal heart rate zones makes every cardio session more effective. This calculator supports both the Karvonen method (using resting heart rate) and the simpler percentage-of-max approach.",
+    icon: "heart-pulse",
+    category: "cardio",
+    keywords: [
+      "heart rate zones", "heart rate calculator", "target heart rate", "karvonen formula",
+      "training zones", "cardio zones", "fat burning zone", "heart rate training",
+      "max heart rate", "heart rate reserve",
+    ],
+    faqs: [
+      { question: "What are heart rate training zones?", answer: "Heart rate zones are ranges of heartbeats per minute that correspond to different exercise intensities. Zone 1 (50-60% max) is recovery, Zone 2 (60-70%) targets fat burning, Zone 3 (70-80%) builds aerobic fitness, Zone 4 (80-90%) pushes threshold, and Zone 5 (90-100%) is maximum effort." },
+      { question: "What is the Karvonen method?", answer: "The Karvonen method uses your heart rate reserve (max HR minus resting HR) to calculate more personalised training zones. The formula is: Target HR = ((Max HR - Resting HR) x intensity%) + Resting HR. It is considered more accurate than simple percentage of max HR." },
+      { question: "How accurate is the 220-minus-age formula?", answer: "The 220-minus-age formula for estimating max heart rate is a rough average with a standard deviation of about 10-12 bpm. It may overestimate max HR in younger people and underestimate it in older adults. For greater accuracy, consider a graded exercise test with a healthcare provider." },
+      { question: "Which heart rate zone burns the most fat?", answer: "Zone 2 (60-70% max HR) is often called the fat-burning zone because a higher percentage of calories come from fat. However, higher-intensity zones burn more total calories per minute. For weight loss, total calorie expenditure matters more than the fuel source." },
+    ],
+    relatedTools: ["resting-heart-rate-assessment", "heart-rate-recovery-calculator", "vo2-max-calculator", "running-pace-calculator"],
+    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-guide" }],
+    affiliateHeading: "Heart Rate Monitors",
+    affiliateText: "Chest strap monitors, fitness watches, and pulse oximeters for accurate heart rate tracking during workouts.",
+  },
 ];
 
 // ─── Lookup Helpers ─────────────────────────────────────────────────

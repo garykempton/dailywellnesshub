@@ -43,8 +43,6 @@ export default async function sitemap({
       { url: `${SITE_URL}/terms-of-service`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/cookie-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/tools`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-      { url: `${SITE_URL}/tools/bmi-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-      { url: `${SITE_URL}/tools/heart-rate-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     ];
 
     const toolPages: MetadataRoute.Sitemap = TOOLS_REGISTRY.map((tool) => ({

@@ -8,32 +8,13 @@ import { NewsletterInlineBlock } from "@/components/NewsletterInlineBlock";
 import { TOOL_CATEGORIES, getToolsByCategory, TOOLS_REGISTRY } from "@/lib/tools";
 import { ICON_MAP } from "@/components/ToolPageLayout";
 
-const totalTools =
-  TOOLS_REGISTRY.length + 2; // +2 for legacy BMI & heart-rate tools not in registry
+const totalTools = TOOLS_REGISTRY.length;
 
 export const metadata: Metadata = buildMetadata({
   title: "Free Wellness Tools & Calculators",
-  description: `${totalTools} free health and wellness calculators and trackers: body fat, ideal weight, running pace, sleep cycles, calories, macros, protein, VO2 max, 1RM, hydration, fasting, and more. No signup required.`,
+  description: `${totalTools} free health and wellness calculators and trackers: BMI, body fat, ideal weight, running pace, sleep cycles, calories, macros, protein, VO2 max, 1RM, hydration, fasting, and more. No signup required.`,
   path: "/tools",
 });
-
-/* Legacy tools that exist as standalone pages but aren't in the registry yet */
-const LEGACY_TOOLS = [
-  {
-    slug: "bmi-calculator",
-    shortName: "BMI Calculator",
-    description: "Calculate your Body Mass Index using height and weight.",
-    icon: "ruler",
-    category: "body-composition",
-  },
-  {
-    slug: "heart-rate-calculator",
-    shortName: "Heart Rate Zones Calculator",
-    description: "Calculate target heart rate training zones based on age and resting HR.",
-    icon: "heart-pulse",
-    category: "cardio",
-  },
-];
 
 export default function ToolsPage() {
   return (
@@ -53,26 +34,8 @@ export default function ToolsPage() {
 
       {/* Tool categories */}
       {TOOL_CATEGORIES.map((category, catIdx) => {
-        const registryTools = getToolsByCategory(category.slug);
-        const legacyInCat = LEGACY_TOOLS.filter(
-          (t) => t.category === category.slug,
-        );
-        const allTools = [
-          ...legacyInCat.map((t) => ({
-            slug: t.slug,
-            shortName: t.shortName,
-            description: t.description,
-            icon: t.icon,
-          })),
-          ...registryTools.map((t) => ({
-            slug: t.slug,
-            shortName: t.shortName,
-            description: t.description,
-            icon: t.icon,
-          })),
-        ];
-
-        if (allTools.length === 0) return null;
+        const tools = getToolsByCategory(category.slug);
+        if (tools.length === 0) return null;
 
         return (
           <section key={category.slug} className="mb-10">
@@ -91,7 +54,7 @@ export default function ToolsPage() {
               </Link>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {allTools.map((tool) => (
+              {tools.map((tool) => (
                 <Link
                   key={tool.slug}
                   href={`/tools/${tool.slug}`}
@@ -147,20 +110,12 @@ export default function ToolsPage() {
             mainEntity: {
               "@type": "ItemList",
               numberOfItems: totalTools,
-              itemListElement: [
-                ...LEGACY_TOOLS.map((tool, i) => ({
-                  "@type": "ListItem",
-                  position: i + 1,
-                  name: tool.shortName,
-                  url: `${SITE_URL}/tools/${tool.slug}`,
-                })),
-                ...TOOLS_REGISTRY.map((tool, i) => ({
-                  "@type": "ListItem",
-                  position: LEGACY_TOOLS.length + i + 1,
-                  name: tool.shortName,
-                  url: `${SITE_URL}/tools/${tool.slug}`,
-                })),
-              ],
+              itemListElement: TOOLS_REGISTRY.map((tool, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                name: tool.shortName,
+                url: `${SITE_URL}/tools/${tool.slug}`,
+              })),
             },
           }),
         }}
