@@ -253,9 +253,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "recovery-tracker",
     ],
     relatedArticles: [
-      { title: "How Sleep Cycles Affect Your Energy Levels", href: "/sleep/how-sleep-cycles-affect-energy" },
-      { title: "Evening Routines for Better Sleep", href: "/sleep/evening-routines-for-better-sleep" },
-      { title: "10 Habits That Ruin Your Sleep Quality", href: "/sleep/habits-that-ruin-sleep-quality" },
+      { title: "How to Build a Bedtime Routine That May Improve Sleep Quality", href: "/sleep/bedtime-routine-improve-sleep-quality" },
+      { title: "Screen Time Before Bed: Why It Disrupts Sleep and What Helps", href: "/sleep/screen-time-before-bed-sleep" },
+      { title: "Why You Wake Up at 3am and How to Sleep Through", href: "/sleep/why-you-wake-up-at-3am-and-how-to-sleep-through" },
     ],
     affiliateHeading: "Sleep Better Tonight",
     affiliateText:
@@ -314,8 +314,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "walking-calorie-calculator",
     ],
     relatedArticles: [
-      { title: "Signs You're Not Drinking Enough Water", href: "/nutrition/signs-not-drinking-enough-water" },
-      { title: "Hydration and Exercise Performance", href: "/fitness/hydration-exercise-performance" },
+      { title: "Daily Water Intake Guide: How Much Water You Really Need", href: "/health-calculators/daily-water-intake-hydration-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
+      { title: "Water Intake Tracker: A Simple Daily Log", href: "/health-calculators/water-intake-tracker-daily-log" },
     ],
     affiliateHeading: "Stay Hydrated Effortlessly",
     affiliateText:
@@ -375,8 +376,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "fasting-tracker",
     ],
     relatedArticles: [
-      { title: "Understanding Your Metabolism", href: "/nutrition/understanding-metabolism" },
-      { title: "How to Count Calories Without Obsessing", href: "/weight-loss/count-calories-without-obsessing" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
     ],
     affiliateHeading: "Tools for Tracking Nutrition",
     affiliateText:
@@ -435,8 +437,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "habit-tracker",
     ],
     relatedArticles: [
-      { title: "Walking for Weight Loss: A Complete Guide", href: "/fitness/walking-for-weight-loss" },
-      { title: "How to Start a Daily Walking Habit", href: "/habits/start-daily-walking-habit" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Gear Up for Your Walk",
     affiliateText:
@@ -490,8 +492,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "martial-arts-conditioning-planner",
     ],
     relatedArticles: [
-      { title: "Best Stretches for Desk Workers", href: "/fitness/stretches-for-desk-workers" },
-      { title: "How Flexibility Supports Healthy Ageing", href: "/healthy-ageing/flexibility-supports-healthy-ageing" },
+      { title: "5 Stretching Routines That May Improve Flexibility and Mobility", href: "/fitness/stretching-routines-improve-flexibility-mobility" },
     ],
     affiliateHeading: "Stretch Further",
     affiliateText:
@@ -546,8 +547,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "tai-chi-breathing-timer",
     ],
     relatedArticles: [
-      { title: "Why Mobility Matters More Than Flexibility", href: "/fitness/mobility-vs-flexibility" },
-      { title: "5 Minute Morning Mobility Routine", href: "/fitness/morning-mobility-routine" },
+      { title: "Stress Level Quiz: A Simple Self-Assessment Tool", href: "/stress/stress-level-quiz-self-assessment" },
     ],
     affiliateHeading: "Mobility Tools",
     affiliateText:
@@ -602,8 +602,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "breathing-timer",
     ],
     relatedArticles: [
-      { title: "Active Recovery: What to Do on Rest Days", href: "/fitness/active-recovery-rest-days" },
-      { title: "How Sleep Fuels Muscle Recovery", href: "/sleep/sleep-fuels-muscle-recovery" },
+      { title: "Active Recovery Days: What to Do on Rest Days", href: "/fitness/active-recovery-days-what-to-do-on-rest-days" },
+      { title: "Sleep and Muscle Recovery: How Rest Affects Training", href: "/fitness/sleep-and-muscle-recovery-how-rest-affects-training" },
     ],
     affiliateHeading: "Recovery Essentials",
     affiliateText:
@@ -664,8 +664,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "recovery-tracker",
     ],
     relatedArticles: [
-      { title: "Box Breathing: The Navy SEAL Stress Technique", href: "/stress/box-breathing-technique" },
-      { title: "Breathing Exercises for Better Sleep", href: "/sleep/breathing-exercises-for-sleep" },
+      { title: "Tai Chi Breathing Exercises for Beginners: A Guide", href: "/fitness/tai-chi-breathing-exercises-for-beginners-a-guide" },
+      { title: "Breathing Exercises Before Sleep: 5 Techniques to Try", href: "/sleep/breathing-exercises-before-sleep-5-techniques-to-try" },
+      { title: "5 Breathing Techniques That May Help Reduce Everyday Stress", href: "/stress/breathing-techniques-reduce-stress" },
     ],
     affiliateHeading: "Enhance Your Practice",
     affiliateText:
@@ -720,8 +721,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "The Science of Habit Formation", href: "/habits/science-of-habit-formation" },
-      { title: "Morning Routines That Actually Stick", href: "/habits/morning-routines-that-stick" },
+      { title: "How to Build a Habit Tracker (Free Template)", href: "/habits/how-to-build-a-habit-tracker-template" },
+      { title: "How to Build a Daily Reading Habit: Practical Tips", href: "/habits/how-to-build-a-reading-habit" },
+      { title: "How Long Does It Really Take to Build a Habit? The Science Explained", href: "/habits/habit-formation-science-how-long-build-habit" },
     ],
     affiliateHeading: "Habit-Building Essentials",
     affiliateText:
@@ -781,8 +783,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "hydration-calculator",
     ],
     relatedArticles: [
-      { title: "Beginner's Guide to Intermittent Fasting", href: "/nutrition/beginners-guide-intermittent-fasting" },
-      { title: "What Breaks a Fast?", href: "/nutrition/what-breaks-a-fast" },
+      { title: "Intermittent Fasting for Beginners Over 40: 16:8 Guide", href: "/nutrition/intermittent-fasting-for-beginners-over-40-16-8-guide" },
+      { title: "Intermittent Fasting for Beginners: Methods and Evidence", href: "/weight-loss/intermittent-fasting-beginners-guide-methods" },
     ],
     affiliateHeading: "Fasting Support",
     affiliateText:
@@ -837,8 +839,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "hydration-calculator",
     ],
     relatedArticles: [
-      { title: "How to Count Macros: A Beginner's Guide", href: "/nutrition/how-to-count-macros" },
-      { title: "High-Protein Meal Ideas", href: "/nutrition/high-protein-meal-ideas" },
+      { title: "Macro Calculator: How to Split Proteins, Fats and Carbs", href: "/health-calculators/macro-calculator-proteins-fats-carbs" },
+      { title: "Body Fat Percentage Calculator: Methods and Meaning", href: "/health-calculators/body-fat-percentage-calculator-methods" },
+      { title: "Understanding Macronutrients: A Simple Guide to Proteins, Fats & Carbs", href: "/nutrition/understanding-macronutrients-guide-proteins-fats-carbs" },
     ],
     affiliateHeading: "Macro-Friendly Kitchen",
     affiliateText:
@@ -893,8 +896,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "tai-chi-breathing-timer",
     ],
     relatedArticles: [
-      { title: "Strength Training for Martial Artists", href: "/fitness/strength-training-martial-artists" },
-      { title: "Recovery Tips for Combat Athletes", href: "/fitness/recovery-tips-combat-athletes" },
+      { title: "Martial Arts Conditioning: Bodyweight Programme for Fight Fitness", href: "/fitness/martial-arts-conditioning-bodyweight-programme-for-fight-fitness" },
+      { title: "Recovery After Martial Arts Training: Reduce Soreness", href: "/fitness/recovery-after-martial-arts-training-reduce-soreness" },
+      { title: "What to Eat Before and After Martial Arts Training", href: "/nutrition/what-to-eat-before-and-after-martial-arts-training" },
     ],
     affiliateHeading: "Training Gear",
     affiliateText:
@@ -949,8 +953,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "mobility-assessment",
     ],
     relatedArticles: [
-      { title: "Tai Chi for Beginners: Getting Started", href: "/stress/tai-chi-for-beginners" },
-      { title: "Benefits of Tai Chi for Stress Reduction", href: "/stress/tai-chi-stress-reduction-benefits" },
+      { title: "Tai Chi Breathing Exercises for Beginners: A Guide", href: "/fitness/tai-chi-breathing-exercises-for-beginners-a-guide" },
+      { title: "Does Tai Chi Help Anxiety? What the Research Says", href: "/stress/does-tai-chi-help-anxiety-what-the-research-says" },
+      { title: "Tai Chi for Balance and Fall Prevention: What Research Says", href: "/fitness/tai-chi-for-balance-and-fall-prevention-what-research-says" },
     ],
     affiliateHeading: "Tai Chi Practice Essentials",
     affiliateText:
@@ -1005,8 +1010,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "sleep-calculator",
     ],
     relatedArticles: [
-      { title: "10 Evidence-Based Ways to Lower Cortisol", href: "/stress/evidence-based-lower-cortisol" },
-      { title: "How Chronic Stress Affects Your Health", href: "/stress/chronic-stress-health-effects" },
+      { title: "How to Create a Stress Management Plan (Template)", href: "/stress/how-to-create-a-stress-management-plan" },
+      { title: "Walking and Stress Reduction: How a Daily Walk Helps", href: "/stress/walking-and-stress-reduction-how-a-daily-walk-helps" },
+      { title: "Simple Workplace Habits That May Help Lower Daily Stress", href: "/stress/workplace-habits-lower-daily-stress" },
     ],
     affiliateHeading: "Stress Relief Products",
     affiliateText:
@@ -1069,8 +1075,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "waist-hip-ratio-calculator",
     ],
     relatedArticles: [
-      { title: "Body Fat vs BMI: Which Matters More?", href: "/fitness/body-fat-vs-bmi" },
-      { title: "How to Accurately Measure Body Fat at Home", href: "/fitness/measure-body-fat-at-home" },
+      { title: "Body Fat Percentage Calculator: Methods and Meaning", href: "/health-calculators/body-fat-percentage-calculator-methods" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
     ],
     affiliateHeading: "Body Composition Tools",
     affiliateText:
@@ -1125,8 +1131,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "lean-body-mass-calculator",
     ],
     relatedArticles: [
-      { title: "Understanding Your Healthy Weight Range", href: "/weight-loss/healthy-weight-range" },
-      { title: "Why the Scale Doesn't Tell the Whole Story", href: "/fitness/scale-doesnt-tell-whole-story" },
+      { title: "Ideal Weight Calculator: Healthy Weight by Height and Age", href: "/health-calculators/ideal-weight-calculator-height-age" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Daily Walking for Weight Management: What Research Shows", href: "/weight-loss/daily-walking-weight-management" },
     ],
     affiliateHeading: "Weight Management Essentials",
     affiliateText:
@@ -1181,8 +1188,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "protein-calculator",
     ],
     relatedArticles: [
-      { title: "How to Build Lean Muscle Mass", href: "/fitness/build-lean-muscle" },
-      { title: "Protein Needs for Muscle Growth", href: "/nutrition/protein-needs-muscle-growth" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Body Fat Percentage Calculator: Methods and Meaning", href: "/health-calculators/body-fat-percentage-calculator-methods" },
     ],
     affiliateHeading: "Build Lean Mass",
     affiliateText:
@@ -1237,8 +1244,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "calorie-calculator",
     ],
     relatedArticles: [
-      { title: "Why Belly Fat Is the Most Dangerous Kind", href: "/fitness/belly-fat-health-risks" },
-      { title: "How to Reduce Visceral Fat Naturally", href: "/fitness/reduce-visceral-fat" },
+      { title: "Waist-to-Hip Ratio Calculator: What It Tells You About Health", href: "/health-calculators/waist-to-hip-ratio-calculator-health" },
     ],
     affiliateHeading: "Measurement Tools",
     affiliateText:
@@ -1301,8 +1307,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "walking-calorie-calculator",
     ],
     relatedArticles: [
-      { title: "How to Find Your Ideal Training Pace", href: "/fitness/ideal-training-pace" },
-      { title: "Beginner's Guide to Running Your First 5K", href: "/fitness/beginners-guide-first-5k" },
+      { title: "How to Start Running: A Beginner's Guide", href: "/fitness/how-to-start-running-beginners-guide" },
+      { title: "How to Prevent Running Injuries", href: "/fitness/how-to-prevent-running-injuries-a-beginners-guide" },
     ],
     affiliateHeading: "Running Essentials",
     affiliateText:
@@ -1362,8 +1368,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "recovery-tracker",
     ],
     relatedArticles: [
-      { title: "VO2 Max and Longevity: What the Research Shows", href: "/fitness/vo2-max-longevity" },
-      { title: "How to Improve Your VO2 Max at Any Age", href: "/fitness/improve-vo2-max" },
+      { title: "Exercise for Healthy Ageing: Activity, Longevity, Vitality", href: "/fitness/exercise-for-healthy-ageing-activity-longevity-vitality" },
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
     ],
     affiliateHeading: "Cardio Fitness Gear",
     affiliateText:
@@ -1418,8 +1424,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "cycling-calorie-calculator",
     ],
     relatedArticles: [
-      { title: "Running for Weight Loss: A Complete Guide", href: "/fitness/running-for-weight-loss" },
-      { title: "How to Start Running as a Beginner", href: "/fitness/start-running-beginner" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Running Gear",
     affiliateText:
@@ -1474,8 +1480,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "heart-rate-calculator",
     ],
     relatedArticles: [
-      { title: "Cycling for Fitness: Getting Started", href: "/fitness/cycling-for-fitness" },
-      { title: "Indoor vs Outdoor Cycling: Pros and Cons", href: "/fitness/indoor-vs-outdoor-cycling" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Cycling Essentials",
     affiliateText:
@@ -1530,8 +1536,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "calorie-calculator",
     ],
     relatedArticles: [
-      { title: "Swimming for Fitness: A Beginner's Guide", href: "/fitness/swimming-fitness-beginners" },
-      { title: "Best Pool Workouts for Weight Loss", href: "/fitness/pool-workouts-weight-loss" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Swimming Gear",
     affiliateText:
@@ -1586,8 +1592,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "habit-tracker",
     ],
     relatedArticles: [
-      { title: "Do You Really Need 10,000 Steps a Day?", href: "/fitness/do-you-need-10000-steps" },
-      { title: "How to Increase Your Daily Step Count", href: "/habits/increase-daily-step-count" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
     ],
     affiliateHeading: "Step Tracking Gear",
     affiliateText:
@@ -1651,8 +1656,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "macro-calculator",
     ],
     relatedArticles: [
-      { title: "How to Use Training Percentages", href: "/fitness/training-percentages-guide" },
-      { title: "Progressive Overload: The Key to Getting Stronger", href: "/fitness/progressive-overload" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
     ],
     affiliateHeading: "Strength Training Gear",
     affiliateText:
@@ -1715,8 +1719,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "one-rep-max-calculator",
     ],
     relatedArticles: [
-      { title: "How Much Protein Do You Really Need?", href: "/nutrition/how-much-protein-do-you-need" },
-      { title: "Best High-Protein Foods for Every Diet", href: "/nutrition/best-high-protein-foods" },
+      { title: "Daily Water Intake Guide: How Much Water You Really Need", href: "/health-calculators/daily-water-intake-hydration-guide" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
     ],
     affiliateHeading: "Protein Essentials",
     affiliateText:
@@ -1780,8 +1785,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "breathing-timer",
     ],
     relatedArticles: [
-      { title: "The Science of Power Napping", href: "/sleep/science-of-power-napping" },
-      { title: "How Naps Affect Night-Time Sleep", href: "/sleep/naps-affect-night-sleep" },
+      { title: "Nap Calculator: How Long Should You Nap?", href: "/sleep/nap-calculator-how-long-to-nap" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Ideal Weight Calculator: Healthy Weight by Height and Age", href: "/health-calculators/ideal-weight-calculator-height-age" },
     ],
     affiliateHeading: "Nap Accessories",
     affiliateText:
@@ -1844,8 +1850,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "How Caffeine Affects Your Sleep Quality", href: "/sleep/caffeine-affects-sleep-quality" },
-      { title: "Caffeine Detox: How to Reset Your Tolerance", href: "/nutrition/caffeine-detox-reset-tolerance" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
+      { title: "Water Intake Tracker: A Simple Daily Log", href: "/health-calculators/water-intake-tracker-daily-log" },
     ],
     affiliateHeading: "Better Coffee Habits",
     affiliateText:
@@ -1906,8 +1913,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "First Trimester: What to Expect", href: "/wellness/first-trimester-guide" },
-      { title: "Nutrition During Pregnancy", href: "/nutrition/nutrition-during-pregnancy" },
+      { title: "How Long Does It Really Take to Build a Habit? The Science Explained", href: "/habits/habit-formation-science-how-long-build-habit" },
+      { title: "How to Break Bad Habits: Practical Strategies Backed by Research", href: "/habits/how-to-break-bad-habits-practical-strategies" },
     ],
     affiliateHeading: "Pregnancy Essentials",
     affiliateText:
@@ -1960,7 +1967,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "sleep-calculator",
     ],
     relatedArticles: [
-      { title: "Understanding Your Menstrual Cycle", href: "/wellness/menstrual-cycle-guide" },
+      { title: "How Long Does It Really Take to Build a Habit? The Science Explained", href: "/habits/habit-formation-science-how-long-build-habit" },
+      { title: "How to Break Bad Habits: Practical Strategies Backed by Research", href: "/habits/how-to-break-bad-habits-practical-strategies" },
     ],
     affiliateHeading: "Cycle Tracking Essentials",
     affiliateText:
@@ -2014,7 +2022,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "Understanding Ovulation and Fertility", href: "/wellness/ovulation-fertility-guide" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Fertility Planning",
     affiliateText:
@@ -2068,7 +2076,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "Understanding Blood Pressure", href: "/wellness/blood-pressure-guide" },
+      { title: "How to Build a Daily Reading Habit: Practical Tips", href: "/habits/how-to-build-a-reading-habit" },
     ],
     affiliateHeading: "Blood Pressure Monitoring",
     affiliateText:
@@ -2122,7 +2130,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "walking-calorie-calculator",
     ],
     relatedArticles: [
-      { title: "Sustainable Weight Loss Guide", href: "/weight-loss/sustainable-weight-loss" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
     ],
     affiliateHeading: "Weight Loss Support",
     affiliateText:
@@ -2175,7 +2185,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "sleep-calculator",
     ],
     relatedArticles: [
-      { title: "Alcohol and Wellness", href: "/wellness/alcohol-health-guide" },
+      { title: "Understanding Macronutrients: A Simple Guide to Proteins, Fats & Carbs", href: "/nutrition/understanding-macronutrients-guide-proteins-fats-carbs" },
+      { title: "7 Nutrient-Dense Foods to Add to Your Diet", href: "/nutrition/nutrient-dense-foods-add-to-diet" },
     ],
     affiliateHeading: "Mindful Drinking",
     affiliateText:
@@ -2229,7 +2240,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "protein-calculator",
     ],
     relatedArticles: [
-      { title: "Training for Your Body Type", href: "/fitness/body-type-training" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Body Fat Percentage Calculator: Methods and Meaning", href: "/health-calculators/body-fat-percentage-calculator-methods" },
     ],
     affiliateHeading: "Training Gear",
     affiliateText:
@@ -2281,10 +2293,12 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "running-calorie-calculator",
       "heart-rate-calculator",
       "recovery-tracker",
-      "calories-calculator",
+      "calorie-calculator",
     ],
     relatedArticles: [
-      { title: "HIIT for Beginners", href: "/fitness/hiit-beginners-guide" },
+      { title: "Strength Training at Home: A Beginner's Guide Without Equipment", href: "/fitness/strength-training-home-no-equipment-beginners" },
+      { title: "Strength Training After 40: Build Muscle Safely", href: "/fitness/strength-training-after-40-build-muscle-safely" },
+      { title: "4-Week Bodyweight Workout Plan (Printable)", href: "/fitness/bodyweight-workout-plan-4-weeks-printable" },
     ],
     affiliateHeading: "HIIT Equipment",
     affiliateText:
@@ -2339,7 +2353,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "nap-calculator",
     ],
     relatedArticles: [
-      { title: "Meditation for Beginners", href: "/wellness/meditation-beginners-guide" },
+      { title: "Walking Meditation: A Beginner's Guide", href: "/stress/walking-meditation-guide-beginners" },
     ],
     affiliateHeading: "Meditation Essentials",
     affiliateText:
@@ -2395,7 +2409,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "muscle-recovery-calculator",
     ],
     relatedArticles: [
-      { title: "Choosing the Right Workout Split", href: "/fitness/workout-split-guide" },
+      { title: "4-Week Bodyweight Workout Plan (Printable)", href: "/fitness/bodyweight-workout-plan-4-weeks-printable" },
+      { title: "Meal Prep for Beginners: A Simple Weekly Plan", href: "/nutrition/meal-prep-beginners-guide-weekly-plan" },
+      { title: "Self-Care Plan Template: A Weekly Guide", href: "/mental-wellness/self-care-plan-template-weekly" },
     ],
     affiliateHeading: "Strength Training Gear",
     affiliateText:
@@ -2443,7 +2459,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "vo2-max-calculator",
     ],
     relatedArticles: [
-      { title: "Running Pace Strategy Guide", href: "/fitness/running-pace-strategy" },
+      { title: "How to Start Running: A Beginner's Guide", href: "/fitness/how-to-start-running-beginners-guide" },
     ],
     affiliateHeading: "Running Gear",
     affiliateText:
@@ -2497,7 +2513,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "recovery-tracker",
     ],
     relatedArticles: [
-      { title: "Flexibility Guide for Beginners", href: "/fitness/flexibility-guide" },
+      { title: "5 Stretching Routines That May Improve Flexibility and Mobility", href: "/fitness/stretching-routines-improve-flexibility-mobility" },
+      { title: "Stretching Before Bed: A 10-Minute Routine for Better Sleep", href: "/sleep/stretching-before-bed-a-10-minute-routine-for-better-sleep" },
     ],
     affiliateHeading: "Flexibility Equipment",
     affiliateText:
@@ -2550,7 +2567,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "stress-reduction-checklist",
     ],
     relatedArticles: [
-      { title: "Digital Wellness Guide", href: "/wellness/digital-wellness" },
+      { title: "Screen Time Guidelines for Children: What Research Actually Shows", href: "/family-wellness/screen-time-guidelines-children-research" },
+      { title: "Screen Time Before Bed: Why It Disrupts Sleep and What Helps", href: "/sleep/screen-time-before-bed-sleep" },
+      { title: "Reducing Family Screen Time: A Practical Plan", href: "/family-wellness/reducing-family-screen-time-practical-plan" },
     ],
     affiliateHeading: "Digital Wellness",
     affiliateText:
@@ -2604,7 +2623,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "protein-calculator",
     ],
     relatedArticles: [
-      { title: "Muscle Recovery Science", href: "/fitness/muscle-recovery-guide" },
+      { title: "Sleep and Muscle Recovery: How Rest Affects Training", href: "/fitness/sleep-and-muscle-recovery-how-rest-affects-training" },
     ],
     affiliateHeading: "Recovery Tools",
     affiliateText:
@@ -2659,7 +2678,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "flexibility-tracker",
     ],
     relatedArticles: [
-      { title: "Yoga for Beginners Guide", href: "/fitness/yoga-beginners-guide" },
+      { title: "How to Create a Stress Management Plan (Template)", href: "/stress/how-to-create-a-stress-management-plan" },
     ],
     affiliateHeading: "Yoga Essentials",
     affiliateText:
@@ -2718,7 +2737,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       "muscle-recovery-calculator",
     ],
     relatedArticles: [
-      { title: "Creatine Guide: Benefits, Dosing & Safety", href: "/nutrition/creatine-guide" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
     ],
     affiliateHeading: "Supplements",
     affiliateText:
@@ -2745,7 +2765,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What are the effects of sleep debt?", answer: "Sleep debt impairs concentration, memory, decision-making, reaction time, and emotional regulation. Chronic sleep debt is linked to increased risk of obesity, diabetes, cardiovascular disease, weakened immunity, and mental health issues." },
     ],
     relatedTools: ["sleep-calculator", "nap-calculator", "caffeine-calculator"],
-    relatedArticles: [{ title: "Understanding Sleep Debt", href: "/sleep/sleep-debt-guide" }],
+    relatedArticles: [
+      { title: "Sleep Debt Calculator: How to Recover Lost Sleep", href: "/health-calculators/sleep-debt-calculator-how-to-recover" },
+      { title: "How Much Deep Sleep Do You Need Each Night?", href: "/sleep/how-much-deep-sleep-do-you-need" },
+      { title: "Sleep Calculator: How Many Hours You Really Need by Age", href: "/health-calculators/sleep-calculator-hours-needed-by-age" },
+    ],
     affiliateHeading: "Sleep Better",
     affiliateText: "Sleep trackers, weighted blankets, blackout curtains, and magnesium supplements for deeper rest.",
   },
@@ -2771,7 +2795,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Is this quiz scientifically based?", answer: "This quiz is inspired by Dr. Michael Breus's chronotype model, which builds on decades of circadian rhythm research. While simplified, the four-type framework helps people identify their natural patterns and make practical scheduling adjustments." },
     ],
     relatedTools: ["sleep-calculator", "sleep-debt-calculator", "nap-calculator", "caffeine-calculator"],
-    relatedArticles: [{ title: "Understanding Your Chronotype", href: "/sleep/chronotype-guide" }],
+    relatedArticles: [
+      { title: "Natural Approaches That May Help You Fall Asleep Faster", href: "/sleep/natural-approaches-fall-asleep-faster" },
+      { title: "How to Build a Bedtime Routine That May Improve Sleep Quality", href: "/sleep/bedtime-routine-improve-sleep-quality" },
+    ],
     affiliateHeading: "Sleep Optimisation",
     affiliateText: "Dawn simulators, blue-light glasses, sleep journals, and chronotype-specific supplements.",
   },
@@ -2797,7 +2824,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Who should avoid cold plunges?", answer: "People with cardiovascular conditions, Raynaud's disease, cold urticaria, uncontrolled blood pressure, or who are pregnant should avoid cold water immersion. Always consult your doctor before starting a cold plunge practice." },
     ],
     relatedTools: ["recovery-tracker", "muscle-recovery-calculator", "breathing-timer", "meditation-timer"],
-    relatedArticles: [{ title: "Cold Plunge Guide for Beginners", href: "/recovery/cold-plunge-guide" }],
+    relatedArticles: [{ title: "Cold Water Immersion for Recovery: What Research Says", href: "/fitness/cold-water-immersion-for-recovery-what-research-says" }],
     affiliateHeading: "Cold Plunge Equipment",
     affiliateText: "Cold plunge tubs, ice bath barrels, waterproof thermometers, and recovery robes.",
   },
@@ -2823,7 +2850,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How much water should I drink during a sauna?", answer: "Drink at least 500ml (16oz) of water before your session and another 500ml-1L after. You can lose 0.5-1kg of water weight per session through sweating. Replace electrolytes if doing extended or multiple sessions." },
     ],
     relatedTools: ["cold-plunge-timer", "recovery-tracker", "hydration-calculator", "muscle-recovery-calculator"],
-    relatedArticles: [{ title: "Sauna Benefits and Best Practices", href: "/recovery/sauna-guide" }],
+    relatedArticles: [{ title: "Exercise Recovery: Science-Backed Strategies", href: "/fitness/exercise-recovery-science-backed-strategies-to-recover-faster" }],
     affiliateHeading: "Sauna Accessories",
     affiliateText: "Sauna thermometers, wooden buckets, essential oils, towels, and portable infrared saunas.",
   },
@@ -2849,7 +2876,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Is it safe to lose weight during pregnancy?", answer: "Intentional weight loss during pregnancy is generally not recommended. If you are overweight or obese, your provider may recommend slower weight gain rather than weight loss. Always follow your healthcare provider's personalised guidance." },
     ],
     relatedTools: ["pregnancy-due-date-calculator", "calorie-calculator", "hydration-calculator"],
-    relatedArticles: [{ title: "Healthy Pregnancy Weight Guide", href: "/wellness/pregnancy-weight-guide" }],
+    relatedArticles: [
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Ideal Weight Calculator: Healthy Weight by Height and Age", href: "/health-calculators/ideal-weight-calculator-height-age" },
+      { title: "10 Sustainable Eating Habits for Healthy Weight Management", href: "/weight-loss/sustainable-eating-habits-weight-management" },
+    ],
     affiliateHeading: "Pregnancy Wellness",
     affiliateText: "Pregnancy scales, bump-friendly fitness gear, prenatal vitamins, and pregnancy journals.",
   },
@@ -2875,7 +2906,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What factors most affect biological age?", answer: "The biggest modifiable factors are: regular exercise (especially both cardio and strength training), sleep quality and duration, diet quality, stress management, not smoking, and social connection. Genetics play a role but lifestyle factors are highly influential." },
     ],
     relatedTools: ["sleep-calculator", "calorie-calculator", "stress-reduction-checklist", "habit-tracker"],
-    relatedArticles: [{ title: "Healthy Ageing Guide", href: "/wellness/healthy-ageing-guide" }],
+    relatedArticles: [
+      { title: "Sleep Calculator: How Many Hours You Really Need by Age", href: "/health-calculators/sleep-calculator-hours-needed-by-age" },
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "Ideal Weight Calculator: Healthy Weight by Height and Age", href: "/health-calculators/ideal-weight-calculator-height-age" },
+    ],
     affiliateHeading: "Longevity & Ageing",
     affiliateText: "Biological age test kits, longevity supplements, fitness trackers, and healthy ageing books.",
   },
@@ -2901,7 +2936,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How many meals per day is optimal?", answer: "There is no single best number. Both 3 meals and 5-6 smaller meals can work well depending on your preferences, schedule, and goals. Total daily intake matters more than meal frequency for most health outcomes. Consistency matters most." },
     ],
     relatedTools: ["calorie-calculator", "macro-calculator", "fasting-tracker", "protein-calculator"],
-    relatedArticles: [{ title: "Nutrient Timing Guide", href: "/nutrition/nutrient-timing" }],
+    relatedArticles: [
+      { title: "Meal Prep for Beginners: A Simple Weekly Plan", href: "/nutrition/meal-prep-beginners-guide-weekly-plan" },
+      { title: "Meal Prep for One: Weekly Strategies for Singles", href: "/nutrition/meal-prep-for-one-weekly-strategies-for-singles" },
+    ],
     affiliateHeading: "Meal Prep",
     affiliateText: "Meal prep containers, food scales, portion control plates, and timed eating reminder apps.",
   },
@@ -2927,7 +2965,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What are the best sources of fiber?", answer: "Legumes (lentils, chickpeas, black beans): 12-15g per cup. Whole grains (oats, quinoa, brown rice): 3-8g per serving. Fruits (raspberries, pears, apples with skin): 4-8g each. Vegetables (broccoli, artichoke, Brussels sprouts): 4-10g per cup. Seeds (chia, flax): 5-10g per tablespoon." },
     ],
     relatedTools: ["macro-calculator", "calorie-calculator", "protein-calculator", "hydration-calculator"],
-    relatedArticles: [{ title: "Complete Fiber Guide", href: "/nutrition/fiber-guide" }],
+    relatedArticles: [
+      { title: "Daily Water Intake Guide: How Much Water You Really Need", href: "/health-calculators/daily-water-intake-hydration-guide" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
+    ],
     affiliateHeading: "Fiber Supplements",
     affiliateText: "Psyllium husk, chia seeds, fiber supplements, and high-fiber recipe books.",
   },
@@ -2953,7 +2995,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What MET value is used for jump rope?", answer: "MET values: slow pace (< 100 skips/min) = 8.8, moderate pace (100-120 skips/min) = 11.8, fast pace (> 120 skips/min) = 12.3. Double unders and advanced tricks increase to approximately 14.0 METs." },
     ],
     relatedTools: ["running-calorie-calculator", "cycling-calorie-calculator", "steps-to-calories-calculator"],
-    relatedArticles: [{ title: "Jump Rope Workout Guide", href: "/fitness/jump-rope-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+    ],
     affiliateHeading: "Jump Rope Gear",
     affiliateText: "Speed ropes, weighted ropes, jump rope mats, and interval timer apps.",
   },
@@ -2979,7 +3024,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What MET values are used?", answer: "Slow stair climbing = 4.0 METs, moderate pace = 8.8 METs, fast/vigorous = 14.0 METs. Descending stairs = 3.5 METs. Stair machine (general) = 9.0 METs." },
     ],
     relatedTools: ["walking-calorie-calculator", "steps-to-calories-calculator", "running-calorie-calculator"],
-    relatedArticles: [{ title: "Stair Climbing for Fitness", href: "/fitness/stair-climbing-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+    ],
     affiliateHeading: "Stair Climbing Gear",
     affiliateText: "Mini steppers, stair climbing machines, knee supports, and activity trackers.",
   },
@@ -3005,7 +3053,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How does rowing compare to running?", answer: "At moderate intensity, 30 minutes of rowing burns similar calories to 30 minutes of running at 8-9 km/h. Rowing has the advantage of being low-impact (easier on joints) and providing a full-body workout rather than primarily lower body." },
     ],
     relatedTools: ["cycling-calorie-calculator", "swimming-calorie-calculator", "running-calorie-calculator"],
-    relatedArticles: [{ title: "Rowing Workout Guide", href: "/fitness/rowing-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+    ],
     affiliateHeading: "Rowing Equipment",
     affiliateText: "Indoor rowing machines, rowing gloves, heart rate monitors, and rowing training plans.",
   },
@@ -3031,7 +3082,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How often should I plank?", answer: "Planks can be done daily since they are an isometric exercise with minimal muscle damage. However, for progressive overload, 3-4 times per week with rest days allows better adaptation. Vary the plank type to prevent plateaus and target different muscle fibres." },
     ],
     relatedTools: ["hiit-timer", "one-rep-max-calculator", "workout-split-generator"],
-    relatedArticles: [{ title: "Core Training Guide", href: "/fitness/core-training-guide" }],
+    relatedArticles: [
+      { title: "Low Impact Exercise for Bad Knees: Protect Your Joints", href: "/fitness/low-impact-exercise-for-bad-knees-protect-your-joints" },
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Gentle Exercise for Chronic Pain: A Careful Guide", href: "/fitness/gentle-exercise-chronic-pain-guide" },
+    ],
     affiliateHeading: "Core Training",
     affiliateText: "Exercise mats, ab wheels, stability balls, and core training programs.",
   },
@@ -3057,7 +3112,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Is this calculator accurate for driving decisions?", answer: "No BAC calculator should be used to decide if you are safe to drive. Impairment varies greatly between individuals and can occur at any BAC level. The only safe BAC for driving is 0.00%. This tool is for educational purposes only." },
     ],
     relatedTools: ["alcohol-unit-calculator", "hydration-calculator", "sleep-calculator"],
-    relatedArticles: [{ title: "Alcohol and Health", href: "/wellness/alcohol-health-guide" }],
+    relatedArticles: [
+      { title: "How Long Does It Really Take to Build a Habit? The Science Explained", href: "/habits/habit-formation-science-how-long-build-habit" },
+      { title: "How to Break Bad Habits: Practical Strategies Backed by Research", href: "/habits/how-to-break-bad-habits-practical-strategies" },
+    ],
     affiliateHeading: "Responsible Drinking",
     affiliateText: "Personal BAC testers, non-alcoholic alternatives, drink tracking apps, and alcohol-free spirits.",
   },
@@ -3083,7 +3141,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How can I improve my push-up count?", answer: "Practice push-ups 3-4 times per week using a 'grease the groove' approach (multiple sets throughout the day at sub-max reps). Supplement with bench press, dips, and plank holds. Beginners can start with incline push-ups and progress to standard form." },
     ],
     relatedTools: ["one-rep-max-calculator", "workout-split-generator", "plank-timer"],
-    relatedArticles: [{ title: "Upper Body Strength Guide", href: "/fitness/upper-body-guide" }],
+    relatedArticles: [
+      { title: "Progressive Overload Explained: Key to Fitness Gains", href: "/fitness/progressive-overload-explained-key-to-fitness-gains" },
+      { title: "Thoracic Spine Mobility: Fix Upper Back Stiffness", href: "/fitness/thoracic-spine-mobility-fix-upper-back-stiffness" },
+      { title: "Martial Arts Conditioning: Bodyweight Programme for Fight Fitness", href: "/fitness/martial-arts-conditioning-bodyweight-programme-for-fight-fitness" },
+    ],
     affiliateHeading: "Fitness Testing",
     affiliateText: "Push-up handles, resistance bands, exercise mats, and fitness testing kits.",
   },
@@ -3109,7 +3171,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Does a standing desk help?", answer: "Alternating between sitting and standing is better than either alone. Stand for 15-30 minutes per hour. Standing all day can cause its own issues (leg fatigue, varicose veins). A sit-stand desk with an anti-fatigue mat provides the best ergonomic flexibility." },
     ],
     relatedTools: ["screen-time-calculator", "stress-reduction-checklist", "stretching-routine-generator"],
-    relatedArticles: [{ title: "Home Office Ergonomics Guide", href: "/wellness/desk-ergonomics-guide" }],
+    relatedArticles: [
+      { title: "How to Stop Sitting All Day: Movement Breaks for Desk Workers", href: "/habits/how-to-stop-sitting-all-day-movement-breaks-for-desk-workers" },
+    ],
     affiliateHeading: "Ergonomic Essentials",
     affiliateText: "Monitor arms, ergonomic keyboards, lumbar supports, standing desk converters, and footrests.",
   },
@@ -3134,7 +3198,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How long does it take to enter ketosis?", answer: "Most people enter ketosis within 2-4 days of restricting carbs to under 20-50g per day. Full keto-adaptation (where your body efficiently burns fat for fuel) takes 2-6 weeks. During the transition, you may experience 'keto flu' symptoms." },
     ],
     relatedTools: ["calorie-calculator", "macro-calculator", "protein-calculator", "calorie-deficit-calculator"],
-    relatedArticles: [{ title: "Ketogenic Diet Guide", href: "/nutrition/keto-diet-guide" }],
+    relatedArticles: [
+      { title: "Macro Calculator: How to Split Proteins, Fats and Carbs", href: "/health-calculators/macro-calculator-proteins-fats-carbs" },
+      { title: "7 Nutrient-Dense Foods to Add to Your Diet", href: "/nutrition/nutrient-dense-foods-add-to-diet" },
+    ],
     affiliateHeading: "Keto Essentials",
     affiliateText: "Ketone test strips, MCT oil, keto cookbooks, and low-carb snacks.",
   },
@@ -3160,7 +3227,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What affects BMR?", answer: "Key factors: muscle mass (more muscle = higher BMR), age (decreases ~2% per decade after 20), sex (men typically have higher BMR), genetics, thyroid function, body size, and extreme dieting (can lower BMR through metabolic adaptation)." },
     ],
     relatedTools: ["calorie-calculator", "calorie-deficit-calculator", "macro-calculator", "body-fat-calculator"],
-    relatedArticles: [{ title: "Understanding Your Metabolism", href: "/nutrition/metabolism-guide" }],
+    relatedArticles: [
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
+    ],
     affiliateHeading: "Metabolism Support",
     affiliateText: "Metabolism-boosting supplements, food scales, body composition scales, and nutrition tracking apps.",
   },
@@ -3186,7 +3255,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How long should a bulk last?", answer: "A lean bulk typically lasts 3-6 months. Aim to gain 0.25-0.5% of bodyweight per week (roughly 0.5-1kg/month for most). If body fat exceeds 15-17% (men) or 25-27% (women), consider transitioning to a cut." },
     ],
     relatedTools: ["calorie-calculator", "protein-calculator", "macro-calculator", "one-rep-max-calculator"],
-    relatedArticles: [{ title: "Lean Bulking Guide", href: "/fitness/lean-bulk-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Macro Calculator: How to Split Proteins, Fats and Carbs", href: "/health-calculators/macro-calculator-proteins-fats-carbs" },
+    ],
     affiliateHeading: "Muscle Building",
     affiliateText: "Protein powder, mass gainer, creatine, food scales, and meal prep containers.",
   },
@@ -3212,7 +3285,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Can foam rolling be harmful?", answer: "Avoid rolling directly on joints, bones, the lower back (spine), and acute injuries. Never roll so hard that it causes sharp pain — moderate discomfort is normal but sharp pain means you should stop. Avoid foam rolling areas with varicose veins or blood clots." },
     ],
     relatedTools: ["stretching-routine-generator", "muscle-recovery-calculator", "recovery-tracker", "mobility-assessment"],
-    relatedArticles: [{ title: "Foam Rolling Guide", href: "/recovery/foam-rolling-guide" }],
+    relatedArticles: [
+      { title: "Foam Rolling for Recovery: A Beginner's Guide", href: "/fitness/foam-rolling-for-recovery-a-beginners-guide" },
+      { title: "Foam Rolling for Beginners: A Complete Guide", href: "/fitness/foam-rolling-for-beginners-a-complete-guide" },
+    ],
     affiliateHeading: "Recovery Tools",
     affiliateText: "Foam rollers, lacrosse balls, massage guns, and trigger point therapy tools.",
   },
@@ -3238,7 +3314,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How far is 10,000 steps?", answer: "For an average adult, 10,000 steps is approximately 7.5-8 km (4.7-5 miles). Step length varies by height and pace — taller people and faster walkers cover more distance per step." },
     ],
     relatedTools: ["walking-calorie-calculator", "steps-to-calories-calculator", "stair-climbing-calorie-calculator"],
-    relatedArticles: [{ title: "Walking for Health Guide", href: "/fitness/walking-health-guide" }],
+    relatedArticles: [
+      { title: "Sleep Calculator: How Many Hours You Really Need by Age", href: "/health-calculators/sleep-calculator-hours-needed-by-age" },
+      { title: "Nap Calculator: How Long Should You Nap?", href: "/sleep/nap-calculator-how-long-to-nap" },
+      { title: "How Many Steps Per Day Do You Need by Age?", href: "/fitness/how-many-steps-per-day-by-age" },
+    ],
     affiliateHeading: "Walking Gear",
     affiliateText: "Pedometers, walking shoes, fitness trackers, and walking poles.",
   },
@@ -3264,7 +3344,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Can I do other exercises during rest?", answer: "Yes — this is called supersets (alternating exercises for different muscle groups). For example, doing bicep curls during bench press rest. This is time-efficient but may reduce performance if the exercises share stabiliser muscles." },
     ],
     relatedTools: ["hiit-timer", "one-rep-max-calculator", "workout-split-generator", "plank-timer"],
-    relatedArticles: [{ title: "Rest Period Guide", href: "/fitness/rest-period-guide" }],
+    relatedArticles: [
+      { title: "How Long to Rest Between Workouts: A Recovery Guide", href: "/fitness/how-long-to-rest-between-workouts-a-recovery-guide" },
+      { title: "Sleep and Muscle Recovery: How Rest Affects Training", href: "/fitness/sleep-and-muscle-recovery-how-rest-affects-training" },
+      { title: "Active Recovery Days: What to Do on Rest Days", href: "/fitness/active-recovery-days-what-to-do-on-rest-days" },
+    ],
     affiliateHeading: "Gym Accessories",
     affiliateText: "Gym timers, wireless earbuds, lifting gloves, and workout log books.",
   },
@@ -3290,7 +3374,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How can I improve my cholesterol ratios?", answer: "Increase HDL through regular exercise (especially cardio), eating healthy fats (olive oil, nuts, avocado, fatty fish), and maintaining a healthy weight. Lower LDL by reducing saturated and trans fats, increasing fibre intake, and managing stress." },
     ],
     relatedTools: ["blood-pressure-checker", "calorie-calculator", "biological-age-calculator"],
-    relatedArticles: [{ title: "Cholesterol Guide", href: "/wellness/cholesterol-guide" }],
+    relatedArticles: [
+      { title: "Waist-to-Hip Ratio Calculator: What It Tells You About Health", href: "/health-calculators/waist-to-hip-ratio-calculator-health" },
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
+    ],
     affiliateHeading: "Heart Health",
     affiliateText: "Home cholesterol test kits, omega-3 supplements, heart-healthy cookbooks, and fitness trackers.",
   },
@@ -3316,7 +3403,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Does the 0.5 rule apply to everyone?", answer: "The 0.5 boundary applies broadly across different ethnicities, ages, and sexes, which is one reason researchers favour it. However, some studies suggest slightly lower thresholds (0.46-0.48) may be appropriate for Asian populations." },
     ],
     relatedTools: ["waist-hip-ratio-calculator", "body-fat-calculator", "bmi-calculator", "ideal-weight-calculator"],
-    relatedArticles: [{ title: "Body Composition Health Guide", href: "/fitness/body-composition-guide" }],
+    relatedArticles: [
+      { title: "Waist-to-Hip Ratio Calculator: What It Tells You About Health", href: "/health-calculators/waist-to-hip-ratio-calculator-health" },
+      { title: "Ideal Weight Calculator: Healthy Weight by Height and Age", href: "/health-calculators/ideal-weight-calculator-height-age" },
+    ],
     affiliateHeading: "Measurement Tools",
     affiliateText: "Body tape measures, smart scales, body composition monitors, and health journals.",
   },
@@ -3342,7 +3432,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What are signs of electrolyte imbalance?", answer: "Muscle cramps, twitching, fatigue, headaches, dizziness, nausea, irregular heartbeat, brain fog, and dark urine. If exercising heavily in heat and experiencing these symptoms, replenish electrolytes immediately." },
     ],
     relatedTools: ["hydration-calculator", "keto-calculator", "protein-calculator", "creatine-calculator"],
-    relatedArticles: [{ title: "Electrolyte Guide for Athletes", href: "/nutrition/electrolyte-guide" }],
+    relatedArticles: [
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+      { title: "Hydration Calculator: How Much Water Do You Need Daily?", href: "/health-calculators/hydration-calculator-how-much-water-daily" },
+    ],
     affiliateHeading: "Electrolyte Products",
     affiliateText: "Electrolyte powders, salt tablets, magnesium supplements, and electrolyte water bottles.",
   },
@@ -3368,7 +3461,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How can I improve heart rate recovery?", answer: "Regular aerobic exercise is the most effective way to improve HRR. Consistent cardio training (150+ minutes/week) strengthens the parasympathetic nervous system, which controls heart rate deceleration. Improvements can be seen within 4-8 weeks of training." },
     ],
     relatedTools: ["heart-rate-calculator", "vo2-max-calculator", "running-calorie-calculator"],
-    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-training" }],
+    relatedArticles: [
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
+    ],
     affiliateHeading: "Heart Rate Monitoring",
     affiliateText: "Chest strap heart rate monitors, fitness watches, and cardio training programs.",
   },
@@ -3393,7 +3488,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "What MET values are used?", answer: "MET values from the Compendium of Physical Activities: Hatha 2.5, general yoga 3.0, Vinyasa/flow 4.0, Ashtanga/Power 5.0-5.5, Hot/Bikram 6.0, restorative/Yin 2.0." },
     ],
     relatedTools: ["yoga-flow-builder", "meditation-timer", "stretching-routine-generator", "breathing-timer"],
-    relatedArticles: [{ title: "Yoga for Fitness Guide", href: "/fitness/yoga-fitness-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+    ],
     affiliateHeading: "Yoga Gear",
     affiliateText: "Yoga mats, blocks, straps, hot yoga towels, and yoga class subscriptions.",
   },
@@ -3418,7 +3516,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How often should I do Pilates?", answer: "Joseph Pilates recommended 3-4 sessions per week. For noticeable results, aim for at least 2-3 sessions weekly. Pilates can be done daily as it is low-impact, but allow recovery if doing intense reformer work." },
     ],
     relatedTools: ["yoga-calorie-calculator", "stretching-routine-generator", "calorie-calculator"],
-    relatedArticles: [{ title: "Pilates for Beginners", href: "/fitness/pilates-guide" }],
+    relatedArticles: [
+      { title: "Exercise Calorie Burn Calculator: Calories by Activity", href: "/fitness/exercise-calorie-burn-calculator-activities" },
+      { title: "Daily Calorie Calculator: Find Your TDEE", href: "/health-calculators/daily-calorie-calculator-tdee-guide" },
+    ],
     affiliateHeading: "Pilates Equipment",
     affiliateText: "Pilates mats, resistance rings, reformer machines, and online Pilates class subscriptions.",
   },
@@ -3444,7 +3545,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How recent should my reference race be?", answer: "Use a race result from the last 2-3 months for the most accurate prediction. Your fitness level changes over time, so older results may not reflect your current ability. Also ensure you ran the reference race at full effort." },
     ],
     relatedTools: ["running-pace-calculator", "pace-converter", "vo2-max-calculator", "running-calorie-calculator"],
-    relatedArticles: [{ title: "Race Training Guide", href: "/fitness/race-training-guide" }],
+    relatedArticles: [{ title: "How to Start Running: A Beginner's Guide", href: "/fitness/how-to-start-running-beginners-guide" }],
     affiliateHeading: "Race Day Gear",
     affiliateText: "GPS running watches, racing flats, energy gels, and race training plans.",
   },
@@ -3470,7 +3571,10 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "When should I call my provider?", answer: "Call when contractions follow the pattern your provider specified (usually 5-1-1 or 4-1-1), if your water breaks, if you have heavy bleeding, if baby's movements decrease significantly, or if something feels wrong. When in doubt, always call." },
     ],
     relatedTools: ["pregnancy-due-date-calculator", "pregnancy-weight-gain-calculator", "breathing-timer"],
-    relatedArticles: [{ title: "Labour Preparation Guide", href: "/wellness/labour-preparation-guide" }],
+    relatedArticles: [
+      { title: "How Long Does It Really Take to Build a Habit? The Science Explained", href: "/habits/habit-formation-science-how-long-build-habit" },
+      { title: "How to Break Bad Habits: Practical Strategies Backed by Research", href: "/habits/how-to-break-bad-habits-practical-strategies" },
+    ],
     affiliateHeading: "Birth Preparation",
     affiliateText: "Hospital bag essentials, birthing balls, labour comfort items, and newborn care kits.",
   },
@@ -3496,7 +3600,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How can I lower my resting heart rate?", answer: "Regular aerobic exercise is the most effective method. Consistent cardio training can lower RHR by 5-20+ bpm over months. Other factors: adequate sleep (7-9 hours), stress management, reducing caffeine and alcohol, staying hydrated, and maintaining a healthy weight." },
     ],
     relatedTools: ["heart-rate-calculator", "heart-rate-recovery-calculator", "vo2-max-calculator", "blood-pressure-checker"],
-    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-guide" }],
+    relatedArticles: [
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
+    ],
     affiliateHeading: "Heart Rate Monitoring",
     affiliateText: "Heart rate monitors, fitness watches, chest straps, and cardio training guides.",
   },
@@ -3523,7 +3629,11 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "How often should I check my BMI?", answer: "Checking BMI once every few months is sufficient for most people tracking general trends. More important than any single reading is the direction of change over time. Always pair BMI with other health markers for the full picture." },
     ],
     relatedTools: ["body-fat-calculator", "ideal-weight-calculator", "waist-to-height-ratio-calculator", "waist-hip-ratio-calculator"],
-    relatedArticles: [{ title: "BMI vs Body Fat: Which Matters More?", href: "/fitness/bmi-vs-body-fat" }],
+    relatedArticles: [
+      { title: "BMI Calculator & Body Mass Index: What It Measures and Limitations", href: "/health-calculators/understanding-bmi-limitations-healthy-weight" },
+      { title: "BMI Calculator: What Your Number Actually Means", href: "/health-calculators/bmi-calculator-what-your-number-means" },
+      { title: "Body Fat Percentage Calculator: Methods and Meaning", href: "/health-calculators/body-fat-percentage-calculator-methods" },
+    ],
     affiliateHeading: "Body Composition Tools",
     affiliateText: "Smart scales, body fat calipers, and measuring tapes for tracking your body composition beyond BMI.",
   },
@@ -3549,7 +3659,9 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
       { question: "Which heart rate zone burns the most fat?", answer: "Zone 2 (60-70% max HR) is often called the fat-burning zone because a higher percentage of calories come from fat. However, higher-intensity zones burn more total calories per minute. For weight loss, total calorie expenditure matters more than the fuel source." },
     ],
     relatedTools: ["resting-heart-rate-assessment", "heart-rate-recovery-calculator", "vo2-max-calculator", "running-pace-calculator"],
-    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-guide" }],
+    relatedArticles: [
+      { title: "Heart Rate Zones Calculator for Exercise", href: "/health-calculators/heart-rate-zones-calculator-exercise" },
+    ],
     affiliateHeading: "Heart Rate Monitors",
     affiliateText: "Chest strap monitors, fitness watches, and pulse oximeters for accurate heart rate tracking during workouts.",
   },
