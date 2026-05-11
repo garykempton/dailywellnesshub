@@ -57,6 +57,21 @@ export const ICON_MAP: Record<string, string> = {
   "muscle-clock": "⏳",
   "yoga-flow": "🧘‍♀️",
   pill: "💊",
+  "sleep-debt": "😪",
+  owl: "🦉",
+  snowflake: "❄️",
+  thermometer: "🌡️",
+  pregnant: "🤰",
+  dna: "🧬",
+  "clock-meal": "🕐",
+  grain: "🌾",
+  "jump-rope": "⏭️",
+  stairs: "🪜",
+  rowing: "🚣",
+  plank: "🧱",
+  beer: "🍺",
+  pushup: "🫸",
+  desk: "🖥️",
 };
 
 export function ToolPageLayout({ tool, children }: Props) {

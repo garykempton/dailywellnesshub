@@ -2724,6 +2724,395 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     affiliateText:
       "Creatine monohydrate, shaker bottles, digital scales, and pre-workout supplements.",
   },
+  {
+    slug: "sleep-debt-calculator",
+    name: "Sleep Debt Calculator - How Much Sleep Do You Owe?",
+    shortName: "Sleep Debt Calculator",
+    description:
+      "Calculate your accumulated sleep debt over the past week. See how much extra sleep you need and get a personalised recovery plan.",
+    longDescription:
+      "Sleep debt is the difference between the sleep you need and the sleep you actually get. Even small nightly shortfalls accumulate into significant debt that affects cognition, mood, and health. Enter your sleep target and actual hours for the past 7 nights to see your total sleep debt and get a realistic recovery plan.",
+    icon: "sleep-debt",
+    category: "sleep",
+    keywords: [
+      "sleep debt calculator", "sleep deficit", "how much sleep do I owe",
+      "sleep debt recovery", "accumulated sleep debt", "sleep deprivation calculator",
+    ],
+    faqs: [
+      { question: "What is sleep debt?", answer: "Sleep debt is the cumulative difference between the amount of sleep you need and the amount you actually get. If you need 8 hours but only sleep 6, you accumulate 2 hours of debt per night — 14 hours over a week." },
+      { question: "Can you pay back sleep debt?", answer: "Short-term sleep debt (a few days) can be recovered with extra sleep over the following nights. Chronic sleep debt (weeks or months) is harder to recover from and may require consistent, sustained improvements in sleep habits rather than a single long sleep." },
+      { question: "How much sleep do adults need?", answer: "The National Sleep Foundation recommends 7-9 hours for adults aged 18-64 and 7-8 hours for those over 65. Individual needs vary — some people genuinely function well on 7 hours while others need 9." },
+      { question: "What are the effects of sleep debt?", answer: "Sleep debt impairs concentration, memory, decision-making, reaction time, and emotional regulation. Chronic sleep debt is linked to increased risk of obesity, diabetes, cardiovascular disease, weakened immunity, and mental health issues." },
+    ],
+    relatedTools: ["sleep-calculator", "nap-calculator", "caffeine-calculator"],
+    relatedArticles: [{ title: "Understanding Sleep Debt", href: "/sleep/sleep-debt-guide" }],
+    affiliateHeading: "Sleep Better",
+    affiliateText: "Sleep trackers, weighted blankets, blackout curtains, and magnesium supplements for deeper rest.",
+  },
+  {
+    slug: "chronotype-quiz",
+    name: "Chronotype Quiz - Are You a Lion, Bear, Wolf, or Dolphin?",
+    shortName: "Chronotype Quiz",
+    description:
+      "Discover your sleep chronotype with this quiz based on Dr. Michael Breus's research. Get personalised sleep, productivity, and exercise timing recommendations.",
+    longDescription:
+      "Your chronotype is your body's natural tendency toward sleeping and waking at certain times. Understanding whether you are a Lion (early riser), Bear (follows the sun), Wolf (night owl), or Dolphin (light sleeper) helps you optimise your daily schedule for peak performance, better sleep, and improved wellbeing.",
+    icon: "owl",
+    category: "sleep",
+    keywords: [
+      "chronotype quiz", "sleep chronotype", "am I a night owl or early bird",
+      "lion bear wolf dolphin quiz", "chronotype test", "sleep personality quiz",
+      "best time to sleep for my body",
+    ],
+    faqs: [
+      { question: "What are the four chronotypes?", answer: "Lion: early risers who peak in the morning (15-20% of people). Bear: follow the solar cycle, most productive mid-morning (50%). Wolf: night owls who peak in the evening (15-20%). Dolphin: light sleepers with irregular patterns (10%)." },
+      { question: "Can your chronotype change?", answer: "Chronotype shifts naturally with age — teenagers tend toward Wolf, while older adults shift toward Lion. You can't fundamentally change your chronotype, but you can adjust habits to work better within your natural pattern." },
+      { question: "How does chronotype affect productivity?", answer: "Each chronotype has peak focus windows. Lions peak from 8-12pm, Bears from 10am-2pm, Wolves from 5-9pm, and Dolphins in short bursts mid-morning. Scheduling demanding work during your peak window significantly improves output." },
+      { question: "Is this quiz scientifically based?", answer: "This quiz is inspired by Dr. Michael Breus's chronotype model, which builds on decades of circadian rhythm research. While simplified, the four-type framework helps people identify their natural patterns and make practical scheduling adjustments." },
+    ],
+    relatedTools: ["sleep-calculator", "sleep-debt-calculator", "nap-calculator", "caffeine-calculator"],
+    relatedArticles: [{ title: "Understanding Your Chronotype", href: "/sleep/chronotype-guide" }],
+    affiliateHeading: "Sleep Optimisation",
+    affiliateText: "Dawn simulators, blue-light glasses, sleep journals, and chronotype-specific supplements.",
+  },
+  {
+    slug: "cold-plunge-timer",
+    name: "Cold Plunge Timer - Ice Bath Duration & Temperature Guide",
+    shortName: "Cold Plunge Timer",
+    description:
+      "Time your cold plunge sessions with recommended durations based on water temperature and experience level. Track your cold exposure practice safely.",
+    longDescription:
+      "Cold water immersion has gained attention for potential benefits including reduced inflammation, improved mood, and enhanced recovery. This timer helps you build a safe cold plunge practice with duration recommendations based on water temperature and your experience level. Start conservatively and progress gradually.",
+    icon: "snowflake",
+    category: "recovery",
+    keywords: [
+      "cold plunge timer", "ice bath timer", "cold water immersion",
+      "cold plunge benefits", "how long cold plunge", "ice bath duration",
+      "cold exposure timer", "cold plunge for beginners",
+    ],
+    faqs: [
+      { question: "How long should a cold plunge be?", answer: "Beginners should start with 30-60 seconds and work up gradually. Most research uses 2-5 minute exposures. Experienced practitioners may go up to 10-15 minutes in milder temperatures (15°C/59°F). Never exceed your comfort level and exit immediately if you feel unwell." },
+      { question: "What temperature should a cold plunge be?", answer: "Most protocols use water between 3-15°C (37-59°F). Beginners should start warmer (12-15°C) and progress to colder temperatures over weeks. Below 5°C is considered advanced and requires experience." },
+      { question: "What are the benefits of cold plunges?", answer: "Research suggests cold water immersion may reduce muscle soreness, decrease inflammation, improve mood through dopamine and norepinephrine release, enhance circulation, and build mental resilience. However, more research is needed for many claimed benefits." },
+      { question: "Who should avoid cold plunges?", answer: "People with cardiovascular conditions, Raynaud's disease, cold urticaria, uncontrolled blood pressure, or who are pregnant should avoid cold water immersion. Always consult your doctor before starting a cold plunge practice." },
+    ],
+    relatedTools: ["recovery-tracker", "muscle-recovery-calculator", "breathing-timer", "meditation-timer"],
+    relatedArticles: [{ title: "Cold Plunge Guide for Beginners", href: "/recovery/cold-plunge-guide" }],
+    affiliateHeading: "Cold Plunge Equipment",
+    affiliateText: "Cold plunge tubs, ice bath barrels, waterproof thermometers, and recovery robes.",
+  },
+  {
+    slug: "sauna-timer",
+    name: "Sauna Timer - Session Duration & Safety Guide",
+    shortName: "Sauna Timer",
+    description:
+      "Time your sauna sessions with duration and temperature recommendations based on sauna type, experience, and health goals. Includes hydration reminders.",
+    longDescription:
+      "Regular sauna use is associated with cardiovascular benefits, stress reduction, and improved recovery. This timer helps you structure safe, effective sauna sessions with recommendations based on the type of sauna (traditional, infrared, steam), your experience level, and your goals. Includes hydration tracking and cool-down guidance.",
+    icon: "thermometer",
+    category: "recovery",
+    keywords: [
+      "sauna timer", "sauna session length", "how long in sauna",
+      "sauna benefits", "infrared sauna timer", "sauna temperature guide",
+      "sauna for recovery", "sauna health benefits",
+    ],
+    faqs: [
+      { question: "How long should a sauna session be?", answer: "Beginners should start with 5-10 minutes. Experienced users typically do 15-20 minutes per session. Finnish sauna tradition often involves 2-3 rounds of 10-20 minutes with cool-down breaks. Never exceed 30 minutes in a single session." },
+      { question: "What temperature should a sauna be?", answer: "Traditional saunas: 70-100°C (158-212°F). Infrared saunas: 45-65°C (113-149°F). Steam rooms: 40-50°C (104-122°F). Infrared saunas operate at lower temperatures but the infrared radiation heats your body directly." },
+      { question: "What are the proven health benefits of sauna?", answer: "A large Finnish study found regular sauna use (4-7 times/week) was associated with significantly reduced risk of cardiovascular death, lower blood pressure, and reduced all-cause mortality. Sauna also triggers heat shock proteins that support cellular repair and immune function." },
+      { question: "How much water should I drink during a sauna?", answer: "Drink at least 500ml (16oz) of water before your session and another 500ml-1L after. You can lose 0.5-1kg of water weight per session through sweating. Replace electrolytes if doing extended or multiple sessions." },
+    ],
+    relatedTools: ["cold-plunge-timer", "recovery-tracker", "hydration-calculator", "muscle-recovery-calculator"],
+    relatedArticles: [{ title: "Sauna Benefits and Best Practices", href: "/recovery/sauna-guide" }],
+    affiliateHeading: "Sauna Accessories",
+    affiliateText: "Sauna thermometers, wooden buckets, essential oils, towels, and portable infrared saunas.",
+  },
+  {
+    slug: "pregnancy-weight-gain-calculator",
+    name: "Pregnancy Weight Gain Calculator - Healthy Range by Trimester",
+    shortName: "Pregnancy Weight Calculator",
+    description:
+      "Calculate the recommended weight gain range during pregnancy based on your pre-pregnancy BMI. Track your progress by trimester with IOM guidelines.",
+    longDescription:
+      "Healthy weight gain during pregnancy supports your baby's growth and your own health. Based on Institute of Medicine (IOM) guidelines, this calculator shows your recommended total weight gain range and expected gain by week and trimester, customised to your pre-pregnancy BMI. Track where you fall relative to the guidelines.",
+    icon: "pregnant",
+    category: "habits",
+    keywords: [
+      "pregnancy weight gain calculator", "how much weight should I gain pregnant",
+      "pregnancy weight tracker", "healthy pregnancy weight gain",
+      "weight gain by trimester", "IOM pregnancy weight gain",
+    ],
+    faqs: [
+      { question: "How much weight should I gain during pregnancy?", answer: "The IOM recommends: Underweight (BMI < 18.5): 12.5-18 kg (28-40 lbs). Normal weight (BMI 18.5-24.9): 11.5-16 kg (25-35 lbs). Overweight (BMI 25-29.9): 7-11.5 kg (15-25 lbs). Obese (BMI ≥ 30): 5-9 kg (11-20 lbs)." },
+      { question: "When does most pregnancy weight gain happen?", answer: "Most weight gain occurs in the second and third trimesters. In the first trimester, expect 0.5-2 kg (1-4 lbs) total. From the second trimester onwards, expect roughly 0.4-0.5 kg (about 1 lb) per week for normal-weight women." },
+      { question: "What does pregnancy weight gain consist of?", answer: "Baby: 3-4 kg. Placenta: 0.5-1 kg. Amniotic fluid: 1 kg. Uterus growth: 1 kg. Increased blood volume: 1.5-2 kg. Breast tissue: 0.5-1 kg. Fat stores for breastfeeding: 2-4 kg. Increased fluid: 1-2 kg." },
+      { question: "Is it safe to lose weight during pregnancy?", answer: "Intentional weight loss during pregnancy is generally not recommended. If you are overweight or obese, your provider may recommend slower weight gain rather than weight loss. Always follow your healthcare provider's personalised guidance." },
+    ],
+    relatedTools: ["pregnancy-due-date-calculator", "calorie-calculator", "hydration-calculator"],
+    relatedArticles: [{ title: "Healthy Pregnancy Weight Guide", href: "/wellness/pregnancy-weight-guide" }],
+    affiliateHeading: "Pregnancy Wellness",
+    affiliateText: "Pregnancy scales, bump-friendly fitness gear, prenatal vitamins, and pregnancy journals.",
+  },
+  {
+    slug: "biological-age-calculator",
+    name: "Biological Age Calculator - How Old Is Your Body Really?",
+    shortName: "Biological Age Calculator",
+    description:
+      "Estimate your biological age based on lifestyle, fitness, sleep, nutrition, and health markers. Compare your biological age to your chronological age.",
+    longDescription:
+      "Your biological age reflects how well your body is ageing compared to your calendar age. This quiz-style calculator assesses key lifestyle factors — exercise habits, sleep quality, nutrition, stress levels, social connection, and health markers — to estimate whether your body is ageing faster or slower than average. Get personalised recommendations to improve your biological age.",
+    icon: "dna",
+    category: "habits",
+    keywords: [
+      "biological age calculator", "biological age test", "how old is my body",
+      "real age calculator", "body age calculator", "biological age quiz",
+      "am I ageing well", "healthy ageing calculator",
+    ],
+    faqs: [
+      { question: "What is biological age?", answer: "Biological age measures how well your body functions compared to average for your chronological age. Someone who is 50 but exercises regularly, sleeps well, and manages stress might have a biological age of 42, meaning their body functions like a typical 42-year-old." },
+      { question: "How accurate is this calculator?", answer: "This is a lifestyle-based estimate, not a clinical measurement. True biological age testing uses biomarkers like DNA methylation, telomere length, or blood panels. This quiz provides a directional estimate based on factors strongly correlated with biological ageing in research." },
+      { question: "Can I lower my biological age?", answer: "Yes. Research shows that regular exercise, quality sleep, stress management, a healthy diet, not smoking, moderate alcohol intake, and strong social connections can all slow biological ageing. Some studies show measurable biological age reversal with sustained lifestyle changes." },
+      { question: "What factors most affect biological age?", answer: "The biggest modifiable factors are: regular exercise (especially both cardio and strength training), sleep quality and duration, diet quality, stress management, not smoking, and social connection. Genetics play a role but lifestyle factors are highly influential." },
+    ],
+    relatedTools: ["sleep-calculator", "calorie-calculator", "stress-reduction-checklist", "habit-tracker"],
+    relatedArticles: [{ title: "Healthy Ageing Guide", href: "/wellness/healthy-ageing-guide" }],
+    affiliateHeading: "Longevity & Ageing",
+    affiliateText: "Biological age test kits, longevity supplements, fitness trackers, and healthy ageing books.",
+  },
+  {
+    slug: "meal-timing-calculator",
+    name: "Meal Timing Calculator - Optimal Eating Windows",
+    shortName: "Meal Timing Calculator",
+    description:
+      "Calculate optimal meal and snack times based on your wake time, sleep time, workout schedule, and eating pattern. Align nutrition with your daily rhythm.",
+    longDescription:
+      "When you eat can be as important as what you eat. This calculator generates a personalised meal timing schedule based on your daily routine, workout times, and preferred eating pattern (3 meals, 5 small meals, or intermittent fasting). Align your nutrition with your circadian rhythm and training for better energy, digestion, and performance.",
+    icon: "clock-meal",
+    category: "nutrition",
+    keywords: [
+      "meal timing calculator", "when should I eat", "optimal meal times",
+      "meal schedule planner", "eating schedule calculator",
+      "best time to eat before workout", "nutrient timing",
+    ],
+    faqs: [
+      { question: "Does meal timing matter?", answer: "Research suggests that eating in alignment with your circadian rhythm — more calories earlier in the day — can improve metabolic health, weight management, and sleep quality. Pre- and post-workout nutrition timing also affects performance and recovery." },
+      { question: "How long before a workout should I eat?", answer: "A full meal 2-3 hours before exercise is ideal. A lighter snack can be eaten 30-60 minutes before. After exercise, eating within 30-60 minutes helps replenish glycogen and supports muscle recovery, especially if you train hard." },
+      { question: "Is it bad to eat late at night?", answer: "Eating close to bedtime can impair sleep quality and may be associated with weight gain. Research suggests finishing your last meal at least 2-3 hours before bed. However, a small protein-rich snack before bed can support overnight muscle recovery." },
+      { question: "How many meals per day is optimal?", answer: "There is no single best number. Both 3 meals and 5-6 smaller meals can work well depending on your preferences, schedule, and goals. Total daily intake matters more than meal frequency for most health outcomes. Consistency matters most." },
+    ],
+    relatedTools: ["calorie-calculator", "macro-calculator", "fasting-tracker", "protein-calculator"],
+    relatedArticles: [{ title: "Nutrient Timing Guide", href: "/nutrition/nutrient-timing" }],
+    affiliateHeading: "Meal Prep",
+    affiliateText: "Meal prep containers, food scales, portion control plates, and timed eating reminder apps.",
+  },
+  {
+    slug: "fiber-calculator",
+    name: "Fiber Calculator - Daily Fiber Intake Recommendation",
+    shortName: "Fiber Calculator",
+    description:
+      "Calculate your recommended daily fiber intake based on age and sex. Track your current intake and get high-fiber food suggestions to close the gap.",
+    longDescription:
+      "Most people consume far less fiber than recommended, which affects digestive health, heart health, and blood sugar control. Enter your age, sex, and estimated current fiber intake to see your recommended target, how much you are falling short, and specific high-fiber food suggestions to bridge the gap.",
+    icon: "grain",
+    category: "nutrition",
+    keywords: [
+      "fiber calculator", "how much fiber do I need", "daily fiber intake",
+      "fiber recommendation by age", "high fiber foods", "fiber intake calculator",
+      "dietary fiber calculator",
+    ],
+    faqs: [
+      { question: "How much fiber do adults need?", answer: "The Academy of Nutrition and Dietetics recommends 25g per day for women and 38g per day for men (14g per 1,000 calories consumed). After age 50, recommendations decrease to 21g for women and 30g for men. Most adults only consume about 15g per day." },
+      { question: "What happens if I don't eat enough fiber?", answer: "Insufficient fiber is linked to constipation, poor gut health, higher cholesterol, unstable blood sugar, increased risk of colorectal cancer, and reduced satiety (leading to overeating). Fiber feeds beneficial gut bacteria that support immune function and mental health." },
+      { question: "Should I increase fiber intake gradually?", answer: "Yes. Increasing fiber too quickly can cause bloating, gas, and discomfort. Add 3-5 grams per week and drink plenty of water. Your gut microbiome needs time to adapt to higher fiber intake." },
+      { question: "What are the best sources of fiber?", answer: "Legumes (lentils, chickpeas, black beans): 12-15g per cup. Whole grains (oats, quinoa, brown rice): 3-8g per serving. Fruits (raspberries, pears, apples with skin): 4-8g each. Vegetables (broccoli, artichoke, Brussels sprouts): 4-10g per cup. Seeds (chia, flax): 5-10g per tablespoon." },
+    ],
+    relatedTools: ["macro-calculator", "calorie-calculator", "protein-calculator", "hydration-calculator"],
+    relatedArticles: [{ title: "Complete Fiber Guide", href: "/nutrition/fiber-guide" }],
+    affiliateHeading: "Fiber Supplements",
+    affiliateText: "Psyllium husk, chia seeds, fiber supplements, and high-fiber recipe books.",
+  },
+  {
+    slug: "jump-rope-calorie-calculator",
+    name: "Jump Rope Calorie Calculator - Calories Burned Skipping",
+    shortName: "Jump Rope Calorie Calculator",
+    description:
+      "Calculate calories burned jumping rope based on your weight, duration, and intensity. Compare jump rope to other cardio exercises.",
+    longDescription:
+      "Jump rope is one of the most efficient cardio exercises, burning more calories per minute than running, cycling, or swimming at equivalent effort. Enter your weight, session duration, and jumping intensity to see your estimated calorie burn, plus comparisons to other popular cardio activities.",
+    icon: "jump-rope",
+    category: "cardio",
+    keywords: [
+      "jump rope calories", "calories burned jump rope", "skipping calories",
+      "jump rope calorie calculator", "how many calories does jump rope burn",
+      "jump rope for weight loss", "skipping rope calories burned",
+    ],
+    faqs: [
+      { question: "How many calories does jumping rope burn?", answer: "A 70kg (154lb) person burns approximately 10-16 calories per minute jumping rope, depending on intensity. That is 300-480 calories in 30 minutes — comparable to running at 8-10 km/h. Higher intensity (double unders, faster pace) burns significantly more." },
+      { question: "Is jump rope better than running for burning calories?", answer: "Minute for minute, jumping rope generally burns more calories than running at a moderate pace. A 10-minute jump rope session is roughly equivalent to running a 8-minute mile. Jump rope also provides more upper body engagement and coordination training." },
+      { question: "How long should I jump rope for?", answer: "Beginners should start with 5-10 minute sessions with rest breaks. Intermediate: 15-20 minutes. Advanced: 20-30+ minutes. Even short intervals (1-3 minute rounds) provide excellent cardiovascular benefits when done consistently." },
+      { question: "What MET value is used for jump rope?", answer: "MET values: slow pace (< 100 skips/min) = 8.8, moderate pace (100-120 skips/min) = 11.8, fast pace (> 120 skips/min) = 12.3. Double unders and advanced tricks increase to approximately 14.0 METs." },
+    ],
+    relatedTools: ["running-calorie-calculator", "cycling-calorie-calculator", "steps-to-calories-calculator"],
+    relatedArticles: [{ title: "Jump Rope Workout Guide", href: "/fitness/jump-rope-guide" }],
+    affiliateHeading: "Jump Rope Gear",
+    affiliateText: "Speed ropes, weighted ropes, jump rope mats, and interval timer apps.",
+  },
+  {
+    slug: "stair-climbing-calorie-calculator",
+    name: "Stair Climbing Calorie Calculator - Calories Burned on Stairs",
+    shortName: "Stair Climbing Calculator",
+    description:
+      "Calculate calories burned climbing stairs based on your weight, number of floors or minutes, and pace. See how stairs compare to other exercises.",
+    longDescription:
+      "Climbing stairs is a free, accessible workout that burns significant calories and strengthens your lower body and cardiovascular system. Calculate your calorie burn whether you are taking the stairs at work, doing a stair machine workout, or climbing a specific number of floors. Compare stair climbing to other activities.",
+    icon: "stairs",
+    category: "cardio",
+    keywords: [
+      "stair climbing calories", "calories burned climbing stairs",
+      "stairs calorie calculator", "stair stepper calories",
+      "how many calories climbing stairs", "stair climbing exercise",
+    ],
+    faqs: [
+      { question: "How many calories does climbing stairs burn?", answer: "A 70kg person burns approximately 0.15-0.20 calories per stair step, or roughly 5-10 calories per flight (one storey). Stair climbing burns about 8-11 calories per minute, which is higher than walking (3-5 cal/min) and comparable to jogging." },
+      { question: "How many stairs equal a workout?", answer: "Climbing 10-20 flights (about 150-300 steps) provides a meaningful workout for most people. The Empire State Building Run-Up covers 86 floors (1,576 steps). Even 5 flights per day provides measurable cardiovascular and muscular benefits over time." },
+      { question: "Is stair climbing good for weight loss?", answer: "Yes. Stair climbing is highly effective for weight loss because it burns significant calories, requires no equipment, and can be incorporated into daily routines. It also builds lower body muscle, which increases resting metabolic rate." },
+      { question: "What MET values are used?", answer: "Slow stair climbing = 4.0 METs, moderate pace = 8.8 METs, fast/vigorous = 14.0 METs. Descending stairs = 3.5 METs. Stair machine (general) = 9.0 METs." },
+    ],
+    relatedTools: ["walking-calorie-calculator", "steps-to-calories-calculator", "running-calorie-calculator"],
+    relatedArticles: [{ title: "Stair Climbing for Fitness", href: "/fitness/stair-climbing-guide" }],
+    affiliateHeading: "Stair Climbing Gear",
+    affiliateText: "Mini steppers, stair climbing machines, knee supports, and activity trackers.",
+  },
+  {
+    slug: "rowing-calorie-calculator",
+    name: "Rowing Calorie Calculator - Indoor & Outdoor Rowing Calories",
+    shortName: "Rowing Calorie Calculator",
+    description:
+      "Calculate calories burned rowing based on your weight, duration, intensity, and rowing type. See split times and compare to other cardio exercises.",
+    longDescription:
+      "Rowing is a full-body exercise that works 86% of your muscles while providing excellent cardiovascular training. Whether you use an indoor rowing machine (ergometer) or row on water, this calculator estimates your calorie burn based on weight, duration, and intensity. See how rowing compares to other cardio activities.",
+    icon: "rowing",
+    category: "cardio",
+    keywords: [
+      "rowing calories", "rowing calorie calculator", "calories burned rowing",
+      "rowing machine calories", "indoor rowing calories", "concept 2 calories",
+      "how many calories does rowing burn", "rowing for weight loss",
+    ],
+    faqs: [
+      { question: "How many calories does rowing burn?", answer: "A 70kg person burns approximately 200-300 calories in 30 minutes of moderate rowing and 350-500 calories during vigorous rowing. Rowing burns more calories than cycling at equivalent effort because it uses both upper and lower body muscles simultaneously." },
+      { question: "Is rowing a good full-body workout?", answer: "Yes. Rowing engages approximately 86% of your muscles. The drive phase works legs (60%), back and core (20%), and arms (20%). It develops cardiovascular fitness, muscular endurance, and strength simultaneously — making it one of the most efficient exercises." },
+      { question: "What MET values are used for rowing?", answer: "Ergometer (light effort, 50W) = 4.8 METs. Moderate (100W) = 7.0 METs. Vigorous (150W) = 8.5 METs. Very vigorous (200W+) = 12.0 METs. On-water recreational rowing = 5.3 METs, competitive = 12.0 METs." },
+      { question: "How does rowing compare to running?", answer: "At moderate intensity, 30 minutes of rowing burns similar calories to 30 minutes of running at 8-9 km/h. Rowing has the advantage of being low-impact (easier on joints) and providing a full-body workout rather than primarily lower body." },
+    ],
+    relatedTools: ["cycling-calorie-calculator", "swimming-calorie-calculator", "running-calorie-calculator"],
+    relatedArticles: [{ title: "Rowing Workout Guide", href: "/fitness/rowing-guide" }],
+    affiliateHeading: "Rowing Equipment",
+    affiliateText: "Indoor rowing machines, rowing gloves, heart rate monitors, and rowing training plans.",
+  },
+  {
+    slug: "plank-timer",
+    name: "Plank Timer - Core Exercise Timer with Progress Tracking",
+    shortName: "Plank Timer",
+    description:
+      "Time your plank holds with a visual countdown, progressive goals, and variation suggestions. Track your progress and build core strength systematically.",
+    longDescription:
+      "The plank is the most effective bodyweight core exercise, strengthening your abs, back, shoulders, and glutes simultaneously. This timer helps you build plank endurance with customisable durations, multiple plank variations, and progressive goals. Set a target, watch the countdown, and track your improvement over sessions.",
+    icon: "plank",
+    category: "fitness",
+    keywords: [
+      "plank timer", "plank hold timer", "plank exercise timer",
+      "how long can you plank", "plank challenge timer",
+      "core exercise timer", "plank workout",
+    ],
+    faqs: [
+      { question: "How long should I hold a plank?", answer: "Beginners: aim for 20-30 seconds. Intermediate: 45-90 seconds. Advanced: 2-5 minutes. Research suggests that multiple shorter planks (3-4 sets of 30-60 seconds) may be more beneficial than one long hold for building functional core strength." },
+      { question: "What muscles does a plank work?", answer: "Planks primarily target the rectus abdominis, transverse abdominis, obliques, and erector spinae. They also engage the shoulders (deltoids), chest (pectorals), glutes, quadriceps, and hip flexors. This makes them a true full-body isometric exercise." },
+      { question: "Are planks better than sit-ups?", answer: "For most people, yes. Planks train the core in its functional role (stabilisation) without the spinal flexion of sit-ups, which can strain the lower back. Planks also engage more muscle groups and build the anti-extension strength needed for daily activities and sports." },
+      { question: "How often should I plank?", answer: "Planks can be done daily since they are an isometric exercise with minimal muscle damage. However, for progressive overload, 3-4 times per week with rest days allows better adaptation. Vary the plank type to prevent plateaus and target different muscle fibres." },
+    ],
+    relatedTools: ["hiit-timer", "one-rep-max-calculator", "workout-split-generator"],
+    relatedArticles: [{ title: "Core Training Guide", href: "/fitness/core-training-guide" }],
+    affiliateHeading: "Core Training",
+    affiliateText: "Exercise mats, ab wheels, stability balls, and core training programs.",
+  },
+  {
+    slug: "bac-calculator",
+    name: "Blood Alcohol Calculator (BAC) - Estimate Your BAC Level",
+    shortName: "BAC Calculator",
+    description:
+      "Estimate your blood alcohol concentration based on your drinks, weight, sex, and time elapsed. Understand how alcohol affects your body and when you may be sober.",
+    longDescription:
+      "Blood Alcohol Concentration (BAC) measures the percentage of alcohol in your bloodstream. This calculator uses the Widmark formula to estimate your BAC based on what you have drunk, your body weight, biological sex, and how much time has passed. Understand the effects at different BAC levels and when you may return to zero.",
+    icon: "beer",
+    category: "habits",
+    keywords: [
+      "BAC calculator", "blood alcohol calculator", "blood alcohol level",
+      "how drunk am I", "alcohol calculator", "BAC estimator",
+      "when will I be sober", "blood alcohol concentration calculator",
+    ],
+    faqs: [
+      { question: "How is BAC calculated?", answer: "The Widmark formula estimates BAC: BAC = (grams of alcohol / (body weight in grams × r)) − (0.015 × hours since first drink). The 'r' value (Widmark factor) is 0.68 for males and 0.55 for females, reflecting differences in body water content." },
+      { question: "What BAC level is legally drunk?", answer: "Most US states and many countries set the legal driving limit at 0.08% BAC. However, impairment begins well below this level — reaction time and judgment are measurably affected at 0.02-0.03% BAC. Many European countries use a 0.05% limit." },
+      { question: "How fast does alcohol leave your system?", answer: "Your body metabolises alcohol at approximately 0.015% BAC per hour (roughly one standard drink per hour). This rate cannot be sped up by coffee, cold showers, food, or exercise. Only time reduces BAC." },
+      { question: "Is this calculator accurate for driving decisions?", answer: "No BAC calculator should be used to decide if you are safe to drive. Impairment varies greatly between individuals and can occur at any BAC level. The only safe BAC for driving is 0.00%. This tool is for educational purposes only." },
+    ],
+    relatedTools: ["alcohol-unit-calculator", "hydration-calculator", "sleep-calculator"],
+    relatedArticles: [{ title: "Alcohol and Health", href: "/wellness/alcohol-health-guide" }],
+    affiliateHeading: "Responsible Drinking",
+    affiliateText: "Personal BAC testers, non-alcoholic alternatives, drink tracking apps, and alcohol-free spirits.",
+  },
+  {
+    slug: "push-up-test",
+    name: "Push-Up Test - Assess Your Upper Body Fitness Level",
+    shortName: "Push-Up Test",
+    description:
+      "Assess your upper body strength and endurance with the standardised push-up test. Compare your score to age and sex-based fitness norms.",
+    longDescription:
+      "The push-up test is a widely used fitness assessment that measures upper body muscular endurance. Perform as many push-ups as you can in one minute (or until failure), enter your count along with your age and sex, and see how you compare to established fitness norms. Track your progress over time and get training recommendations to improve.",
+    icon: "pushup",
+    category: "fitness",
+    keywords: [
+      "push up test", "push up fitness test", "how many push ups should I do",
+      "push up norms by age", "push up assessment", "upper body fitness test",
+      "push up standards", "push up test chart",
+    ],
+    faqs: [
+      { question: "How many push-ups should I be able to do?", answer: "It varies by age and sex. For men aged 20-29: 17-29 is average, 36+ is above average. For women aged 20-29: 6-14 is average, 20+ is above average. These norms decrease with age. Any improvement from your baseline is progress." },
+      { question: "How is the push-up test performed?", answer: "Start in a standard push-up position (hands shoulder-width, body straight from head to heels). Lower your chest to the floor (or within a fist's width), then push back up fully. Count the maximum number you can complete with proper form, without resting on the ground." },
+      { question: "Do push-ups predict heart health?", answer: "A 2019 Harvard study found that men who could do 40+ push-ups had a 96% lower risk of cardiovascular events compared to those who could do fewer than 10. Push-up capacity is a simple, practical indicator of overall fitness and cardiovascular health." },
+      { question: "How can I improve my push-up count?", answer: "Practice push-ups 3-4 times per week using a 'grease the groove' approach (multiple sets throughout the day at sub-max reps). Supplement with bench press, dips, and plank holds. Beginners can start with incline push-ups and progress to standard form." },
+    ],
+    relatedTools: ["one-rep-max-calculator", "workout-split-generator", "plank-timer"],
+    relatedArticles: [{ title: "Upper Body Strength Guide", href: "/fitness/upper-body-guide" }],
+    affiliateHeading: "Fitness Testing",
+    affiliateText: "Push-up handles, resistance bands, exercise mats, and fitness testing kits.",
+  },
+  {
+    slug: "desk-ergonomics-checker",
+    name: "Desk Ergonomics Checker - Optimise Your Workspace Setup",
+    shortName: "Desk Ergonomics Checker",
+    description:
+      "Assess your desk setup with a guided checklist covering chair height, monitor position, keyboard placement, and posture. Get personalised improvement tips.",
+    longDescription:
+      "Poor desk ergonomics contribute to neck pain, back pain, eye strain, carpal tunnel, and headaches. This guided assessment walks you through every aspect of your workspace — from chair height to monitor distance to keyboard angle — and scores your setup. Get specific, actionable recommendations to reduce pain and improve comfort.",
+    icon: "desk",
+    category: "habits",
+    keywords: [
+      "desk ergonomics checker", "ergonomic desk setup", "workstation assessment",
+      "desk posture checker", "home office ergonomics", "computer ergonomics",
+      "desk setup guide", "ergonomic assessment tool",
+    ],
+    faqs: [
+      { question: "What is the ideal monitor height?", answer: "The top of your screen should be at or slightly below eye level, about an arm's length away (50-70 cm). Your eyes should look slightly downward at a 15-20 degree angle when viewing the centre of the screen. This reduces neck strain and eye fatigue." },
+      { question: "How high should my desk chair be?", answer: "Your chair height should allow your feet to rest flat on the floor (or on a footrest) with your knees bent at approximately 90 degrees. Your thighs should be parallel to the floor. Armrests should support your forearms at desk height without raising your shoulders." },
+      { question: "How often should I take breaks from sitting?", answer: "Follow the 20-20-20 rule for eyes (every 20 minutes, look 20 feet away for 20 seconds). Stand or walk for 2-5 minutes every 30-60 minutes. Research shows that breaking up prolonged sitting reduces back pain, improves circulation, and increases productivity." },
+      { question: "Does a standing desk help?", answer: "Alternating between sitting and standing is better than either alone. Stand for 15-30 minutes per hour. Standing all day can cause its own issues (leg fatigue, varicose veins). A sit-stand desk with an anti-fatigue mat provides the best ergonomic flexibility." },
+    ],
+    relatedTools: ["screen-time-calculator", "stress-reduction-checklist", "stretching-routine-generator"],
+    relatedArticles: [{ title: "Home Office Ergonomics Guide", href: "/wellness/desk-ergonomics-guide" }],
+    affiliateHeading: "Ergonomic Essentials",
+    affiliateText: "Monitor arms, ergonomic keyboards, lumbar supports, standing desk converters, and footrests.",
+  },
 ];
 
 // ─── Lookup Helpers ─────────────────────────────────────────────────
