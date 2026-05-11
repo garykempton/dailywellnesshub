@@ -9,7 +9,7 @@ import { TOOL_CATEGORIES, getToolsByCategory, TOOLS_REGISTRY } from "@/lib/tools
 import { ICON_MAP } from "@/components/ToolPageLayout";
 
 const totalTools =
-  TOOLS_REGISTRY.length + 2; // +2 for legacy BMI & heart-rate tools not yet in registry
+  TOOLS_REGISTRY.length + 2; // +2 for legacy BMI & heart-rate tools not in registry
 
 export const metadata: Metadata = buildMetadata({
   title: "Free Wellness Tools & Calculators",

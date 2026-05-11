@@ -1913,6 +1913,817 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     affiliateText:
       "Prenatal vitamins, pregnancy journals, and comfortable maternity products for every trimester.",
   },
+  {
+    slug: "period-calculator",
+    name: "Period Calculator - Predict Your Next Menstrual Cycle",
+    shortName: "Period Calculator",
+    description:
+      "Predict your next period, fertile window, and ovulation date based on your cycle history. View a 6-month menstrual cycle forecast.",
+    longDescription:
+      "Understanding your menstrual cycle helps you plan ahead and recognise changes in your health. Enter the first day of your last period and your average cycle length to get predictions for the next 6 months, including expected period start dates, fertile windows, and estimated ovulation days.",
+    icon: "calendar",
+    category: "habits",
+    keywords: [
+      "period calculator",
+      "menstrual cycle calculator",
+      "next period predictor",
+      "when is my next period",
+      "menstrual cycle tracker",
+      "period date calculator",
+      "cycle length calculator",
+    ],
+    faqs: [
+      {
+        question: "How is my next period calculated?",
+        answer:
+          "Your next period is estimated by adding your average cycle length (in days) to the first day of your last period. The average cycle length is 28 days, but normal cycles range from 21 to 35 days.",
+      },
+      {
+        question: "What is a normal menstrual cycle length?",
+        answer:
+          "Normal menstrual cycles range from 21 to 35 days, with the average being 28 days. Cycles can vary from month to month. Consistently irregular cycles should be discussed with a healthcare provider.",
+      },
+      {
+        question: "When is my fertile window?",
+        answer:
+          "Your fertile window is typically the 5 days before ovulation and the day of ovulation itself. Ovulation usually occurs about 14 days before your next expected period, not 14 days after your last period started.",
+      },
+      {
+        question: "Can stress affect my cycle?",
+        answer:
+          "Yes. Stress, significant weight changes, intense exercise, illness, and travel can all affect your menstrual cycle timing. This calculator provides estimates based on your average cycle — actual dates may vary.",
+      },
+    ],
+    relatedTools: [
+      "ovulation-calculator",
+      "pregnancy-due-date-calculator",
+      "sleep-calculator",
+    ],
+    relatedArticles: [
+      { title: "Understanding Your Menstrual Cycle", href: "/wellness/menstrual-cycle-guide" },
+    ],
+    affiliateHeading: "Cycle Tracking Essentials",
+    affiliateText:
+      "Period tracking apps, menstrual cups, heating pads, and supplements to support your cycle.",
+  },
+  {
+    slug: "ovulation-calculator",
+    name: "Ovulation Calculator - Find Your Fertile Window",
+    shortName: "Ovulation Calculator",
+    description:
+      "Estimate your ovulation date and fertile window based on your menstrual cycle. View a 6-month fertility forecast to help you plan.",
+    longDescription:
+      "Knowing when you ovulate is key to understanding your fertility. This calculator estimates your ovulation date and most fertile days based on your cycle length and last period date. View predictions for the next 6 months to identify your best chances of conception — or to better understand your body's natural rhythm.",
+    icon: "flower",
+    category: "habits",
+    keywords: [
+      "ovulation calculator",
+      "fertility calculator",
+      "when do I ovulate",
+      "fertile window calculator",
+      "ovulation predictor",
+      "best time to conceive",
+      "fertility window",
+      "ovulation date calculator",
+    ],
+    faqs: [
+      {
+        question: "How is ovulation date calculated?",
+        answer:
+          "Ovulation is estimated by subtracting 14 days from your expected next period date. This is based on the luteal phase (the time between ovulation and your period) typically being about 14 days, though it can range from 12-16 days.",
+      },
+      {
+        question: "What is the fertile window?",
+        answer:
+          "The fertile window spans approximately 6 days: the 5 days before ovulation and the day of ovulation itself. Sperm can survive in the reproductive tract for up to 5 days, while an egg is viable for 12-24 hours after release.",
+      },
+      {
+        question: "How accurate is an ovulation calculator?",
+        answer:
+          "Ovulation calculators provide estimates based on average cycle patterns. Actual ovulation can vary. For more precise tracking, combine calendar predictions with ovulation predictor kits (OPKs), basal body temperature charting, or cervical mucus monitoring.",
+      },
+      {
+        question: "Can I ovulate at different times each cycle?",
+        answer:
+          "Yes. Ovulation timing can vary from cycle to cycle due to stress, illness, travel, weight changes, and hormonal fluctuations. Cycles with irregular ovulation are common and normal.",
+      },
+    ],
+    relatedTools: [
+      "period-calculator",
+      "pregnancy-due-date-calculator",
+      "stress-reduction-checklist",
+    ],
+    relatedArticles: [
+      { title: "Understanding Ovulation and Fertility", href: "/wellness/ovulation-fertility-guide" },
+    ],
+    affiliateHeading: "Fertility Planning",
+    affiliateText:
+      "Ovulation predictor kits, basal thermometers, fertility supplements, and tracking tools.",
+  },
+  {
+    slug: "blood-pressure-checker",
+    name: "Blood Pressure Checker - Understand Your Reading",
+    shortName: "Blood Pressure Checker",
+    description:
+      "Enter your blood pressure reading to see which category it falls into (normal, elevated, or high) based on AHA guidelines, with lifestyle recommendations.",
+    longDescription:
+      "Understanding your blood pressure numbers is one of the most important things you can do for your heart health. Enter your systolic (top) and diastolic (bottom) numbers to see how your reading compares to American Heart Association guidelines. Get personalised lifestyle recommendations based on your category.",
+    icon: "stethoscope",
+    category: "habits",
+    keywords: [
+      "blood pressure checker",
+      "blood pressure chart",
+      "is my blood pressure normal",
+      "blood pressure categories",
+      "blood pressure calculator",
+      "high blood pressure check",
+      "blood pressure reading",
+      "what does my blood pressure mean",
+    ],
+    faqs: [
+      {
+        question: "What is a normal blood pressure reading?",
+        answer:
+          "A normal blood pressure reading is below 120/80 mmHg according to the American Heart Association. The top number (systolic) measures pressure when your heart beats; the bottom number (diastolic) measures pressure when your heart rests between beats.",
+      },
+      {
+        question: "What are the blood pressure categories?",
+        answer:
+          "The AHA defines five categories: Normal (less than 120/80), Elevated (120-129/less than 80), High Blood Pressure Stage 1 (130-139 or 80-89), High Blood Pressure Stage 2 (140+ or 90+), and Hypertensive Crisis (higher than 180/120).",
+      },
+      {
+        question: "When should I check my blood pressure?",
+        answer:
+          "Check at the same time each day, ideally in the morning before eating or taking medication and again in the evening. Sit quietly for 5 minutes before measuring. Take 2-3 readings one minute apart and record the average.",
+      },
+      {
+        question: "Can lifestyle changes lower blood pressure?",
+        answer:
+          "Yes. Regular exercise, reducing sodium intake, maintaining a healthy weight, limiting alcohol, managing stress, and eating a diet rich in fruits, vegetables, and whole grains (like the DASH diet) can all help lower blood pressure.",
+      },
+    ],
+    relatedTools: [
+      "heart-rate-calculator",
+      "calorie-calculator",
+      "stress-reduction-checklist",
+    ],
+    relatedArticles: [
+      { title: "Understanding Blood Pressure", href: "/wellness/blood-pressure-guide" },
+    ],
+    affiliateHeading: "Blood Pressure Monitoring",
+    affiliateText:
+      "Home blood pressure monitors, wrist cuffs, tracking logs, and heart-healthy supplements.",
+  },
+  {
+    slug: "calorie-deficit-calculator",
+    name: "Calorie Deficit Calculator - How Much to Eat to Lose Weight",
+    shortName: "Calorie Deficit Calculator",
+    description:
+      "Calculate your daily calorie target for safe, sustainable weight loss. See how long it will take to reach your goal weight with different deficit sizes.",
+    longDescription:
+      "Losing weight requires eating fewer calories than your body burns — a calorie deficit. This calculator estimates your maintenance calories using the Mifflin-St Jeor equation, then shows you daily calorie targets for different deficit levels (mild, moderate, aggressive). See your projected timeline to reach your goal weight safely.",
+    icon: "chart-down",
+    category: "nutrition",
+    keywords: [
+      "calorie deficit calculator",
+      "how many calories to lose weight",
+      "weight loss calorie calculator",
+      "calorie deficit for weight loss",
+      "how much should I eat to lose weight",
+      "safe calorie deficit",
+      "weight loss calculator",
+    ],
+    faqs: [
+      {
+        question: "What is a calorie deficit?",
+        answer:
+          "A calorie deficit means consuming fewer calories than your body burns in a day. A deficit of about 500 calories per day leads to roughly 1 pound (0.45 kg) of weight loss per week, since one pound of body fat contains approximately 3,500 calories.",
+      },
+      {
+        question: "What is a safe rate of weight loss?",
+        answer:
+          "Most health organisations recommend losing 0.5 to 1 kg (1-2 lbs) per week. Faster weight loss can lead to muscle loss, nutritional deficiencies, gallstones, and metabolic slowdown. Very low calorie diets should only be followed under medical supervision.",
+      },
+      {
+        question: "Should I eat back exercise calories?",
+        answer:
+          "It depends on your approach. If your TDEE already accounts for your activity level, you don't need to eat back exercise calories. If you calculated your deficit from your BMR or sedentary TDEE, you may want to eat back a portion (about 50-75%) of exercise calories to avoid too large a deficit.",
+      },
+      {
+        question: "What is the minimum safe calorie intake?",
+        answer:
+          "General guidelines suggest women should not eat below 1,200 calories and men should not eat below 1,500 calories per day without medical supervision. Eating too few calories can slow metabolism, cause nutrient deficiencies, and lead to muscle loss.",
+      },
+    ],
+    relatedTools: [
+      "calorie-calculator",
+      "macro-calculator",
+      "protein-calculator",
+      "walking-calorie-calculator",
+    ],
+    relatedArticles: [
+      { title: "Sustainable Weight Loss Guide", href: "/weight-loss/sustainable-weight-loss" },
+    ],
+    affiliateHeading: "Weight Loss Support",
+    affiliateText:
+      "Food scales, meal prep containers, calorie tracking apps, and portion control plates.",
+  },
+  {
+    slug: "alcohol-unit-calculator",
+    name: "Alcohol Unit Calculator - Track Your Drinking",
+    shortName: "Alcohol Unit Calculator",
+    description:
+      "Calculate alcohol units, calories, and estimated metabolism time for your drinks. Compare your intake to recommended weekly limits.",
+    longDescription:
+      "Understanding how many units of alcohol you consume helps you make informed decisions about your drinking. Enter your drinks to see total units, calories, and how long your body needs to process the alcohol. Compare your weekly intake to UK Chief Medical Officers' guidelines (14 units per week).",
+    icon: "wine",
+    category: "nutrition",
+    keywords: [
+      "alcohol unit calculator",
+      "units in a pint",
+      "alcohol units calculator",
+      "how many units in wine",
+      "alcohol calorie calculator",
+      "drink units calculator",
+      "weekly alcohol units",
+    ],
+    faqs: [
+      {
+        question: "How is an alcohol unit calculated?",
+        answer:
+          "One UK alcohol unit equals 10ml (8g) of pure alcohol. The formula is: units = (volume in ml × ABV%) ÷ 1,000. For example, a pint (568ml) of 4% beer = (568 × 4) ÷ 1,000 = 2.3 units.",
+      },
+      {
+        question: "What is the recommended weekly limit?",
+        answer:
+          "The UK Chief Medical Officers recommend no more than 14 units per week for both men and women, spread over 3 or more days with several drink-free days. This is roughly equivalent to 6 pints of 4% beer or 6 medium glasses of 13% wine.",
+      },
+      {
+        question: "How long does it take to process alcohol?",
+        answer:
+          "Your body processes approximately 1 unit of alcohol per hour. This rate cannot be sped up by coffee, cold showers, or food. A heavy night of drinking (12 units) could mean alcohol is still in your system 12+ hours later.",
+      },
+      {
+        question: "How many calories are in alcohol?",
+        answer:
+          "Alcohol contains 7 calories per gram — nearly as much as fat (9 cal/g). A pint of 4% beer has about 180 calories, a medium glass of wine about 160 calories, and a single spirit with mixer about 100-120 calories.",
+      },
+    ],
+    relatedTools: [
+      "calorie-calculator",
+      "hydration-calculator",
+      "sleep-calculator",
+    ],
+    relatedArticles: [
+      { title: "Alcohol and Wellness", href: "/wellness/alcohol-health-guide" },
+    ],
+    affiliateHeading: "Mindful Drinking",
+    affiliateText:
+      "Non-alcoholic alternatives, alcohol-free spirits, drink tracking journals, and wellness books.",
+  },
+  {
+    slug: "body-type-calculator",
+    name: "Body Type Calculator - Ectomorph, Mesomorph, or Endomorph",
+    shortName: "Body Type Calculator",
+    description:
+      "Determine your somatotype (ectomorph, mesomorph, or endomorph) based on your measurements. Get training and nutrition recommendations for your body type.",
+    longDescription:
+      "Understanding your body type (somatotype) can help guide your training and nutrition strategy. Answer questions about your bone structure, natural build, and body tendencies to find out whether you lean toward ectomorph (naturally lean), mesomorph (muscular build), or endomorph (stockier build). Most people are a blend of types.",
+    icon: "body-type",
+    category: "body-composition",
+    keywords: [
+      "body type calculator",
+      "what body type am I",
+      "ectomorph mesomorph endomorph",
+      "somatotype calculator",
+      "body type quiz",
+      "body type test",
+      "am I an ectomorph",
+    ],
+    faqs: [
+      {
+        question: "What are the three body types?",
+        answer:
+          "Ectomorph: naturally lean, narrow shoulders and hips, fast metabolism, finds it hard to gain weight. Mesomorph: naturally muscular, medium frame, gains muscle easily. Endomorph: wider build, stores fat more easily, strong but may struggle to lose weight.",
+      },
+      {
+        question: "Can your body type change?",
+        answer:
+          "Your underlying skeletal structure doesn't change, but your body composition (muscle and fat) absolutely can. Training and nutrition can significantly alter how your body looks and performs regardless of your somatotype classification.",
+      },
+      {
+        question: "How should different body types train?",
+        answer:
+          "Ectomorphs often benefit from heavy compound lifts with fewer reps and more calories. Mesomorphs respond well to varied training. Endomorphs may benefit from combining strength training with cardio and paying closer attention to calorie intake. However, individual variation matters more than body type labels.",
+      },
+      {
+        question: "Is the body type system scientifically accurate?",
+        answer:
+          "Somatotyping was developed by psychologist William Sheldon in the 1940s. While the strict categories are an oversimplification, the general concept that people have different natural builds, metabolic tendencies, and responses to training is well-supported. Most people are a blend of all three types.",
+      },
+    ],
+    relatedTools: [
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "calorie-calculator",
+      "protein-calculator",
+    ],
+    relatedArticles: [
+      { title: "Training for Your Body Type", href: "/fitness/body-type-training" },
+    ],
+    affiliateHeading: "Training Gear",
+    affiliateText:
+      "Adjustable dumbbells, resistance bands, body composition scales, and training programs for your body type.",
+  },
+  {
+    slug: "hiit-timer",
+    name: "HIIT Timer - Interval Training Workout Timer",
+    shortName: "HIIT Timer",
+    description:
+      "Customisable HIIT interval timer with work/rest periods, round counter, warmup, and cooldown. Visual and audio cues keep you on track.",
+    longDescription:
+      "High-Intensity Interval Training (HIIT) is one of the most effective training methods for burning calories and improving cardiovascular fitness. Set your work and rest intervals, number of rounds, and optional warmup/cooldown periods. The timer provides clear visual countdowns and phase indicators so you can focus on your workout.",
+    icon: "stopwatch",
+    category: "fitness",
+    keywords: [
+      "HIIT timer",
+      "interval timer",
+      "tabata timer",
+      "workout timer",
+      "interval training timer",
+      "HIIT workout timer",
+      "exercise timer",
+      "circuit training timer",
+    ],
+    faqs: [
+      {
+        question: "What is HIIT?",
+        answer:
+          "High-Intensity Interval Training (HIIT) alternates between short bursts of intense exercise and brief recovery periods. A typical session lasts 15-30 minutes and can burn as many calories as a longer moderate-intensity workout.",
+      },
+      {
+        question: "What are good HIIT work/rest ratios?",
+        answer:
+          "Common ratios include 1:1 (e.g. 30s work/30s rest) for beginners, 2:1 (e.g. 40s work/20s rest) for intermediate, and Tabata-style 20s work/10s rest for advanced. Start with longer rest periods and progress as your fitness improves.",
+      },
+      {
+        question: "How often should I do HIIT?",
+        answer:
+          "Most experts recommend 2-3 HIIT sessions per week with at least 48 hours between sessions. HIIT places significant stress on your body and nervous system, so adequate recovery is essential to avoid overtraining and injury.",
+      },
+      {
+        question: "What is Tabata training?",
+        answer:
+          "Tabata is a specific HIIT protocol: 20 seconds of maximum-effort exercise followed by 10 seconds of rest, repeated for 8 rounds (4 minutes total). It was developed by Japanese researcher Dr. Izumi Tabata and is extremely demanding.",
+      },
+    ],
+    relatedTools: [
+      "running-calorie-calculator",
+      "heart-rate-calculator",
+      "recovery-tracker",
+      "calories-calculator",
+    ],
+    relatedArticles: [
+      { title: "HIIT for Beginners", href: "/fitness/hiit-beginners-guide" },
+    ],
+    affiliateHeading: "HIIT Equipment",
+    affiliateText:
+      "Jump ropes, kettlebells, resistance bands, exercise mats, and heart rate monitors for HIIT training.",
+  },
+  {
+    slug: "meditation-timer",
+    name: "Meditation Timer - Guided Session Timer with Interval Bells",
+    shortName: "Meditation Timer",
+    description:
+      "Simple meditation timer with customisable duration, interval bells, and ambient sound options. Track your practice with session summaries.",
+    longDescription:
+      "A distraction-free meditation timer to support your mindfulness practice. Set your session length, choose optional interval bells to gently mark time, and select from calming ambient sounds. The minimal interface lets you focus entirely on your meditation without watching the clock.",
+    icon: "lotus",
+    category: "stress",
+    keywords: [
+      "meditation timer",
+      "mindfulness timer",
+      "meditation bell timer",
+      "zen timer",
+      "meditation clock",
+      "guided meditation timer",
+      "mindfulness practice timer",
+      "meditation session timer",
+    ],
+    faqs: [
+      {
+        question: "How long should I meditate?",
+        answer:
+          "Start with 5 minutes and gradually increase. Research shows benefits from as little as 10 minutes daily. Experienced meditators typically sit for 20-45 minutes. Consistency matters more than duration — daily 10-minute sessions are better than occasional longer ones.",
+      },
+      {
+        question: "What are interval bells used for?",
+        answer:
+          "Interval bells gently sound at set intervals during your meditation. They can help you stay present, mark transitions between different practices (e.g. body scan then breath focus), or simply reassure you that time is passing so you don't need to check the clock.",
+      },
+      {
+        question: "When is the best time to meditate?",
+        answer:
+          "Morning meditation sets a calm tone for the day. However, the best time is whenever you can do it consistently. Some people prefer meditating before bed to improve sleep quality, while others use a midday session to manage stress.",
+      },
+      {
+        question: "What are the proven benefits of meditation?",
+        answer:
+          "Research shows regular meditation can reduce stress and anxiety, lower blood pressure, improve focus and concentration, enhance emotional regulation, improve sleep quality, and even change brain structure in areas related to attention and emotional processing.",
+      },
+    ],
+    relatedTools: [
+      "breathing-timer",
+      "stress-reduction-checklist",
+      "sleep-calculator",
+      "nap-calculator",
+    ],
+    relatedArticles: [
+      { title: "Meditation for Beginners", href: "/wellness/meditation-beginners-guide" },
+    ],
+    affiliateHeading: "Meditation Essentials",
+    affiliateText:
+      "Meditation cushions, singing bowls, eye masks, incense, and mindfulness journals.",
+  },
+  {
+    slug: "workout-split-generator",
+    name: "Workout Split Generator - Weekly Training Plan Builder",
+    shortName: "Workout Split Generator",
+    description:
+      "Generate a weekly workout split based on your training days, experience level, and goals. Get muscle group assignments and exercise suggestions for each day.",
+    longDescription:
+      "Your workout split — how you organise muscle groups across training days — is one of the biggest factors in your results. Tell us how many days you can train, your experience level, and your primary goal, and we'll generate an optimised weekly split with muscle group assignments and suggested exercises for each session.",
+    icon: "clipboard",
+    category: "fitness",
+    keywords: [
+      "workout split",
+      "workout split generator",
+      "push pull legs",
+      "training split",
+      "workout plan generator",
+      "gym split",
+      "bro split",
+      "upper lower split",
+      "workout schedule",
+    ],
+    faqs: [
+      {
+        question: "What is a workout split?",
+        answer:
+          "A workout split is how you divide your training across the week. Common splits include Push/Pull/Legs (PPL), Upper/Lower, Full Body, and the traditional 'bro split' (one muscle group per day). The best split depends on your schedule, experience, and goals.",
+      },
+      {
+        question: "How many days per week should I train?",
+        answer:
+          "Beginners benefit from 3-4 days. Intermediate lifters typically train 4-5 days. Advanced lifters may train 5-6 days. More isn't always better — recovery is when muscle growth happens. Each muscle group needs roughly 48-72 hours of recovery.",
+      },
+      {
+        question: "What is the Push/Pull/Legs split?",
+        answer:
+          "PPL divides workouts into push movements (chest, shoulders, triceps), pull movements (back, biceps, rear delts), and legs (quads, hamstrings, glutes, calves). It can be run 3 days/week or 6 days/week (each twice). It's popular because it provides good volume with logical groupings.",
+      },
+      {
+        question: "Should beginners do full body or split routines?",
+        answer:
+          "Most evidence supports full-body routines for beginners (3 days/week). They allow higher training frequency per muscle group, are more time-efficient, and provide ample recovery. As you advance and need more volume per muscle group, splits become more practical.",
+      },
+    ],
+    relatedTools: [
+      "one-rep-max-calculator",
+      "protein-calculator",
+      "recovery-tracker",
+      "muscle-recovery-calculator",
+    ],
+    relatedArticles: [
+      { title: "Choosing the Right Workout Split", href: "/fitness/workout-split-guide" },
+    ],
+    affiliateHeading: "Strength Training Gear",
+    affiliateText:
+      "Lifting belts, wrist wraps, resistance bands, workout journals, and adjustable dumbbells.",
+  },
+  {
+    slug: "pace-converter",
+    name: "Pace Converter - Running Pace & Speed Calculator",
+    shortName: "Pace Converter",
+    description:
+      "Convert running pace between min/km and min/mile. See your speed in km/h and mph, plus estimated finish times for common race distances.",
+    longDescription:
+      "Quickly convert your running pace between metric and imperial units. Enter a pace in minutes per kilometre or minutes per mile to see the conversion, your speed in both km/h and mph, and estimated finish times for 5K, 10K, half marathon, and full marathon distances.",
+    icon: "arrows",
+    category: "cardio",
+    keywords: [
+      "pace converter",
+      "running pace converter",
+      "min/km to min/mile",
+      "pace calculator km to miles",
+      "running speed calculator",
+      "pace conversion chart",
+      "km pace to mile pace",
+    ],
+    faqs: [
+      {
+        question: "How do I convert min/km to min/mile?",
+        answer:
+          "Multiply your min/km pace by 1.60934. For example, 5:00/km × 1.60934 = 8:03/mile. To convert min/mile to min/km, divide by 1.60934 (or multiply by 0.621371).",
+      },
+      {
+        question: "What is a good running pace?",
+        answer:
+          "It depends on experience and distance. For recreational runners, a 5K pace of 6:00-7:00/km (9:40-11:15/mile) is common. Competitive runners target 4:00-5:00/km (6:26-8:03/mile). Elite runners run sub-3:00/km (sub-4:50/mile) for 5K.",
+      },
+      {
+        question: "How does pace differ from speed?",
+        answer:
+          "Pace is time per distance (e.g. 5:30 per km), while speed is distance per time (e.g. 10.9 km/h). Runners typically think in pace because it directly translates to race finish times, but speed is useful for comparing with cycling or other activities.",
+      },
+    ],
+    relatedTools: [
+      "running-pace-calculator",
+      "running-calorie-calculator",
+      "vo2-max-calculator",
+    ],
+    relatedArticles: [
+      { title: "Running Pace Strategy Guide", href: "/fitness/running-pace-strategy" },
+    ],
+    affiliateHeading: "Running Gear",
+    affiliateText:
+      "GPS running watches, running shoes, hydration vests, and training plan books.",
+  },
+  {
+    slug: "stretching-routine-generator",
+    name: "Stretching Routine Generator - Custom Flexibility Routine",
+    shortName: "Stretching Routine",
+    description:
+      "Generate a personalised stretching routine based on your target areas, available time, and flexibility level. Get an ordered sequence with hold times.",
+    longDescription:
+      "A good stretching routine improves flexibility, reduces injury risk, and speeds recovery. Select the body areas you want to target, how much time you have, and your current flexibility level. The generator creates an ordered sequence of stretches with recommended hold times and clear instructions.",
+    icon: "acrobat",
+    category: "recovery",
+    keywords: [
+      "stretching routine",
+      "stretching routine generator",
+      "flexibility routine",
+      "stretches for beginners",
+      "full body stretch routine",
+      "post workout stretches",
+      "morning stretching routine",
+      "daily stretching plan",
+    ],
+    faqs: [
+      {
+        question: "How long should I hold a stretch?",
+        answer:
+          "Hold static stretches for 15-30 seconds for maintenance, or 30-60 seconds to improve flexibility. The American College of Sports Medicine recommends holding each stretch for at least 15 seconds and repeating 2-4 times.",
+      },
+      {
+        question: "Should I stretch before or after exercise?",
+        answer:
+          "Dynamic stretches (leg swings, arm circles) are best before exercise to warm up muscles. Static stretches (hold positions) are best after exercise when muscles are warm. Stretching cold muscles can increase injury risk.",
+      },
+      {
+        question: "How often should I stretch?",
+        answer:
+          "For maintaining flexibility, stretch 2-3 times per week. For improving flexibility, daily stretching produces the best results. Even 10 minutes of stretching per day can make a significant difference over several weeks.",
+      },
+      {
+        question: "Why is flexibility important?",
+        answer:
+          "Good flexibility reduces injury risk, improves posture, enhances athletic performance, reduces muscle soreness, increases range of motion for daily activities, and can help reduce lower back pain. Flexibility naturally decreases with age, making regular stretching increasingly important.",
+      },
+    ],
+    relatedTools: [
+      "flexibility-tracker",
+      "mobility-assessment",
+      "recovery-tracker",
+    ],
+    relatedArticles: [
+      { title: "Flexibility Guide for Beginners", href: "/fitness/flexibility-guide" },
+    ],
+    affiliateHeading: "Flexibility Equipment",
+    affiliateText:
+      "Yoga mats, foam rollers, stretching straps, resistance bands, and flexibility training guides.",
+  },
+  {
+    slug: "screen-time-calculator",
+    name: "Screen Time Calculator - Understand Your Digital Habits",
+    shortName: "Screen Time Calculator",
+    description:
+      "Enter your daily screen time by category to see weekly, monthly, and yearly totals. Get a health impact assessment and practical reduction tips.",
+    longDescription:
+      "Most people underestimate how much time they spend on screens. Log your daily hours across work, social media, entertainment, gaming, and other categories to see the true scale of your screen time. The calculator shows weekly, monthly, and yearly projections with a health impact assessment and evidence-based tips for reducing unnecessary screen use.",
+    icon: "phone",
+    category: "habits",
+    keywords: [
+      "screen time calculator",
+      "how much screen time",
+      "screen time tracker",
+      "digital wellness",
+      "screen time health effects",
+      "reduce screen time",
+      "daily screen time",
+    ],
+    faqs: [
+      {
+        question: "How much screen time is too much?",
+        answer:
+          "For adults, there's no official limit, but research suggests that recreational screen time over 2 hours per day is associated with poorer health outcomes. Work-related screen time is harder to reduce, but taking regular breaks (20-20-20 rule) helps mitigate effects.",
+      },
+      {
+        question: "What is the 20-20-20 rule?",
+        answer:
+          "Every 20 minutes of screen use, look at something 20 feet (6 metres) away for at least 20 seconds. This helps reduce digital eye strain, dry eyes, and headaches associated with prolonged screen use.",
+      },
+      {
+        question: "Does screen time affect sleep?",
+        answer:
+          "Yes. Blue light from screens suppresses melatonin production and can delay sleep onset. Screen use within 1-2 hours of bedtime is associated with poorer sleep quality, shorter sleep duration, and longer time to fall asleep.",
+      },
+      {
+        question: "What health issues are linked to excessive screen time?",
+        answer:
+          "Research links excessive screen time to digital eye strain, neck and back pain, poor sleep, sedentary behaviour (increasing obesity and cardiovascular risk), increased anxiety and depression symptoms, and reduced social connection quality.",
+      },
+    ],
+    relatedTools: [
+      "sleep-calculator",
+      "habit-tracker",
+      "stress-reduction-checklist",
+    ],
+    relatedArticles: [
+      { title: "Digital Wellness Guide", href: "/wellness/digital-wellness" },
+    ],
+    affiliateHeading: "Digital Wellness",
+    affiliateText:
+      "Blue-light glasses, screen time management apps, standing desks, and mindfulness journals.",
+  },
+  {
+    slug: "muscle-recovery-calculator",
+    name: "Muscle Recovery Calculator - When to Train Again",
+    shortName: "Muscle Recovery Calculator",
+    description:
+      "Estimate muscle group recovery time based on workout intensity, training experience, and lifestyle factors. Know when each muscle group is ready to train again.",
+    longDescription:
+      "Training a muscle group before it has recovered can lead to overtraining, plateaus, and injury. This calculator estimates recovery time for each muscle group based on your workout intensity, training experience, sleep quality, nutrition, and stress levels. Plan your training schedule around optimal recovery windows.",
+    icon: "muscle-clock",
+    category: "recovery",
+    keywords: [
+      "muscle recovery time",
+      "how long do muscles take to recover",
+      "muscle recovery calculator",
+      "when to train again",
+      "rest days between workouts",
+      "muscle recovery guide",
+      "overtraining recovery",
+    ],
+    faqs: [
+      {
+        question: "How long does muscle recovery take?",
+        answer:
+          "Small muscle groups (biceps, triceps, calves) typically recover in 24-48 hours. Large muscle groups (legs, back, chest) need 48-72 hours. Very intense workouts or training to failure may require 72-96 hours. Individual recovery varies based on fitness level, nutrition, sleep, and stress.",
+      },
+      {
+        question: "What are signs of incomplete recovery?",
+        answer:
+          "Persistent muscle soreness beyond 72 hours, decreased performance, increased resting heart rate, poor sleep, mood changes, loss of motivation, increased injury frequency, and feeling weaker in subsequent workouts are all signs you may need more recovery time.",
+      },
+      {
+        question: "Does sleep affect muscle recovery?",
+        answer:
+          "Sleep is the single most important recovery factor. Growth hormone is released primarily during deep sleep, and muscle protein synthesis increases during rest. Research shows that sleeping less than 7 hours significantly impairs recovery, performance, and increases injury risk.",
+      },
+      {
+        question: "Should I train a sore muscle?",
+        answer:
+          "Mild soreness (DOMS) is okay to train through, but sharp pain or severe soreness means the muscle needs more recovery. Active recovery (light movement, walking, gentle stretching) can help reduce soreness without impeding recovery.",
+      },
+    ],
+    relatedTools: [
+      "recovery-tracker",
+      "workout-split-generator",
+      "sleep-calculator",
+      "protein-calculator",
+    ],
+    relatedArticles: [
+      { title: "Muscle Recovery Science", href: "/fitness/muscle-recovery-guide" },
+    ],
+    affiliateHeading: "Recovery Tools",
+    affiliateText:
+      "Massage guns, foam rollers, compression garments, BCAA supplements, and sleep aids.",
+  },
+  {
+    slug: "yoga-flow-builder",
+    name: "Yoga Flow Builder - Create Your Custom Yoga Sequence",
+    shortName: "Yoga Flow Builder",
+    description:
+      "Build a personalised yoga flow based on your level, time, and focus area. Get an ordered sequence of poses with durations and a guided practice timer.",
+    longDescription:
+      "Design a yoga sequence tailored to your needs. Choose your experience level, how long you want to practise, and what you want to focus on (flexibility, strength, relaxation, or energy). The flow builder creates an ordered sequence of poses appropriate for your level, with hold times and a built-in practice timer to guide you through the session.",
+    icon: "yoga-flow",
+    category: "stress",
+    keywords: [
+      "yoga flow builder",
+      "yoga sequence generator",
+      "yoga for beginners",
+      "yoga routine",
+      "yoga flow",
+      "custom yoga sequence",
+      "yoga pose sequence",
+      "yoga practice planner",
+    ],
+    faqs: [
+      {
+        question: "How long should a yoga session be?",
+        answer:
+          "Even 10-15 minutes of yoga provides benefits. A typical class is 60-90 minutes, but 20-30 minute home sessions are effective for building strength, flexibility, and reducing stress. Consistency matters more than duration.",
+      },
+      {
+        question: "What type of yoga is best for beginners?",
+        answer:
+          "Hatha yoga moves slowly with clear instruction, making it ideal for beginners. Vinyasa (flow) yoga links poses with breath and moves faster. Yin yoga holds poses for 3-5 minutes, focusing on deep tissue flexibility. Start with beginner-level flows and progress gradually.",
+      },
+      {
+        question: "Can yoga build strength?",
+        answer:
+          "Yes. Yoga builds functional strength, particularly in the core, shoulders, back, and legs. Poses like plank, chaturanga, warrior sequences, and arm balances are challenging strength exercises. Power yoga and vinyasa flows are particularly effective for building muscle.",
+      },
+      {
+        question: "How often should I do yoga?",
+        answer:
+          "2-3 sessions per week is a good starting point. Many practitioners benefit from daily yoga, even if sessions are short. Listen to your body — yoga should complement your other training, not leave you exhausted or overly sore.",
+      },
+    ],
+    relatedTools: [
+      "meditation-timer",
+      "breathing-timer",
+      "stretching-routine-generator",
+      "flexibility-tracker",
+    ],
+    relatedArticles: [
+      { title: "Yoga for Beginners Guide", href: "/fitness/yoga-beginners-guide" },
+    ],
+    affiliateHeading: "Yoga Essentials",
+    affiliateText:
+      "Yoga mats, blocks, straps, bolsters, and online yoga class subscriptions.",
+  },
+  {
+    slug: "creatine-calculator",
+    name: "Creatine Calculator - Daily Dosage & Loading Protocol",
+    shortName: "Creatine Calculator",
+    description:
+      "Calculate your optimal daily creatine dose based on body weight. See loading and maintenance protocols with timing recommendations.",
+    longDescription:
+      "Creatine monohydrate is one of the most researched and effective sports supplements. This calculator provides personalised dosing based on your body weight for both the loading phase (rapid saturation) and daily maintenance. Learn the science behind creatine, optimal timing, and what to expect.",
+    icon: "pill",
+    category: "nutrition",
+    keywords: [
+      "creatine calculator",
+      "creatine dosage calculator",
+      "how much creatine should I take",
+      "creatine loading phase",
+      "creatine dose by weight",
+      "creatine maintenance dose",
+      "creatine monohydrate dosage",
+    ],
+    faqs: [
+      {
+        question: "How much creatine should I take daily?",
+        answer:
+          "The standard maintenance dose is 3-5 grams per day (approximately 0.03-0.04 g per kg of body weight). An optional loading phase of 0.3 g/kg/day (split into 4 doses) for 5-7 days can saturate muscles faster, but is not required — daily maintenance dosing reaches the same levels in 3-4 weeks.",
+      },
+      {
+        question: "Do I need to do a loading phase?",
+        answer:
+          "No. A loading phase (20g/day for 5-7 days) saturates muscles faster, but taking 3-5g daily will reach the same creatine levels in about 3-4 weeks. Loading can cause temporary water retention and mild digestive discomfort in some people.",
+      },
+      {
+        question: "When should I take creatine?",
+        answer:
+          "Timing is not critical — consistency matters more. Some research suggests post-workout may be slightly better due to increased blood flow and nutrient uptake. Taking it with a meal can improve absorption and reduce any digestive discomfort.",
+      },
+      {
+        question: "Is creatine safe?",
+        answer:
+          "Creatine monohydrate is one of the most studied supplements in sports science. Research consistently shows it is safe for healthy adults when used at recommended doses. It does not cause kidney damage in healthy individuals. Stay well hydrated while supplementing.",
+      },
+      {
+        question: "Does creatine cause water retention?",
+        answer:
+          "Creatine draws water into muscle cells, which can increase body weight by 1-3 kg, mostly in the first week. This is intracellular water (inside muscles), not subcutaneous water retention, and actually makes muscles appear fuller.",
+      },
+    ],
+    relatedTools: [
+      "protein-calculator",
+      "one-rep-max-calculator",
+      "macro-calculator",
+      "muscle-recovery-calculator",
+    ],
+    relatedArticles: [
+      { title: "Creatine Guide: Benefits, Dosing & Safety", href: "/nutrition/creatine-guide" },
+    ],
+    affiliateHeading: "Supplements",
+    affiliateText:
+      "Creatine monohydrate, shaker bottles, digital scales, and pre-workout supplements.",
+  },
 ];
 
 // ─── Lookup Helpers ─────────────────────────────────────────────────
