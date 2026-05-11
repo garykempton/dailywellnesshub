@@ -72,6 +72,21 @@ export const ICON_MAP: Record<string, string> = {
   beer: "🍺",
   pushup: "🫸",
   desk: "🖥️",
+  bacon: "🥓",
+  "flame-small": "🔥",
+  "muscle-up": "💪🏋️",
+  "foam-roller": "🧴",
+  "step-goal": "👣",
+  hourglass: "⏳",
+  "heart-check": "❤️‍🩹",
+  "height-ruler": "📐",
+  salt: "🧂",
+  "heart-recovery": "💗",
+  "yoga-mat": "🧘‍♀️",
+  pilates: "🤸‍♀️",
+  trophy: "🏆",
+  contraction: "⏱️👶",
+  "heart-rest": "🫀",
 };
 
 export function ToolPageLayout({ tool, children }: Props) {

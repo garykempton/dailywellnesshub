@@ -3113,6 +3113,393 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     affiliateHeading: "Ergonomic Essentials",
     affiliateText: "Monitor arms, ergonomic keyboards, lumbar supports, standing desk converters, and footrests.",
   },
+  {
+    slug: "keto-calculator",
+    name: "Keto Calculator - Ketogenic Diet Macro Calculator",
+    shortName: "Keto Calculator",
+    description:
+      "Calculate your ideal macros for a ketogenic diet based on your body stats, activity level, and goals. Get personalised fat, protein, and carb targets.",
+    longDescription:
+      "The ketogenic diet requires precise macro ratios to maintain ketosis. This calculator uses your body measurements, activity level, and goals (weight loss, maintenance, or muscle gain) to generate personalised daily targets for fat, protein, and net carbs. See your calorie breakdown and meal planning guidance.",
+    icon: "bacon",
+    category: "nutrition",
+    keywords: [
+      "keto calculator", "keto macro calculator", "ketogenic diet calculator",
+      "keto diet macros", "how many carbs on keto", "keto calorie calculator",
+    ],
+    faqs: [
+      { question: "What are the standard keto macro ratios?", answer: "A standard ketogenic diet typically consists of 70-75% fat, 20-25% protein, and 5-10% carbohydrates. This usually translates to 20-50g of net carbs per day, though individual needs vary based on activity level and metabolic health." },
+      { question: "How many carbs can I eat on keto?", answer: "Most people enter and maintain ketosis eating fewer than 20-50g of net carbs per day. Net carbs = total carbs minus fibre. Beginners should start at 20g and adjust upward only if they can maintain ketosis at higher levels." },
+      { question: "How much protein should I eat on keto?", answer: "Protein intake on keto is typically 1.2-2.0g per kg of lean body mass. Too little protein causes muscle loss; moderate protein does not prevent ketosis despite common myths. Prioritise adequate protein to preserve muscle." },
+      { question: "How long does it take to enter ketosis?", answer: "Most people enter ketosis within 2-4 days of restricting carbs to under 20-50g per day. Full keto-adaptation (where your body efficiently burns fat for fuel) takes 2-6 weeks. During the transition, you may experience 'keto flu' symptoms." },
+    ],
+    relatedTools: ["calorie-calculator", "macro-calculator", "protein-calculator", "calorie-deficit-calculator"],
+    relatedArticles: [{ title: "Ketogenic Diet Guide", href: "/nutrition/keto-diet-guide" }],
+    affiliateHeading: "Keto Essentials",
+    affiliateText: "Ketone test strips, MCT oil, keto cookbooks, and low-carb snacks.",
+  },
+  {
+    slug: "bmr-calculator",
+    name: "BMR Calculator - Basal Metabolic Rate Calculator",
+    shortName: "BMR Calculator",
+    description:
+      "Calculate your Basal Metabolic Rate using Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas. Understand the calories your body burns at rest.",
+    longDescription:
+      "Your Basal Metabolic Rate (BMR) is the number of calories your body needs to perform basic life-sustaining functions like breathing, circulation, and cell production. This calculator compares three established BMR formulas to give you a comprehensive picture of your resting metabolism, which forms the foundation for all calorie and nutrition planning.",
+    icon: "flame-small",
+    category: "nutrition",
+    keywords: [
+      "BMR calculator", "basal metabolic rate calculator", "resting metabolic rate",
+      "how many calories do I burn at rest", "metabolism calculator",
+      "Mifflin-St Jeor calculator", "Harris-Benedict calculator",
+    ],
+    faqs: [
+      { question: "What is BMR?", answer: "Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest to maintain vital functions — breathing, heart beating, brain function, cell repair. BMR typically accounts for 60-75% of total daily calorie expenditure." },
+      { question: "What is the difference between BMR and TDEE?", answer: "BMR is calories burned at rest; TDEE (Total Daily Energy Expenditure) includes BMR plus calories from physical activity and the thermic effect of food. TDEE = BMR × activity multiplier. TDEE is what you use for diet planning." },
+      { question: "Which BMR formula is most accurate?", answer: "The Mifflin-St Jeor equation (1990) is considered most accurate for most people. Harris-Benedict (1919, revised 1984) is older but still widely used. Katch-McArdle uses lean body mass and is most accurate if you know your body fat percentage." },
+      { question: "What affects BMR?", answer: "Key factors: muscle mass (more muscle = higher BMR), age (decreases ~2% per decade after 20), sex (men typically have higher BMR), genetics, thyroid function, body size, and extreme dieting (can lower BMR through metabolic adaptation)." },
+    ],
+    relatedTools: ["calorie-calculator", "calorie-deficit-calculator", "macro-calculator", "body-fat-calculator"],
+    relatedArticles: [{ title: "Understanding Your Metabolism", href: "/nutrition/metabolism-guide" }],
+    affiliateHeading: "Metabolism Support",
+    affiliateText: "Metabolism-boosting supplements, food scales, body composition scales, and nutrition tracking apps.",
+  },
+  {
+    slug: "lean-bulk-calculator",
+    name: "Lean Bulk Calculator - Clean Bulking Calorie & Macro Planner",
+    shortName: "Lean Bulk Calculator",
+    description:
+      "Calculate your optimal calorie surplus and macros for lean muscle gain with minimal fat. Get personalised daily targets based on your training experience.",
+    longDescription:
+      "A lean bulk aims to build muscle while minimising fat gain by using a controlled calorie surplus. This calculator determines your maintenance calories, then adds the optimal surplus based on your training experience (beginners can gain faster), and provides precise macro targets emphasising protein for muscle synthesis.",
+    icon: "muscle-up",
+    category: "nutrition",
+    keywords: [
+      "lean bulk calculator", "clean bulk calculator", "bulking calorie calculator",
+      "how many calories to build muscle", "lean bulk macros",
+      "muscle gain calorie surplus", "bulking macro calculator",
+    ],
+    faqs: [
+      { question: "What is a lean bulk?", answer: "A lean bulk is a controlled calorie surplus (typically 200-500 calories above maintenance) designed to build muscle while minimising fat gain. Unlike a 'dirty bulk' with unlimited calories, a lean bulk is strategic and produces a better muscle-to-fat gain ratio." },
+      { question: "How big should my calorie surplus be?", answer: "Beginners: 300-500 cal surplus (can build muscle faster). Intermediate: 200-350 cal surplus. Advanced: 150-250 cal surplus (diminishing returns require smaller surplus). Larger surpluses don't build more muscle — they just add more fat." },
+      { question: "How much protein do I need for bulking?", answer: "Research supports 1.6-2.2g of protein per kg of bodyweight for muscle building. Higher protein intake (up to 2.2g/kg) may be beneficial during a bulk to maximise muscle protein synthesis, especially when training hard." },
+      { question: "How long should a bulk last?", answer: "A lean bulk typically lasts 3-6 months. Aim to gain 0.25-0.5% of bodyweight per week (roughly 0.5-1kg/month for most). If body fat exceeds 15-17% (men) or 25-27% (women), consider transitioning to a cut." },
+    ],
+    relatedTools: ["calorie-calculator", "protein-calculator", "macro-calculator", "one-rep-max-calculator"],
+    relatedArticles: [{ title: "Lean Bulking Guide", href: "/fitness/lean-bulk-guide" }],
+    affiliateHeading: "Muscle Building",
+    affiliateText: "Protein powder, mass gainer, creatine, food scales, and meal prep containers.",
+  },
+  {
+    slug: "foam-rolling-routine",
+    name: "Foam Rolling Routine Generator - Myofascial Release Guide",
+    shortName: "Foam Rolling Routine",
+    description:
+      "Generate a personalised foam rolling routine based on your target areas, available time, and soreness level. Get technique guidance for each muscle group.",
+    longDescription:
+      "Foam rolling (self-myofascial release) helps reduce muscle soreness, improve range of motion, and speed recovery. Select your target areas, available time, and current soreness level to get an ordered routine with proper technique instructions and duration for each muscle group.",
+    icon: "foam-roller",
+    category: "recovery",
+    keywords: [
+      "foam rolling routine", "foam roller exercises", "myofascial release routine",
+      "foam rolling for recovery", "foam roller guide", "foam rolling muscles",
+      "foam rolling routine generator",
+    ],
+    faqs: [
+      { question: "How long should I foam roll each muscle?", answer: "Spend 30-60 seconds per muscle group for maintenance, or 60-90 seconds for areas that are particularly tight or sore. Roll slowly (about 1 inch per second) and pause on tender spots for 20-30 seconds until the tension releases." },
+      { question: "Should I foam roll before or after exercise?", answer: "Both are beneficial. Before exercise: brief rolling (30s per area) increases blood flow and range of motion without reducing performance. After exercise: longer rolling (60-90s per area) helps reduce delayed-onset muscle soreness (DOMS)." },
+      { question: "Does foam rolling actually work?", answer: "Yes. Research shows foam rolling reduces DOMS severity, temporarily increases range of motion, improves blood flow to tissues, and may reduce muscle stiffness. It does not permanently change tissue structure but provides meaningful short-term recovery benefits." },
+      { question: "Can foam rolling be harmful?", answer: "Avoid rolling directly on joints, bones, the lower back (spine), and acute injuries. Never roll so hard that it causes sharp pain — moderate discomfort is normal but sharp pain means you should stop. Avoid foam rolling areas with varicose veins or blood clots." },
+    ],
+    relatedTools: ["stretching-routine-generator", "muscle-recovery-calculator", "recovery-tracker", "mobility-assessment"],
+    relatedArticles: [{ title: "Foam Rolling Guide", href: "/recovery/foam-rolling-guide" }],
+    affiliateHeading: "Recovery Tools",
+    affiliateText: "Foam rollers, lacrosse balls, massage guns, and trigger point therapy tools.",
+  },
+  {
+    slug: "daily-step-goal-calculator",
+    name: "Daily Step Goal Calculator - How Many Steps Should You Walk?",
+    shortName: "Step Goal Calculator",
+    description:
+      "Calculate a personalised daily step goal based on your age, fitness level, and health objectives. See calorie burn estimates and health benefit thresholds.",
+    longDescription:
+      "The right step goal varies by person. This calculator considers your age, current activity level, fitness goals, and any limitations to recommend a realistic daily step target. See how different step counts translate to calories burned, distance walked, and health benefits backed by research.",
+    icon: "step-goal",
+    category: "cardio",
+    keywords: [
+      "daily step goal", "how many steps should I walk", "step goal calculator",
+      "10000 steps", "steps per day recommendation", "walking step goal",
+      "how many steps to lose weight",
+    ],
+    faqs: [
+      { question: "Is 10,000 steps a day necessary?", answer: "The 10,000-step goal originated from a Japanese marketing campaign, not research. Studies show health benefits begin at 4,000 steps/day and increase up to about 7,500-10,000 steps. For adults over 60, 6,000-8,000 steps provides most of the mortality benefit." },
+      { question: "How many steps to lose weight?", answer: "Adding 2,000-3,000 steps above your current baseline can support weight loss. Research suggests that people who walk 8,000-12,000 steps daily have lower body fat percentages. Combined with a calorie deficit, increased walking is one of the most sustainable weight loss strategies." },
+      { question: "How many calories does walking burn?", answer: "A rough estimate is 30-40 calories per 1,000 steps for an average adult. A 70kg person walking 10,000 steps burns approximately 300-400 extra calories. Actual burn depends on weight, pace, terrain, and individual metabolism." },
+      { question: "How far is 10,000 steps?", answer: "For an average adult, 10,000 steps is approximately 7.5-8 km (4.7-5 miles). Step length varies by height and pace — taller people and faster walkers cover more distance per step." },
+    ],
+    relatedTools: ["walking-calorie-calculator", "steps-to-calories-calculator", "stair-climbing-calorie-calculator"],
+    relatedArticles: [{ title: "Walking for Health Guide", href: "/fitness/walking-health-guide" }],
+    affiliateHeading: "Walking Gear",
+    affiliateText: "Pedometers, walking shoes, fitness trackers, and walking poles.",
+  },
+  {
+    slug: "gym-rest-timer",
+    name: "Gym Rest Timer - Set Rest Period Timer",
+    shortName: "Gym Rest Timer",
+    description:
+      "Time your rest periods between sets with preset durations for strength, hypertrophy, and endurance training. Stay on track and optimise your workout efficiency.",
+    longDescription:
+      "Rest periods between sets significantly affect your training results. Too short and you cannot perform your next set effectively; too long and you lose training density. This timer provides evidence-based rest periods for your training goal and lets you customise durations to match your programme.",
+    icon: "hourglass",
+    category: "fitness",
+    keywords: [
+      "gym rest timer", "rest between sets timer", "workout rest timer",
+      "how long to rest between sets", "gym timer", "set rest period timer",
+      "weightlifting rest timer",
+    ],
+    faqs: [
+      { question: "How long should I rest between sets?", answer: "Strength (1-5 reps, heavy): 3-5 minutes. Hypertrophy (6-12 reps): 60-90 seconds. Endurance (15+ reps): 30-60 seconds. Compound exercises (squat, deadlift) need longer rest than isolation exercises (curls, lateral raises)." },
+      { question: "Does rest time affect muscle growth?", answer: "Yes. Research shows that 60-90 seconds rest for hypertrophy training maintains metabolic stress while allowing sufficient recovery to maintain performance. However, for compound lifts, longer rest (2-3 minutes) allows more volume, which also drives growth." },
+      { question: "Should I rest longer for heavy lifts?", answer: "Yes. Heavy compound lifts (squats, deadlifts, bench press at 80-95% 1RM) require 3-5 minutes rest to fully replenish the phosphocreatine energy system. Rushing rest periods on heavy lifts reduces performance and increases injury risk." },
+      { question: "Can I do other exercises during rest?", answer: "Yes — this is called supersets (alternating exercises for different muscle groups). For example, doing bicep curls during bench press rest. This is time-efficient but may reduce performance if the exercises share stabiliser muscles." },
+    ],
+    relatedTools: ["hiit-timer", "one-rep-max-calculator", "workout-split-generator", "plank-timer"],
+    relatedArticles: [{ title: "Rest Period Guide", href: "/fitness/rest-period-guide" }],
+    affiliateHeading: "Gym Accessories",
+    affiliateText: "Gym timers, wireless earbuds, lifting gloves, and workout log books.",
+  },
+  {
+    slug: "cholesterol-ratio-calculator",
+    name: "Cholesterol Ratio Calculator - Heart Health Risk Assessment",
+    shortName: "Cholesterol Ratio Calculator",
+    description:
+      "Calculate your cholesterol ratios (Total/HDL, LDL/HDL, triglyceride/HDL) and assess cardiovascular risk. Understand what your cholesterol numbers mean.",
+    longDescription:
+      "Cholesterol ratios are often better predictors of heart disease risk than individual cholesterol numbers alone. Enter your total cholesterol, HDL, LDL, and triglyceride values to calculate key ratios used by cardiologists. See how your numbers compare to optimal ranges and get lifestyle recommendations.",
+    icon: "heart-check",
+    category: "habits",
+    keywords: [
+      "cholesterol ratio calculator", "cholesterol ratio", "total cholesterol to HDL ratio",
+      "LDL HDL ratio", "triglyceride HDL ratio", "cholesterol risk calculator",
+      "is my cholesterol good",
+    ],
+    faqs: [
+      { question: "What is the Total/HDL cholesterol ratio?", answer: "Your Total/HDL ratio is total cholesterol divided by HDL. Optimal: below 3.5. Average risk: 3.5-5.0. High risk: above 5.0. This ratio is considered a better predictor of heart disease than total cholesterol alone because it accounts for the protective effect of HDL." },
+      { question: "What is a good LDL/HDL ratio?", answer: "Optimal LDL/HDL ratio is below 2.0. Moderate risk: 2.0-5.0. High risk: above 5.0. Lower is better because it means you have more protective HDL relative to harmful LDL." },
+      { question: "What does the Triglyceride/HDL ratio indicate?", answer: "The TG/HDL ratio is a marker for insulin resistance and small dense LDL particles. Optimal: below 2.0. High risk: above 4.0. This ratio is increasingly recognised as an important cardiovascular risk indicator." },
+      { question: "How can I improve my cholesterol ratios?", answer: "Increase HDL through regular exercise (especially cardio), eating healthy fats (olive oil, nuts, avocado, fatty fish), and maintaining a healthy weight. Lower LDL by reducing saturated and trans fats, increasing fibre intake, and managing stress." },
+    ],
+    relatedTools: ["blood-pressure-checker", "calorie-calculator", "biological-age-calculator"],
+    relatedArticles: [{ title: "Cholesterol Guide", href: "/wellness/cholesterol-guide" }],
+    affiliateHeading: "Heart Health",
+    affiliateText: "Home cholesterol test kits, omega-3 supplements, heart-healthy cookbooks, and fitness trackers.",
+  },
+  {
+    slug: "waist-to-height-ratio-calculator",
+    name: "Waist-to-Height Ratio Calculator - Health Risk Assessment",
+    shortName: "Waist-to-Height Ratio",
+    description:
+      "Calculate your waist-to-height ratio — a simple, powerful predictor of cardiometabolic risk. Compare your result to health guidelines and track your progress.",
+    longDescription:
+      "The waist-to-height ratio (WHtR) is increasingly recognised as a better predictor of health risks than BMI. The simple rule: keep your waist circumference to less than half your height. Enter your measurements to see your ratio, risk category, and how it compares to BMI-based assessments.",
+    icon: "height-ruler",
+    category: "body-composition",
+    keywords: [
+      "waist to height ratio", "waist to height ratio calculator", "WHtR calculator",
+      "waist height ratio", "is my waist too big", "waist measurement health",
+      "belly fat risk calculator",
+    ],
+    faqs: [
+      { question: "What is a healthy waist-to-height ratio?", answer: "The key threshold is 0.5 — keep your waist less than half your height. Below 0.4: may indicate underweight. 0.4-0.5: healthy range. 0.5-0.6: increased risk. Above 0.6: substantially increased risk for cardiometabolic diseases." },
+      { question: "Is WHtR better than BMI?", answer: "Research suggests WHtR is a better predictor of cardiovascular disease, type 2 diabetes, and mortality than BMI. Unlike BMI, WHtR accounts for abdominal fat distribution, which is more metabolically dangerous than fat stored elsewhere." },
+      { question: "How do I measure my waist correctly?", answer: "Measure at the midpoint between the bottom of your lowest rib and the top of your hip bone (iliac crest), usually at or near the navel. Use a flexible tape measure, breathe out normally, and don't suck in your stomach." },
+      { question: "Does the 0.5 rule apply to everyone?", answer: "The 0.5 boundary applies broadly across different ethnicities, ages, and sexes, which is one reason researchers favour it. However, some studies suggest slightly lower thresholds (0.46-0.48) may be appropriate for Asian populations." },
+    ],
+    relatedTools: ["waist-hip-ratio-calculator", "body-fat-calculator", "bmi-calculator", "ideal-weight-calculator"],
+    relatedArticles: [{ title: "Body Composition Health Guide", href: "/fitness/body-composition-guide" }],
+    affiliateHeading: "Measurement Tools",
+    affiliateText: "Body tape measures, smart scales, body composition monitors, and health journals.",
+  },
+  {
+    slug: "electrolyte-calculator",
+    name: "Electrolyte Calculator - Daily Electrolyte Needs",
+    shortName: "Electrolyte Calculator",
+    description:
+      "Calculate your daily electrolyte needs (sodium, potassium, magnesium) based on activity level, climate, diet type, and sweat rate. Prevent cramps and fatigue.",
+    longDescription:
+      "Electrolytes are essential for muscle function, hydration, nerve signalling, and heart rhythm. Your needs vary based on how much you sweat, your diet (especially keto or fasting), and your activity level. This calculator estimates your daily sodium, potassium, and magnesium requirements with food source suggestions.",
+    icon: "salt",
+    category: "nutrition",
+    keywords: [
+      "electrolyte calculator", "how many electrolytes do I need",
+      "sodium potassium magnesium daily", "electrolytes for athletes",
+      "electrolyte needs calculator", "keto electrolytes",
+    ],
+    faqs: [
+      { question: "Why are electrolytes important?", answer: "Electrolytes (sodium, potassium, magnesium, calcium) regulate fluid balance, muscle contractions, nerve signalling, and heart rhythm. Imbalances cause cramps, fatigue, headaches, dizziness, and in severe cases, dangerous heart arrhythmias." },
+      { question: "How much sodium do athletes need?", answer: "Endurance athletes can lose 500-1500mg of sodium per litre of sweat. During intense exercise lasting over 60 minutes, aim for 300-600mg of sodium per hour. Moderate exercisers typically need 2,300-3,000mg per day total." },
+      { question: "Do I need extra electrolytes on keto?", answer: "Yes. Ketogenic diets cause increased electrolyte excretion through lower insulin levels. Common recommendations for keto: sodium 3,000-5,000mg, potassium 3,500-4,700mg, and magnesium 300-500mg daily. 'Keto flu' is often caused by electrolyte depletion." },
+      { question: "What are signs of electrolyte imbalance?", answer: "Muscle cramps, twitching, fatigue, headaches, dizziness, nausea, irregular heartbeat, brain fog, and dark urine. If exercising heavily in heat and experiencing these symptoms, replenish electrolytes immediately." },
+    ],
+    relatedTools: ["hydration-calculator", "keto-calculator", "protein-calculator", "creatine-calculator"],
+    relatedArticles: [{ title: "Electrolyte Guide for Athletes", href: "/nutrition/electrolyte-guide" }],
+    affiliateHeading: "Electrolyte Products",
+    affiliateText: "Electrolyte powders, salt tablets, magnesium supplements, and electrolyte water bottles.",
+  },
+  {
+    slug: "heart-rate-recovery-calculator",
+    name: "Heart Rate Recovery Calculator - Cardiovascular Fitness Test",
+    shortName: "Heart Rate Recovery Test",
+    description:
+      "Measure your heart rate recovery (HRR) after exercise to assess cardiovascular fitness. A faster recovery indicates a healthier, more efficient heart.",
+    longDescription:
+      "Heart Rate Recovery (HRR) — how quickly your heart rate drops after exercise — is one of the best indicators of cardiovascular fitness and overall health. Record your peak exercise heart rate and your heart rate 1 and 2 minutes after stopping to get your HRR score and fitness assessment.",
+    icon: "heart-recovery",
+    category: "cardio",
+    keywords: [
+      "heart rate recovery", "heart rate recovery calculator", "HRR calculator",
+      "cardiovascular fitness test", "heart rate after exercise",
+      "how fast should heart rate drop after exercise",
+    ],
+    faqs: [
+      { question: "What is a good heart rate recovery?", answer: "After 1 minute: a drop of 20+ bpm is good, 30+ bpm is excellent, and less than 12 bpm is abnormal and may indicate poor cardiovascular fitness. After 2 minutes: a drop of 40+ bpm is good, 50+ bpm is excellent." },
+      { question: "Why does heart rate recovery matter?", answer: "Research shows that slow heart rate recovery is an independent predictor of cardiovascular mortality. A 2020 meta-analysis found that abnormal HRR (< 12 bpm drop in 1 minute) is associated with a significantly higher risk of death from heart disease." },
+      { question: "How do I test my heart rate recovery?", answer: "Exercise at moderate-to-vigorous intensity (70-85% max HR) for at least 5-10 minutes. Immediately stop and remain standing (don't sit or lie down). Record your heart rate at peak, then again at 1 minute and 2 minutes after stopping." },
+      { question: "How can I improve heart rate recovery?", answer: "Regular aerobic exercise is the most effective way to improve HRR. Consistent cardio training (150+ minutes/week) strengthens the parasympathetic nervous system, which controls heart rate deceleration. Improvements can be seen within 4-8 weeks of training." },
+    ],
+    relatedTools: ["heart-rate-calculator", "vo2-max-calculator", "running-calorie-calculator"],
+    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-training" }],
+    affiliateHeading: "Heart Rate Monitoring",
+    affiliateText: "Chest strap heart rate monitors, fitness watches, and cardio training programs.",
+  },
+  {
+    slug: "yoga-calorie-calculator",
+    name: "Yoga Calorie Calculator - Calories Burned Doing Yoga",
+    shortName: "Yoga Calorie Calculator",
+    description:
+      "Calculate calories burned during different styles of yoga based on your weight, session duration, and yoga type. Compare Hatha, Vinyasa, Power, and Hot yoga.",
+    longDescription:
+      "Yoga burns more calories than most people realise, especially vigorous styles like Power and Hot yoga. Enter your weight, session duration, and yoga style to see your estimated calorie burn. Compare different yoga styles side by side and understand what drives calorie expenditure during yoga.",
+    icon: "yoga-mat",
+    category: "stress",
+    keywords: [
+      "yoga calorie calculator", "calories burned yoga", "how many calories does yoga burn",
+      "hot yoga calories", "vinyasa yoga calories", "power yoga calories",
+    ],
+    faqs: [
+      { question: "How many calories does yoga burn?", answer: "It varies by style: Hatha/gentle yoga: 2.5 MET (~180 cal/hr for 70kg). Vinyasa flow: 4.0 MET (~280 cal/hr). Power yoga: 5.5 MET (~385 cal/hr). Hot/Bikram yoga: 6.0 MET (~420 cal/hr). Ashtanga: 5.0 MET (~350 cal/hr)." },
+      { question: "Is yoga good for weight loss?", answer: "While yoga burns fewer calories than high-intensity exercise, it supports weight loss through stress reduction (lowering cortisol), improved body awareness, better sleep, and reduced emotional eating. Consistent yoga practice is associated with lower BMI over time." },
+      { question: "Does hot yoga burn more calories?", answer: "Hot yoga (practiced in 35-42°C rooms) burns slightly more calories due to increased heart rate from heat. However, much of the immediate 'weight loss' is water through sweating. The calorie difference versus regular yoga is modest — about 10-20% more." },
+      { question: "What MET values are used?", answer: "MET values from the Compendium of Physical Activities: Hatha 2.5, general yoga 3.0, Vinyasa/flow 4.0, Ashtanga/Power 5.0-5.5, Hot/Bikram 6.0, restorative/Yin 2.0." },
+    ],
+    relatedTools: ["yoga-flow-builder", "meditation-timer", "stretching-routine-generator", "breathing-timer"],
+    relatedArticles: [{ title: "Yoga for Fitness Guide", href: "/fitness/yoga-fitness-guide" }],
+    affiliateHeading: "Yoga Gear",
+    affiliateText: "Yoga mats, blocks, straps, hot yoga towels, and yoga class subscriptions.",
+  },
+  {
+    slug: "pilates-calorie-calculator",
+    name: "Pilates Calorie Calculator - Calories Burned Doing Pilates",
+    shortName: "Pilates Calorie Calculator",
+    description:
+      "Calculate calories burned during Pilates based on your weight, session type, duration, and intensity. Compare mat, reformer, and clinical Pilates.",
+    longDescription:
+      "Pilates is an effective low-impact exercise for core strength, flexibility, and body toning. Enter your weight, session type, and duration to estimate your calorie burn. Compare different Pilates formats — mat, reformer, and clinical — and see how Pilates stacks up against other exercises.",
+    icon: "pilates",
+    category: "fitness",
+    keywords: [
+      "pilates calorie calculator", "calories burned pilates", "how many calories does pilates burn",
+      "reformer pilates calories", "mat pilates calories", "pilates for weight loss",
+    ],
+    faqs: [
+      { question: "How many calories does Pilates burn?", answer: "Mat Pilates (beginner): ~3.0 MET (~210 cal/hr for 70kg). Mat Pilates (advanced): ~4.0 MET (~280 cal/hr). Reformer Pilates: ~4.0-5.0 MET (~280-350 cal/hr). The actual burn depends on intensity, transitions, and how challenging the exercises are for your level." },
+      { question: "Is Pilates good for weight loss?", answer: "Pilates alone burns moderate calories, but it builds lean muscle which increases resting metabolism. Combined with a balanced diet, Pilates supports sustainable body composition changes. It also reduces stress and improves body awareness, both of which aid weight management." },
+      { question: "Reformer vs mat Pilates — which burns more?", answer: "Reformer Pilates generally burns 10-20% more calories than mat Pilates because the spring resistance adds an extra challenge. However, an advanced mat class can match or exceed a beginner reformer class in calorie burn." },
+      { question: "How often should I do Pilates?", answer: "Joseph Pilates recommended 3-4 sessions per week. For noticeable results, aim for at least 2-3 sessions weekly. Pilates can be done daily as it is low-impact, but allow recovery if doing intense reformer work." },
+    ],
+    relatedTools: ["yoga-calorie-calculator", "stretching-routine-generator", "calorie-calculator"],
+    relatedArticles: [{ title: "Pilates for Beginners", href: "/fitness/pilates-guide" }],
+    affiliateHeading: "Pilates Equipment",
+    affiliateText: "Pilates mats, resistance rings, reformer machines, and online Pilates class subscriptions.",
+  },
+  {
+    slug: "race-time-predictor",
+    name: "Race Time Predictor - Predict Your Finish Time",
+    shortName: "Race Time Predictor",
+    description:
+      "Predict your finish time for any race distance based on a recent race result. Uses the Riegel formula trusted by coaches and runners worldwide.",
+    longDescription:
+      "Planning your next race? Enter a recent race time and distance, then select your target race distance to get a predicted finish time. This calculator uses the Riegel formula — the industry standard used by running coaches, race organisers, and training apps — along with your required average pace.",
+    icon: "trophy",
+    category: "cardio",
+    keywords: [
+      "race time predictor", "race time calculator", "marathon time predictor",
+      "half marathon prediction", "5K to marathon prediction",
+      "Riegel formula", "race pace calculator",
+    ],
+    faqs: [
+      { question: "How does the race prediction formula work?", answer: "The Riegel formula (1977) is: T2 = T1 × (D2/D1)^1.06, where T1 is your known time, D1 is the known distance, D2 is the target distance, and 1.06 is the fatigue factor. This accounts for the natural slowdown over longer distances." },
+      { question: "How accurate are race predictions?", answer: "Predictions are most accurate between adjacent distances (e.g. 10K to half marathon). Predicting from 5K to marathon has more uncertainty. Accuracy depends on proper training for the longer distance, race-day conditions, pacing strategy, and nutrition." },
+      { question: "Why do I slow down at longer distances?", answer: "The fatigue exponent (1.06 in Riegel's formula) reflects that as distance increases, pace naturally slows due to glycogen depletion, accumulated fatigue, and the shift from anaerobic to aerobic energy systems. You cannot maintain your 5K pace for a marathon." },
+      { question: "How recent should my reference race be?", answer: "Use a race result from the last 2-3 months for the most accurate prediction. Your fitness level changes over time, so older results may not reflect your current ability. Also ensure you ran the reference race at full effort." },
+    ],
+    relatedTools: ["running-pace-calculator", "pace-converter", "vo2-max-calculator", "running-calorie-calculator"],
+    relatedArticles: [{ title: "Race Training Guide", href: "/fitness/race-training-guide" }],
+    affiliateHeading: "Race Day Gear",
+    affiliateText: "GPS running watches, racing flats, energy gels, and race training plans.",
+  },
+  {
+    slug: "contraction-timer",
+    name: "Contraction Timer - Track Labour Contractions",
+    shortName: "Contraction Timer",
+    description:
+      "Time and track your labour contractions with one tap. See duration, frequency, and when contractions follow the 5-1-1 or 4-1-1 pattern to go to hospital.",
+    longDescription:
+      "Timing contractions helps you know when to head to the hospital or birthing centre. Simply tap when a contraction starts and stops — the timer tracks duration, frequency (time between contractions), and alerts you when contractions match the patterns your healthcare provider recommends for heading to hospital.",
+    icon: "contraction",
+    category: "habits",
+    keywords: [
+      "contraction timer", "labour contraction timer", "contraction tracker",
+      "when to go to hospital labour", "5-1-1 rule contractions",
+      "timing contractions", "labour timer",
+    ],
+    faqs: [
+      { question: "What is the 5-1-1 rule?", answer: "The 5-1-1 rule means contractions are 5 minutes apart, lasting 1 minute each, for at least 1 hour. Many providers use this as the signal to head to the hospital. Some use the 4-1-1 rule (4 minutes apart) for first-time mothers. Always follow your provider's specific guidance." },
+      { question: "How do I time contractions?", answer: "Start timing when a contraction begins (your belly tightens). Stop when it ends (the tightness fully releases). Frequency is measured from the START of one contraction to the START of the next. Duration is how long each individual contraction lasts." },
+      { question: "How long do early labour contractions last?", answer: "Early labour contractions typically last 30-45 seconds and occur 5-30 minutes apart. As labour progresses, contractions become longer (60-90 seconds), stronger, and closer together (2-4 minutes apart). Active labour contractions are typically 45-60+ seconds." },
+      { question: "When should I call my provider?", answer: "Call when contractions follow the pattern your provider specified (usually 5-1-1 or 4-1-1), if your water breaks, if you have heavy bleeding, if baby's movements decrease significantly, or if something feels wrong. When in doubt, always call." },
+    ],
+    relatedTools: ["pregnancy-due-date-calculator", "pregnancy-weight-gain-calculator", "breathing-timer"],
+    relatedArticles: [{ title: "Labour Preparation Guide", href: "/wellness/labour-preparation-guide" }],
+    affiliateHeading: "Birth Preparation",
+    affiliateText: "Hospital bag essentials, birthing balls, labour comfort items, and newborn care kits.",
+  },
+  {
+    slug: "resting-heart-rate-assessment",
+    name: "Resting Heart Rate Assessment - Cardiovascular Health Check",
+    shortName: "Resting Heart Rate Check",
+    description:
+      "Enter your resting heart rate to assess your cardiovascular fitness level. Compare your RHR to age and sex-based norms and get improvement recommendations.",
+    longDescription:
+      "Your resting heart rate (RHR) is one of the simplest and most powerful indicators of cardiovascular health and fitness. A lower RHR generally indicates a more efficient heart. Enter your resting heart rate to see how you compare to established fitness norms and get evidence-based tips to improve it.",
+    icon: "heart-rest",
+    category: "cardio",
+    keywords: [
+      "resting heart rate", "resting heart rate chart", "what is a good resting heart rate",
+      "normal resting heart rate", "resting heart rate by age",
+      "resting heart rate fitness level", "is my heart rate normal",
+    ],
+    faqs: [
+      { question: "What is a normal resting heart rate?", answer: "For adults, a normal resting heart rate is 60-100 bpm. Well-trained athletes may have RHR as low as 40-50 bpm. A resting heart rate consistently above 100 bpm (tachycardia) or below 40 bpm without being athletic should be evaluated by a doctor." },
+      { question: "How do I measure my resting heart rate?", answer: "Measure first thing in the morning before getting out of bed. Place two fingers on your wrist (radial pulse) or neck (carotid pulse). Count beats for 30 seconds and multiply by 2. Take measurements on 3-5 consecutive mornings and average them." },
+      { question: "What does resting heart rate indicate?", answer: "A lower RHR generally indicates better cardiovascular fitness — your heart pumps more blood per beat, so it needs fewer beats. RHR is also affected by stress, caffeine, medications, hydration, sleep quality, and illness. Tracking trends over time is more useful than single readings." },
+      { question: "How can I lower my resting heart rate?", answer: "Regular aerobic exercise is the most effective method. Consistent cardio training can lower RHR by 5-20+ bpm over months. Other factors: adequate sleep (7-9 hours), stress management, reducing caffeine and alcohol, staying hydrated, and maintaining a healthy weight." },
+    ],
+    relatedTools: ["heart-rate-calculator", "heart-rate-recovery-calculator", "vo2-max-calculator", "blood-pressure-checker"],
+    relatedArticles: [{ title: "Heart Rate Training Guide", href: "/fitness/heart-rate-guide" }],
+    affiliateHeading: "Heart Rate Monitoring",
+    affiliateText: "Heart rate monitors, fitness watches, chest straps, and cardio training guides.",
+  },
 ];
 
 // ─── Lookup Helpers ─────────────────────────────────────────────────
