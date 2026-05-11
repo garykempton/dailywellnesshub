@@ -1,6 +1,6 @@
 import * as fs from "fs";
 
-const raw = fs.readFileSync("C:/Users/user/Desktop/wellness-answers/audit-output-post-fix.txt", "utf8");
+const raw = fs.readFileSync("C:/Users/user/Desktop/wellness-answers/audit-output-final.txt", "utf8");
 
 const pathsLine = raw.split("\n").find((l) => l.startsWith("PATHS:"));
 const bodyLinksLine = raw.split("\n").find((l) => l.startsWith("BODY_LINKS:"));
