@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { CATEGORIES, SITE_URL } from "@/lib/constants";
 import { prisma } from "@/lib/db";
+import { TOOLS_REGISTRY } from "@/lib/tools";
 
 // Next.js supports generateSitemaps() for index-based splitting.
 // Each sitemap can hold up to 50,000 URLs. We split by:
@@ -41,13 +42,17 @@ export default async function sitemap({
       { url: `${SITE_URL}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/terms-of-service`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
       { url: `${SITE_URL}/cookie-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-      { url: `${SITE_URL}/tools`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+      { url: `${SITE_URL}/tools`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
       { url: `${SITE_URL}/tools/bmi-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-      { url: `${SITE_URL}/tools/hydration-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-      { url: `${SITE_URL}/tools/sleep-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-      { url: `${SITE_URL}/tools/calorie-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
       { url: `${SITE_URL}/tools/heart-rate-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     ];
+
+    const toolPages: MetadataRoute.Sitemap = TOOLS_REGISTRY.map((tool) => ({
+      url: `${SITE_URL}/tools/${tool.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }));
 
     const categoryPages: MetadataRoute.Sitemap = CATEGORIES.map((cat) => ({
       url: `${SITE_URL}/${cat.slug}`,
@@ -56,7 +61,7 @@ export default async function sitemap({
       priority: 0.8,
     }));
 
-    return [...staticPages, ...categoryPages];
+    return [...staticPages, ...toolPages, ...categoryPages];
   }
 
   // Sitemap 1+: article pages in chunks

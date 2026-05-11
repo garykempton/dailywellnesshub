@@ -831,6 +831,907 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     affiliateText:
       "Aromatherapy diffusers, weighted blankets, and mindfulness journals to support your stress management routine.",
   },
+
+  // ─── Body Composition Tools ───────────────────────────────────────────
+
+  {
+    slug: "body-fat-calculator",
+    name: "Body Fat Calculator - US Navy & Tape Measure Method",
+    shortName: "Body Fat Calculator",
+    description:
+      "Estimate your body fat percentage using the US Navy circumference method. Measure your neck, waist, and hips with a tape measure to get an accurate body fat estimate.",
+    longDescription:
+      "Body fat percentage is a far better indicator of health and fitness than weight alone. Our free body fat calculator uses the US Navy circumference method — a formula validated against hydrostatic weighing — to estimate your body fat from simple tape measurements. No equipment needed beyond a flexible tape measure.",
+    icon: "ruler",
+    category: "body-composition",
+    keywords: [
+      "body fat calculator",
+      "body fat percentage calculator",
+      "navy body fat calculator",
+      "how to measure body fat",
+      "body fat percentage",
+      "tape measure body fat",
+      "body composition calculator",
+      "US Navy body fat formula",
+    ],
+    faqs: [
+      {
+        question: "How accurate is the US Navy body fat method?",
+        answer:
+          "The US Navy circumference method is accurate to within 3-4% of body fat compared to hydrostatic weighing for most people. It is more reliable than BMI and is used by the US military for fitness assessments.",
+      },
+      {
+        question: "What is a healthy body fat percentage?",
+        answer:
+          "For men, 10-20% is generally considered healthy, with 14-17% being the fitness range. For women, 18-28% is healthy, with 21-24% being the fitness range. Essential fat is about 2-5% for men and 10-13% for women.",
+      },
+      {
+        question: "Where do I measure for the Navy body fat formula?",
+        answer:
+          "Measure your neck circumference just below the larynx, your waist at the narrowest point (navel level for men), and your hips at the widest point (women only). Use a flexible tape measure pulled snug but not compressing the skin.",
+      },
+      {
+        question: "Why is body fat percentage better than BMI?",
+        answer:
+          "BMI does not distinguish between muscle and fat. A muscular athlete may have a high BMI but low body fat, while a sedentary person may have a normal BMI but high body fat. Body fat percentage directly measures adiposity.",
+      },
+      {
+        question: "How often should I measure body fat?",
+        answer:
+          "Measure every 2-4 weeks to track trends. Measure at the same time of day (morning is best) under consistent conditions. Focus on trends over weeks rather than day-to-day fluctuations.",
+      },
+    ],
+    relatedTools: [
+      "bmi-calculator",
+      "ideal-weight-calculator",
+      "lean-body-mass-calculator",
+      "waist-hip-ratio-calculator",
+    ],
+    relatedArticles: [
+      { title: "Body Fat vs BMI: Which Matters More?", href: "/fitness/body-fat-vs-bmi" },
+      { title: "How to Accurately Measure Body Fat at Home", href: "/fitness/measure-body-fat-at-home" },
+    ],
+    affiliateHeading: "Body Composition Tools",
+    affiliateText:
+      "Body fat callipers, smart scales with body composition analysis, and flexible measuring tapes for accurate at-home tracking.",
+  },
+  {
+    slug: "ideal-weight-calculator",
+    name: "Ideal Weight Calculator - Multiple Medical Formulas",
+    shortName: "Ideal Weight Calculator",
+    description:
+      "Calculate your ideal body weight using four established medical formulas: Devine, Robinson, Miller, and Hamwi. Compare results and find a healthy weight range for your height.",
+    longDescription:
+      "There is no single 'ideal' weight, but medical formulas can provide useful reference ranges. Our calculator computes ideal weight using four well-known formulas — Devine (1974), Robinson (1983), Miller (1983), and Hamwi (1964) — and shows you the range. Use this as a starting point, not a definitive answer.",
+    icon: "target",
+    category: "body-composition",
+    keywords: [
+      "ideal weight calculator",
+      "ideal body weight",
+      "how much should I weigh",
+      "healthy weight calculator",
+      "ideal weight for height",
+      "IBW calculator",
+      "Devine formula",
+      "healthy weight range",
+    ],
+    faqs: [
+      {
+        question: "What is the most accurate ideal weight formula?",
+        answer:
+          "No single formula is universally accurate. The Devine formula is the most commonly used in clinical settings (including drug dosing). The range across all four formulas gives a more useful picture than any single number.",
+      },
+      {
+        question: "How much should I weigh for my height?",
+        answer:
+          "Ideal weight depends on height, sex, body frame, muscle mass, and age. For example, a 5'10\" male has an ideal weight range of roughly 66-73 kg (145-160 lbs) across the four formulas, but individual variation is normal.",
+      },
+      {
+        question: "Do ideal weight formulas account for muscle mass?",
+        answer:
+          "No. These formulas use only height and sex. If you have above-average muscle mass (athletes, strength trainees), your healthy weight will likely be higher than these estimates. Body fat percentage is a better metric in that case.",
+      },
+      {
+        question: "Should I aim for my ideal weight?",
+        answer:
+          "Use ideal weight ranges as a general reference, not a strict target. Health markers like blood pressure, blood sugar, energy levels, and body fat percentage are more meaningful indicators of health than weight alone.",
+      },
+    ],
+    relatedTools: [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "calorie-calculator",
+      "lean-body-mass-calculator",
+    ],
+    relatedArticles: [
+      { title: "Understanding Your Healthy Weight Range", href: "/weight-loss/healthy-weight-range" },
+      { title: "Why the Scale Doesn't Tell the Whole Story", href: "/fitness/scale-doesnt-tell-whole-story" },
+    ],
+    affiliateHeading: "Weight Management Essentials",
+    affiliateText:
+      "High-quality digital scales, body composition monitors, and nutrition guides to support your health goals.",
+  },
+  {
+    slug: "lean-body-mass-calculator",
+    name: "Lean Body Mass Calculator - Multiple Formulas",
+    shortName: "Lean Body Mass Calculator",
+    description:
+      "Calculate your lean body mass (fat-free mass) using the Boer, James, and Hume formulas. Understand how much of your body weight is muscle, bone, and organs versus fat.",
+    longDescription:
+      "Lean body mass (LBM) is your total body weight minus all fat weight. Knowing your LBM helps you set better nutrition targets, track muscle gain during a cut, and understand your body composition beyond the scale. Our calculator uses three validated formulas to estimate your fat-free mass.",
+    icon: "dumbbell",
+    category: "body-composition",
+    keywords: [
+      "lean body mass calculator",
+      "LBM calculator",
+      "fat free mass calculator",
+      "lean mass calculator",
+      "how much muscle do I have",
+      "body composition calculator",
+      "Boer formula",
+      "fat free body weight",
+    ],
+    faqs: [
+      {
+        question: "What is lean body mass?",
+        answer:
+          "Lean body mass (LBM) is everything in your body that is not fat: muscle, bone, organs, water, and connective tissue. For most men, LBM is 75-85% of total weight. For women, it is typically 65-75%.",
+      },
+      {
+        question: "Why does lean body mass matter?",
+        answer:
+          "LBM determines your basal metabolic rate more accurately than total weight. It is also essential for calculating protein needs (many recommendations are based on grams per kg of lean mass) and tracking whether weight changes are from fat or muscle.",
+      },
+      {
+        question: "Which lean body mass formula is most accurate?",
+        answer:
+          "The Boer formula is generally considered the most accurate for adults. However, all estimation formulas have limitations. For the most precise measurement, DEXA scanning or hydrostatic weighing are the gold standard.",
+      },
+      {
+        question: "How can I increase my lean body mass?",
+        answer:
+          "Resistance training (lifting weights) combined with adequate protein intake (1.6-2.2g per kg of body weight) and a slight caloric surplus is the most effective strategy. Progressive overload and consistency are key.",
+      },
+    ],
+    relatedTools: [
+      "body-fat-calculator",
+      "bmi-calculator",
+      "ideal-weight-calculator",
+      "protein-calculator",
+    ],
+    relatedArticles: [
+      { title: "How to Build Lean Muscle Mass", href: "/fitness/build-lean-muscle" },
+      { title: "Protein Needs for Muscle Growth", href: "/nutrition/protein-needs-muscle-growth" },
+    ],
+    affiliateHeading: "Build Lean Mass",
+    affiliateText:
+      "Protein supplements, resistance bands, and body composition scales to support muscle building and tracking.",
+  },
+  {
+    slug: "waist-hip-ratio-calculator",
+    name: "Waist-to-Hip Ratio Calculator - Health Risk Assessment",
+    shortName: "Waist-to-Hip Ratio",
+    description:
+      "Calculate your waist-to-hip ratio (WHR) and assess your health risk level. WHR is a simple, evidence-based screening tool for cardiovascular and metabolic disease risk.",
+    longDescription:
+      "The waist-to-hip ratio (WHR) is endorsed by the World Health Organization as a measure of abdominal obesity and associated health risks. It is a better predictor of cardiovascular disease than BMI alone. Simply measure your waist and hip circumference to get your ratio and risk classification.",
+    icon: "tape-measure",
+    category: "body-composition",
+    keywords: [
+      "waist to hip ratio calculator",
+      "WHR calculator",
+      "waist hip ratio",
+      "abdominal obesity",
+      "visceral fat risk",
+      "body shape calculator",
+      "apple vs pear body shape",
+      "cardiovascular risk calculator",
+    ],
+    faqs: [
+      {
+        question: "What is a healthy waist-to-hip ratio?",
+        answer:
+          "The WHO defines low health risk as below 0.90 for men and below 0.85 for women. Ratios above 1.0 for men and 0.85 for women indicate substantially increased cardiovascular and metabolic disease risk.",
+      },
+      {
+        question: "How do I measure my waist and hips correctly?",
+        answer:
+          "Measure your waist at the narrowest point between your ribs and hip bones (usually at or just above the navel). Measure your hips at the widest point of your buttocks. Stand relaxed, breathe normally, and do not pull the tape tight.",
+      },
+      {
+        question: "Is waist-to-hip ratio better than BMI?",
+        answer:
+          "For assessing cardiovascular risk, yes. WHR specifically measures abdominal fat distribution, which is more strongly linked to heart disease, type 2 diabetes, and metabolic syndrome than overall weight. Many experts recommend using both measures together.",
+      },
+      {
+        question: "Can I change my waist-to-hip ratio?",
+        answer:
+          "Yes. Regular aerobic exercise, reducing refined carbohydrates and added sugars, strength training, stress management, and adequate sleep all help reduce abdominal fat and improve WHR over time.",
+      },
+    ],
+    relatedTools: [
+      "bmi-calculator",
+      "body-fat-calculator",
+      "ideal-weight-calculator",
+      "calorie-calculator",
+    ],
+    relatedArticles: [
+      { title: "Why Belly Fat Is the Most Dangerous Kind", href: "/fitness/belly-fat-health-risks" },
+      { title: "How to Reduce Visceral Fat Naturally", href: "/fitness/reduce-visceral-fat" },
+    ],
+    affiliateHeading: "Measurement Tools",
+    affiliateText:
+      "Body measuring tapes, smart scales, and health screening tools for tracking your body composition changes.",
+  },
+
+  // ─── Cardio & Running Tools ───────────────────────────────────────────
+
+  {
+    slug: "running-pace-calculator",
+    name: "Running Pace Calculator - Pace, Distance & Time Converter",
+    shortName: "Running Pace Calculator",
+    description:
+      "Calculate your running pace, finish time, or distance. Convert between min/km and min/mile. Get pace splits for 5K, 10K, half marathon, and marathon distances.",
+    longDescription:
+      "Whether you are training for your first 5K or targeting a marathon PB, pace is everything. Our free running pace calculator lets you enter any two of pace, distance, and time to solve for the third. It also shows projected finish times for common race distances and displays per-kilometre and per-mile splits.",
+    icon: "running",
+    category: "cardio",
+    keywords: [
+      "running pace calculator",
+      "pace calculator",
+      "running speed calculator",
+      "marathon pace calculator",
+      "5K pace calculator",
+      "min per km to min per mile",
+      "race pace calculator",
+      "running time calculator",
+    ],
+    faqs: [
+      {
+        question: "What is a good running pace for beginners?",
+        answer:
+          "A comfortable beginner pace is typically 7:00-8:30 min/km (11:00-13:30 min/mile). The best beginner pace is one where you can hold a conversation. Speed will improve naturally with consistent training.",
+      },
+      {
+        question: "How do I calculate my running pace?",
+        answer:
+          "Divide your total time by the distance. For example, a 30-minute 5K is 30/5 = 6:00 min/km. To convert to min/mile, multiply by 1.609. So 6:00 min/km is approximately 9:39 min/mile.",
+      },
+      {
+        question: "What pace do I need for a sub-4-hour marathon?",
+        answer:
+          "A sub-4-hour marathon requires an average pace of 5:41 min/km (9:09 min/mile) or faster over 42.195 km. This is a common goal for recreational runners and requires consistent training.",
+      },
+      {
+        question: "Should I run at the same pace every day?",
+        answer:
+          "No. Most training plans include easy runs (60-70% of max HR), tempo runs (around lactate threshold), and intervals (above threshold). Running every session at the same pace limits improvement and increases injury risk.",
+      },
+      {
+        question: "How can I improve my running pace?",
+        answer:
+          "Include interval training and tempo runs in your weekly plan, build mileage gradually (10% per week rule), improve running form, strengthen your core and legs, and ensure adequate recovery between hard sessions.",
+      },
+    ],
+    relatedTools: [
+      "running-calorie-calculator",
+      "vo2-max-calculator",
+      "heart-rate-calculator",
+      "walking-calorie-calculator",
+    ],
+    relatedArticles: [
+      { title: "How to Find Your Ideal Training Pace", href: "/fitness/ideal-training-pace" },
+      { title: "Beginner's Guide to Running Your First 5K", href: "/fitness/beginners-guide-first-5k" },
+    ],
+    affiliateHeading: "Running Essentials",
+    affiliateText:
+      "GPS running watches, running shoes, and training plans to help you hit your pace targets.",
+  },
+  {
+    slug: "vo2-max-calculator",
+    name: "VO2 Max Calculator - Estimate Your Aerobic Fitness",
+    shortName: "VO2 Max Estimator",
+    description:
+      "Estimate your VO2 max using the Cooper 12-minute run test or the Rockport walk test. VO2 max is the gold standard measure of cardiovascular fitness and aerobic endurance.",
+    longDescription:
+      "VO2 max represents the maximum volume of oxygen your body can use during intense exercise. It is the single best predictor of cardiovascular fitness and is increasingly recognised as a key longevity biomarker. Our calculator estimates your VO2 max from two popular field tests — no lab required.",
+    icon: "lungs",
+    category: "cardio",
+    keywords: [
+      "VO2 max calculator",
+      "VO2 max test",
+      "aerobic fitness test",
+      "Cooper test calculator",
+      "Rockport walk test",
+      "cardiovascular fitness",
+      "VO2 max by age",
+      "how to measure VO2 max",
+    ],
+    faqs: [
+      {
+        question: "What is a good VO2 max?",
+        answer:
+          "VO2 max varies by age and sex. For men aged 30-39, an 'excellent' VO2 max is above 48 ml/kg/min, 'good' is 40-48, and 'average' is 34-40. For women of the same age, 'excellent' is above 41, 'good' is 34-41, and 'average' is 28-34.",
+      },
+      {
+        question: "How does the Cooper 12-minute run test work?",
+        answer:
+          "Run as far as you can in exactly 12 minutes on a flat surface, then measure the distance covered. The formula VO2max = (distance in metres - 504.9) / 44.73 converts your distance to an estimated VO2 max.",
+      },
+      {
+        question: "Can I improve my VO2 max?",
+        answer:
+          "Yes. High-intensity interval training (HIIT), tempo runs, and progressive overload in aerobic exercise can improve VO2 max by 10-20% in untrained individuals. Genetics set your ceiling, but most people have significant room for improvement.",
+      },
+      {
+        question: "Why does VO2 max matter for longevity?",
+        answer:
+          "Research published in JAMA shows that higher VO2 max is associated with significantly lower all-cause mortality. Moving from a 'low' to 'moderate' fitness level reduces mortality risk more than quitting smoking. It is one of the strongest predictors of long-term health.",
+      },
+      {
+        question: "What is the Rockport walk test?",
+        answer:
+          "Walk 1 mile (1.609 km) as fast as you can, then record your time and heart rate immediately after finishing. The Rockport formula estimates VO2 max using your time, heart rate, age, sex, and weight. It is ideal for people who cannot run.",
+      },
+    ],
+    relatedTools: [
+      "heart-rate-calculator",
+      "running-pace-calculator",
+      "running-calorie-calculator",
+      "recovery-tracker",
+    ],
+    relatedArticles: [
+      { title: "VO2 Max and Longevity: What the Research Shows", href: "/fitness/vo2-max-longevity" },
+      { title: "How to Improve Your VO2 Max at Any Age", href: "/fitness/improve-vo2-max" },
+    ],
+    affiliateHeading: "Cardio Fitness Gear",
+    affiliateText:
+      "Heart rate monitors, GPS watches, and fitness trackers that measure estimated VO2 max during your workouts.",
+  },
+  {
+    slug: "running-calorie-calculator",
+    name: "Running Calorie Calculator - Calories Burned Running",
+    shortName: "Running Calorie Calculator",
+    description:
+      "Calculate how many calories you burn running based on your weight, distance, pace, and terrain. Uses MET values from the Compendium of Physical Activities.",
+    longDescription:
+      "Running is one of the most efficient calorie-burning activities. Our calculator uses MET (Metabolic Equivalent of Task) values from the Compendium of Physical Activities to estimate energy expenditure based on your weight, speed, distance, and terrain. Get accurate calorie burn estimates for any run.",
+    icon: "shoe",
+    category: "cardio",
+    keywords: [
+      "running calorie calculator",
+      "calories burned running",
+      "how many calories does running burn",
+      "jogging calorie calculator",
+      "running for weight loss",
+      "calories per mile running",
+      "calories per km running",
+      "running energy expenditure",
+    ],
+    faqs: [
+      {
+        question: "How many calories does running burn per mile?",
+        answer:
+          "A rough estimate is about 100 calories per mile for a 70 kg (154 lb) person. However, this varies with body weight, speed, and terrain. Heavier runners burn more, and faster paces have slightly higher per-mile calorie costs.",
+      },
+      {
+        question: "Does running faster burn more calories?",
+        answer:
+          "Per minute, yes — faster running has a higher MET value and burns more calories per minute. Per mile, the difference is smaller. The biggest factor in total calories burned is distance covered and body weight.",
+      },
+      {
+        question: "Does running burn more calories than walking the same distance?",
+        answer:
+          "Yes, but not as much as you might think. Running burns roughly 20-30% more calories per mile than walking the same distance, primarily because running involves more vertical oscillation and muscle engagement.",
+      },
+      {
+        question: "How much running do I need to do to lose weight?",
+        answer:
+          "A 500-calorie daily deficit leads to approximately 0.5 kg (1 lb) per week of fat loss. Running 5 km burns roughly 300-400 calories for most people. Combine running with moderate dietary changes for sustainable weight loss.",
+      },
+    ],
+    relatedTools: [
+      "running-pace-calculator",
+      "walking-calorie-calculator",
+      "calorie-calculator",
+      "cycling-calorie-calculator",
+    ],
+    relatedArticles: [
+      { title: "Running for Weight Loss: A Complete Guide", href: "/fitness/running-for-weight-loss" },
+      { title: "How to Start Running as a Beginner", href: "/fitness/start-running-beginner" },
+    ],
+    affiliateHeading: "Running Gear",
+    affiliateText:
+      "Running shoes, GPS watches, and hydration vests to support your running routine.",
+  },
+  {
+    slug: "cycling-calorie-calculator",
+    name: "Cycling Calorie Calculator - Calories Burned Cycling",
+    shortName: "Cycling Calorie Calculator",
+    description:
+      "Calculate calories burned cycling based on your weight, speed, duration, and terrain. Covers road cycling, mountain biking, indoor cycling, and commuting.",
+    longDescription:
+      "Cycling is an excellent low-impact cardio exercise that burns significant calories while being easy on the joints. Our calculator uses MET values to estimate your energy expenditure based on cycling type, speed, duration, and body weight. Whether you ride a road bike, mountain bike, or stationary bike, get an accurate calorie estimate.",
+    icon: "bike",
+    category: "cardio",
+    keywords: [
+      "cycling calorie calculator",
+      "calories burned cycling",
+      "calories burned biking",
+      "cycling for weight loss",
+      "stationary bike calories",
+      "indoor cycling calories",
+      "mountain biking calories",
+      "cycling energy expenditure",
+    ],
+    faqs: [
+      {
+        question: "How many calories does cycling burn per hour?",
+        answer:
+          "A 70 kg person burns approximately 400-600 calories per hour of moderate cycling (16-20 km/h). Vigorous cycling (25+ km/h) can burn 700-1000+ calories per hour. Body weight and intensity are the biggest factors.",
+      },
+      {
+        question: "Does cycling burn more calories than running?",
+        answer:
+          "Per unit of time, running generally burns more calories at equivalent effort levels. However, most people can cycle for longer without fatigue, potentially burning more total calories per session. Cycling is also lower impact on joints.",
+      },
+      {
+        question: "Does indoor cycling burn as many calories as outdoor cycling?",
+        answer:
+          "Indoor cycling can match outdoor cycling calorie burn if the intensity is similar. However, outdoor cycling often involves wind resistance, hills, and terrain variations that increase energy expenditure. Increase indoor resistance to compensate.",
+      },
+      {
+        question: "Is cycling good for weight loss?",
+        answer:
+          "Yes. Cycling is excellent for weight loss because it burns substantial calories, is low-impact (sustainable long-term), can be integrated into daily commuting, and is enjoyable enough that people stick with it.",
+      },
+    ],
+    relatedTools: [
+      "running-calorie-calculator",
+      "walking-calorie-calculator",
+      "calorie-calculator",
+      "heart-rate-calculator",
+    ],
+    relatedArticles: [
+      { title: "Cycling for Fitness: Getting Started", href: "/fitness/cycling-for-fitness" },
+      { title: "Indoor vs Outdoor Cycling: Pros and Cons", href: "/fitness/indoor-vs-outdoor-cycling" },
+    ],
+    affiliateHeading: "Cycling Essentials",
+    affiliateText:
+      "Bike computers, indoor trainers, cycling shorts, and heart rate monitors for tracking your rides.",
+  },
+  {
+    slug: "swimming-calorie-calculator",
+    name: "Swimming Calorie Calculator - Calories Burned Swimming",
+    shortName: "Swimming Calorie Calculator",
+    description:
+      "Calculate calories burned swimming based on stroke type, duration, intensity, and body weight. Covers freestyle, backstroke, breaststroke, butterfly, and treading water.",
+    longDescription:
+      "Swimming is a full-body workout that burns significant calories while being gentle on joints and ideal for all fitness levels. Our calculator uses MET values specific to each swimming stroke and intensity to give you an accurate calorie burn estimate. Great for tracking pool workouts.",
+    icon: "waves",
+    category: "cardio",
+    keywords: [
+      "swimming calorie calculator",
+      "calories burned swimming",
+      "swimming for weight loss",
+      "freestyle calorie burn",
+      "pool workout calories",
+      "swimming laps calories",
+      "breaststroke calories",
+      "swimming exercise calories",
+    ],
+    faqs: [
+      {
+        question: "How many calories does swimming burn per hour?",
+        answer:
+          "A 70 kg person burns roughly 400-700 calories per hour of swimming, depending on stroke and intensity. Butterfly burns the most (around 700 kcal/hr), followed by freestyle (500-600), backstroke (400-500), and breaststroke (400-500).",
+      },
+      {
+        question: "Which swimming stroke burns the most calories?",
+        answer:
+          "Butterfly burns the most calories per minute due to its intense full-body demands. However, most swimmers cannot sustain butterfly for long. For a full workout, moderate-pace freestyle typically results in the highest total calorie burn.",
+      },
+      {
+        question: "Is swimming good for weight loss?",
+        answer:
+          "Swimming is excellent for weight loss: it burns significant calories, works every major muscle group, is low-impact (no joint stress), and can be maintained into old age. Some research suggests cold water may slightly boost metabolic rate.",
+      },
+      {
+        question: "Does body fat affect swimming calorie burn?",
+        answer:
+          "Body fat provides buoyancy, meaning leaner swimmers may expend slightly more energy to stay afloat. However, heavier individuals burn more total calories due to the greater energy cost of moving more mass through water.",
+      },
+    ],
+    relatedTools: [
+      "running-calorie-calculator",
+      "cycling-calorie-calculator",
+      "walking-calorie-calculator",
+      "calorie-calculator",
+    ],
+    relatedArticles: [
+      { title: "Swimming for Fitness: A Beginner's Guide", href: "/fitness/swimming-fitness-beginners" },
+      { title: "Best Pool Workouts for Weight Loss", href: "/fitness/pool-workouts-weight-loss" },
+    ],
+    affiliateHeading: "Swimming Gear",
+    affiliateText:
+      "Swim goggles, waterproof fitness trackers, training paddles, and swim fins for better pool workouts.",
+  },
+  {
+    slug: "steps-to-calories-calculator",
+    name: "Steps to Calories Calculator - Convert Step Count to Calories",
+    shortName: "Steps to Calories Calculator",
+    description:
+      "Convert your daily step count into calories burned. Enter your steps, weight, and stride length to get an accurate calorie estimate from your walking activity.",
+    longDescription:
+      "Wondering how many calories your daily steps burn? Our steps-to-calories calculator converts your step count into estimated energy expenditure based on your body weight and stride length. Whether you are tracking 5,000 or 15,000 steps a day, see exactly what your walking activity contributes to your daily calorie burn.",
+    icon: "footprints",
+    category: "cardio",
+    keywords: [
+      "steps to calories calculator",
+      "how many calories do 10000 steps burn",
+      "step counter calories",
+      "steps to kcal",
+      "walking steps calories",
+      "10000 steps calories",
+      "pedometer calorie calculator",
+      "daily steps calorie burn",
+    ],
+    faqs: [
+      {
+        question: "How many calories do 10,000 steps burn?",
+        answer:
+          "For a 70 kg person with an average stride length, 10,000 steps burns approximately 350-450 calories. The exact number depends on your weight, walking speed, terrain, and stride length.",
+      },
+      {
+        question: "How many steps do I need to burn 500 calories?",
+        answer:
+          "For a 70 kg person, approximately 12,000-14,000 steps burns around 500 calories. Heavier individuals will need fewer steps, and lighter individuals will need more steps to reach the same calorie target.",
+      },
+      {
+        question: "Are all steps equal in terms of calorie burn?",
+        answer:
+          "No. Brisk walking burns more calories per step than a slow stroll. Walking uphill, on uneven terrain, or carrying weight also increases per-step calorie expenditure. Step counters do not usually account for these differences.",
+      },
+      {
+        question: "How do I find my stride length?",
+        answer:
+          "Walk 10 steps at your normal pace, measure the total distance, and divide by 10. Average stride length is about 0.74 metres (2.4 feet) for men and 0.67 metres (2.2 feet) for women. Our calculator uses these defaults if you do not enter your own.",
+      },
+    ],
+    relatedTools: [
+      "walking-calorie-calculator",
+      "running-calorie-calculator",
+      "calorie-calculator",
+      "habit-tracker",
+    ],
+    relatedArticles: [
+      { title: "Do You Really Need 10,000 Steps a Day?", href: "/fitness/do-you-need-10000-steps" },
+      { title: "How to Increase Your Daily Step Count", href: "/habits/increase-daily-step-count" },
+    ],
+    affiliateHeading: "Step Tracking Gear",
+    affiliateText:
+      "Fitness trackers, pedometers, and smartwatches to accurately count your daily steps and monitor activity.",
+  },
+
+  // ─── Strength & Fitness Tools ─────────────────────────────────────────
+
+  {
+    slug: "one-rep-max-calculator",
+    name: "One Rep Max (1RM) Calculator - Estimate Your Max Lift",
+    shortName: "One Rep Max Calculator",
+    description:
+      "Estimate your one-rep max for any lift using Epley, Brzycki, and Lombardi formulas. Enter the weight and reps you completed to get your estimated 1RM and percentage chart.",
+    longDescription:
+      "Your one-rep max (1RM) is the maximum weight you can lift for a single repetition. Knowing your 1RM helps you plan training percentages, track strength progress, and programme exercises effectively. Our calculator uses three validated formulas to estimate your 1RM without needing to test it directly — which is safer and more practical.",
+    icon: "barbell",
+    category: "fitness",
+    keywords: [
+      "one rep max calculator",
+      "1RM calculator",
+      "bench press max calculator",
+      "squat max calculator",
+      "deadlift max calculator",
+      "one rep max formula",
+      "Epley formula",
+      "Brzycki formula",
+      "max lift calculator",
+    ],
+    faqs: [
+      {
+        question: "What is a one rep max (1RM)?",
+        answer:
+          "Your 1RM is the maximum weight you can lift for a single repetition with proper form. It is the standard measure of absolute strength for a given exercise and is used to calculate training loads.",
+      },
+      {
+        question: "How accurate are 1RM calculator formulas?",
+        answer:
+          "1RM formulas are most accurate when using sets of 2-6 reps. Accuracy decreases with higher rep counts (10+). For most people, the Epley and Brzycki formulas are accurate within 5% when using 3-5 rep sets.",
+      },
+      {
+        question: "Which 1RM formula is the best?",
+        answer:
+          "The Epley formula (1RM = weight x (1 + reps/30)) and Brzycki formula (1RM = weight x 36/(37 - reps)) are the most commonly used and generally give similar results. Using the average of multiple formulas provides the best estimate.",
+      },
+      {
+        question: "How should I use my 1RM for training?",
+        answer:
+          "Common training percentages: strength (85-100% 1RM, 1-5 reps), hypertrophy (65-85% 1RM, 6-12 reps), endurance (50-65% 1RM, 15+ reps). The percentage chart provided with your results makes programming easy.",
+      },
+      {
+        question: "How often should I test or recalculate my 1RM?",
+        answer:
+          "Recalculate every 4-8 weeks during a training programme, or whenever you notice your working sets feel significantly easier. Avoid actual 1RM testing too frequently as it is taxing on the nervous system.",
+      },
+    ],
+    relatedTools: [
+      "calorie-calculator",
+      "protein-calculator",
+      "recovery-tracker",
+      "macro-calculator",
+    ],
+    relatedArticles: [
+      { title: "How to Use Training Percentages", href: "/fitness/training-percentages-guide" },
+      { title: "Progressive Overload: The Key to Getting Stronger", href: "/fitness/progressive-overload" },
+    ],
+    affiliateHeading: "Strength Training Gear",
+    affiliateText:
+      "Lifting belts, wrist wraps, chalk, and training logs to support your strength training.",
+  },
+
+  // ─── Nutrition Tools ──────────────────────────────────────────────────
+
+  {
+    slug: "protein-calculator",
+    name: "Protein Intake Calculator - Daily Protein Needs",
+    shortName: "Protein Calculator",
+    description:
+      "Calculate how much protein you need per day based on your weight, activity level, and fitness goals. Get gram-level targets for muscle building, weight loss, or maintenance.",
+    longDescription:
+      "Protein is the most important macronutrient for muscle repair, satiety, and metabolic health. Our free protein calculator provides personalised daily protein targets based on your body weight, activity level, and specific goals — from sedentary maintenance to intense muscle building. Get science-backed recommendations, not guesswork.",
+    icon: "egg",
+    category: "nutrition",
+    keywords: [
+      "protein calculator",
+      "how much protein do I need",
+      "daily protein intake",
+      "protein per day",
+      "protein for muscle building",
+      "protein intake calculator",
+      "protein requirements",
+      "grams of protein per kg",
+    ],
+    faqs: [
+      {
+        question: "How much protein do I need per day?",
+        answer:
+          "The minimum recommendation is 0.8g per kg of body weight for sedentary adults. Active individuals should aim for 1.2-1.6g/kg, and those building muscle or losing weight benefit from 1.6-2.2g/kg. Our calculator personalises this based on your goals.",
+      },
+      {
+        question: "Can I eat too much protein?",
+        answer:
+          "For healthy adults, protein intakes up to 2.2-3.0g/kg appear safe. Higher intakes are not harmful to kidney function in healthy individuals, contrary to popular myth. However, there are diminishing returns for muscle building above 2.2g/kg.",
+      },
+      {
+        question: "When should I eat protein?",
+        answer:
+          "Distribute protein evenly across 3-5 meals (20-40g per meal) for optimal muscle protein synthesis. Post-workout protein is beneficial but the 'anabolic window' is wider than previously thought — within 2-3 hours is fine.",
+      },
+      {
+        question: "Do I need more protein as I age?",
+        answer:
+          "Yes. Older adults (50+) have higher protein needs due to anabolic resistance — the body becomes less efficient at using protein for muscle repair. Experts recommend 1.2-1.5g/kg for adults over 50 to prevent sarcopenia (age-related muscle loss).",
+      },
+      {
+        question: "What are the best sources of protein?",
+        answer:
+          "High-quality sources include eggs, chicken, fish, Greek yoghurt, cottage cheese, lean beef, tofu, tempeh, lentils, and whey protein. Aim for a mix of animal and plant sources for a complete amino acid profile.",
+      },
+    ],
+    relatedTools: [
+      "macro-calculator",
+      "calorie-calculator",
+      "lean-body-mass-calculator",
+      "one-rep-max-calculator",
+    ],
+    relatedArticles: [
+      { title: "How Much Protein Do You Really Need?", href: "/nutrition/how-much-protein-do-you-need" },
+      { title: "Best High-Protein Foods for Every Diet", href: "/nutrition/best-high-protein-foods" },
+    ],
+    affiliateHeading: "Protein Essentials",
+    affiliateText:
+      "Whey protein, plant-based protein powders, protein bars, and shaker bottles to help you hit your daily target.",
+  },
+
+  // ─── Sleep Tools ──────────────────────────────────────────────────────
+
+  {
+    slug: "nap-calculator",
+    name: "Nap Calculator - Find Your Ideal Nap Duration & Timing",
+    shortName: "Nap Calculator",
+    description:
+      "Calculate the best nap duration and timing for your schedule. Power naps, recovery naps, and full-cycle naps — find the right nap to boost alertness without grogginess.",
+    longDescription:
+      "Not all naps are created equal. A 20-minute power nap boosts alertness, while a 90-minute nap includes a full sleep cycle with REM. Timing matters too — nap too late and you will disrupt your night-time sleep. Our nap calculator recommends the ideal nap type, duration, and latest safe nap time based on your schedule.",
+    icon: "nap",
+    category: "sleep",
+    keywords: [
+      "nap calculator",
+      "how long should I nap",
+      "best nap duration",
+      "power nap time",
+      "nap schedule",
+      "when to nap",
+      "nap timer",
+      "afternoon nap calculator",
+      "optimal nap length",
+    ],
+    faqs: [
+      {
+        question: "How long should a power nap be?",
+        answer:
+          "A power nap should be 15-20 minutes. This keeps you in light sleep (stages 1-2), which boosts alertness and mood without causing sleep inertia (grogginess). Set an alarm to avoid sleeping longer.",
+      },
+      {
+        question: "Why do I feel groggy after napping?",
+        answer:
+          "Grogginess after a nap (sleep inertia) usually means you woke up during deep sleep (stage 3). This happens with naps of 30-60 minutes. Either nap for 20 minutes (before deep sleep) or 90 minutes (a full cycle that ends in light sleep).",
+      },
+      {
+        question: "What is the best time to take a nap?",
+        answer:
+          "The best time to nap is between 1:00 PM and 3:00 PM, when your circadian rhythm naturally dips. Napping after 3:00 PM can interfere with your ability to fall asleep at night.",
+      },
+      {
+        question: "Are naps good for you?",
+        answer:
+          "Short naps (20-30 minutes) improve alertness, mood, reaction time, and memory consolidation. However, frequent long naps or napping due to chronic daytime sleepiness may indicate an underlying sleep disorder. Naps should complement, not replace, adequate night-time sleep.",
+      },
+      {
+        question: "Can a nap replace lost sleep?",
+        answer:
+          "A nap can temporarily reduce sleepiness and improve performance, but it cannot fully replace the deep sleep and REM cycles lost from a short night. Consistent night-time sleep of 7-9 hours remains the priority.",
+      },
+    ],
+    relatedTools: [
+      "sleep-calculator",
+      "caffeine-calculator",
+      "recovery-tracker",
+      "breathing-timer",
+    ],
+    relatedArticles: [
+      { title: "The Science of Power Napping", href: "/sleep/science-of-power-napping" },
+      { title: "How Naps Affect Night-Time Sleep", href: "/sleep/naps-affect-night-sleep" },
+    ],
+    affiliateHeading: "Nap Accessories",
+    affiliateText:
+      "Sleep masks, white noise machines, and travel pillows for the perfect nap anywhere.",
+  },
+
+  // ─── Lifestyle & Wellness Tools ───────────────────────────────────────
+
+  {
+    slug: "caffeine-calculator",
+    name: "Caffeine Calculator - Half-Life & Daily Limit Tracker",
+    shortName: "Caffeine Calculator",
+    description:
+      "Calculate how long caffeine stays in your system and find the latest time to drink coffee without affecting sleep. Track daily caffeine intake against recommended limits.",
+    longDescription:
+      "Caffeine has an average half-life of 5-6 hours, meaning half the caffeine from your afternoon coffee is still in your system at bedtime. Our caffeine calculator shows you exactly when caffeine from each drink clears your system, tracks your total daily intake, and tells you the latest safe time for your last caffeinated drink based on your bedtime.",
+    icon: "coffee",
+    category: "sleep",
+    keywords: [
+      "caffeine calculator",
+      "caffeine half life calculator",
+      "how long does caffeine last",
+      "caffeine and sleep",
+      "when to stop drinking coffee",
+      "daily caffeine limit",
+      "caffeine intake calculator",
+      "coffee before bed calculator",
+    ],
+    faqs: [
+      {
+        question: "How long does caffeine stay in your system?",
+        answer:
+          "Caffeine has an average half-life of 5-6 hours, meaning half the caffeine is eliminated every 5-6 hours. A 200mg coffee at 2 PM still has ~100mg active at 8 PM and ~50mg at 2 AM. Full clearance takes about 12 hours.",
+      },
+      {
+        question: "How much caffeine is too much?",
+        answer:
+          "The FDA and EFSA recommend no more than 400mg of caffeine per day for healthy adults (roughly 4 cups of brewed coffee). Pregnant women should limit intake to 200mg. Sensitivity varies significantly between individuals.",
+      },
+      {
+        question: "When should I stop drinking coffee to sleep well?",
+        answer:
+          "Stop consuming caffeine at least 6-8 hours before bedtime for most people. If you go to bed at 10 PM, your last coffee should be by 2 PM at the latest. People who metabolise caffeine slowly should allow even more time.",
+      },
+      {
+        question: "How much caffeine is in common drinks?",
+        answer:
+          "Brewed coffee: 80-100mg per cup. Espresso: 60-75mg per shot. Black tea: 40-70mg. Green tea: 25-45mg. Cola: 30-40mg per can. Energy drinks: 70-200mg per can. Decaf coffee: 2-7mg per cup.",
+      },
+      {
+        question: "Does caffeine tolerance build up?",
+        answer:
+          "Yes. Regular caffeine consumers develop tolerance, meaning the same dose has less effect on alertness. However, caffeine continues to affect sleep architecture even in habitual users, disrupting deep sleep even when you feel you can fall asleep fine.",
+      },
+    ],
+    relatedTools: [
+      "sleep-calculator",
+      "nap-calculator",
+      "hydration-calculator",
+      "stress-reduction-checklist",
+    ],
+    relatedArticles: [
+      { title: "How Caffeine Affects Your Sleep Quality", href: "/sleep/caffeine-affects-sleep-quality" },
+      { title: "Caffeine Detox: How to Reset Your Tolerance", href: "/nutrition/caffeine-detox-reset-tolerance" },
+    ],
+    affiliateHeading: "Better Coffee Habits",
+    affiliateText:
+      "Low-caffeine alternatives, quality decaf coffee, caffeine-tracking apps, and herbal teas for the evening.",
+  },
+  {
+    slug: "pregnancy-due-date-calculator",
+    name: "Pregnancy Due Date Calculator - Estimated Delivery Date",
+    shortName: "Due Date Calculator",
+    description:
+      "Calculate your estimated due date using Naegele's rule based on your last menstrual period or conception date. View your trimester timeline and key pregnancy milestones.",
+    longDescription:
+      "Knowing your estimated due date helps you plan prenatal care and prepare for your baby's arrival. Our due date calculator uses Naegele's rule — the standard method used by healthcare providers — to estimate your delivery date based on the first day of your last menstrual period (LMP) or your estimated conception date. It also shows your trimester breakdown and pregnancy week.",
+    icon: "baby",
+    category: "wellness",
+    keywords: [
+      "due date calculator",
+      "pregnancy due date calculator",
+      "when is my baby due",
+      "pregnancy calculator",
+      "estimated delivery date",
+      "conception date calculator",
+      "pregnancy week calculator",
+      "Naegele rule calculator",
+      "how far along am I",
+    ],
+    faqs: [
+      {
+        question: "How is a due date calculated?",
+        answer:
+          "Naegele's rule calculates the due date by adding 280 days (40 weeks) to the first day of your last menstrual period (LMP). This assumes a 28-day cycle and ovulation on day 14. The calculator adjusts for different cycle lengths.",
+      },
+      {
+        question: "How accurate are due date calculators?",
+        answer:
+          "Only about 5% of babies are born on their estimated due date. Most births occur within 2 weeks of the due date (38-42 weeks). An early ultrasound (before 12 weeks) provides the most accurate dating. This calculator gives an estimate based on LMP.",
+      },
+      {
+        question: "What are the three trimesters?",
+        answer:
+          "First trimester: weeks 1-12 (major organ development). Second trimester: weeks 13-27 (fastest growth, movements felt). Third trimester: weeks 28-40 (final development, preparation for birth).",
+      },
+      {
+        question: "Can my due date change?",
+        answer:
+          "Yes. Your healthcare provider may adjust your due date after an early ultrasound measurement. Ultrasound dating is most accurate in the first trimester and may differ from LMP-based calculations, especially if your cycles are irregular.",
+      },
+      {
+        question: "How do I calculate my due date from conception?",
+        answer:
+          "If you know your conception date, add 266 days (38 weeks) to get your estimated due date. This is because Naegele's rule adds 280 days from LMP, which includes roughly 14 days before conception.",
+      },
+    ],
+    relatedTools: [
+      "calorie-calculator",
+      "hydration-calculator",
+      "sleep-calculator",
+      "stress-reduction-checklist",
+    ],
+    relatedArticles: [
+      { title: "First Trimester: What to Expect", href: "/wellness/first-trimester-guide" },
+      { title: "Nutrition During Pregnancy", href: "/nutrition/nutrition-during-pregnancy" },
+    ],
+    affiliateHeading: "Pregnancy Essentials",
+    affiliateText:
+      "Prenatal vitamins, pregnancy journals, and comfortable maternity products for every trimester.",
+  },
 ];
 
 export function getToolBySlug(slug: string): ToolDefinition | undefined {

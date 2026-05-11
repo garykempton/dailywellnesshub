@@ -26,6 +26,20 @@ const ICON_MAP: Record<string, string> = {
   swords: "🥋",
   leaf: "🍃",
   "shield-check": "🛡️",
+  ruler: "📏",
+  target: "🎯",
+  dumbbell: "💪",
+  "tape-measure": "📐",
+  running: "🏃‍♂️",
+  lungs: "🫁",
+  shoe: "👟",
+  bike: "🚴",
+  waves: "🏊",
+  barbell: "🏋️",
+  egg: "🥚",
+  nap: "😴",
+  coffee: "☕",
+  baby: "👶",
 };
 
 export function ToolPageLayout({ tool, children }: Props) {

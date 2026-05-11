@@ -9,7 +9,7 @@ import { NewsletterInlineBlock } from "@/components/NewsletterInlineBlock";
 export const metadata: Metadata = buildMetadata({
   title: "Free Wellness Tools & Calculators",
   description:
-    "19 free health and wellness calculators and trackers: sleep, calories, macros, hydration, fasting, breathing, habit tracking, mobility, recovery, and more. No signup required.",
+    "31 free health and wellness calculators and trackers: body fat, ideal weight, running pace, sleep cycles, calories, macros, protein, VO2 max, 1RM, hydration, fasting, and more. No signup required.",
   path: "/tools",
 });
 
@@ -19,6 +19,46 @@ interface ToolCategory {
 }
 
 const TOOL_CATEGORIES: ToolCategory[] = [
+  {
+    name: "Body Composition",
+    tools: [
+      {
+        slug: "bmi-calculator",
+        name: "BMI Calculator",
+        description:
+          "Calculate your Body Mass Index using height and weight.",
+        icon: "⚖️",
+      },
+      {
+        slug: "body-fat-calculator",
+        name: "Body Fat Calculator",
+        description:
+          "Estimate body fat percentage using the US Navy tape measure method.",
+        icon: "📏",
+      },
+      {
+        slug: "ideal-weight-calculator",
+        name: "Ideal Weight Calculator",
+        description:
+          "Calculate ideal weight using four established medical formulas.",
+        icon: "🎯",
+      },
+      {
+        slug: "lean-body-mass-calculator",
+        name: "Lean Body Mass Calculator",
+        description:
+          "Estimate fat-free mass using Boer, James, and Hume formulas.",
+        icon: "💪",
+      },
+      {
+        slug: "waist-hip-ratio-calculator",
+        name: "Waist-to-Hip Ratio",
+        description:
+          "Calculate WHR and assess cardiovascular health risk level.",
+        icon: "📐",
+      },
+    ],
+  },
   {
     name: "Nutrition & Calories",
     tools: [
@@ -37,18 +77,18 @@ const TOOL_CATEGORIES: ToolCategory[] = [
         icon: "📊",
       },
       {
+        slug: "protein-calculator",
+        name: "Protein Intake Calculator",
+        description:
+          "Calculate daily protein needs based on weight, activity, and goals.",
+        icon: "🥚",
+      },
+      {
         slug: "hydration-calculator",
         name: "Water Intake Calculator",
         description:
           "Estimate daily water intake based on weight, activity, and climate.",
         icon: "💧",
-      },
-      {
-        slug: "walking-calorie-calculator",
-        name: "Walking Calorie Calculator",
-        description:
-          "Calculate calories burned walking based on speed, distance, and terrain.",
-        icon: "🚶",
       },
       {
         slug: "fasting-tracker",
@@ -60,27 +100,76 @@ const TOOL_CATEGORIES: ToolCategory[] = [
     ],
   },
   {
-    name: "Sleep & Recovery",
+    name: "Cardio & Running",
     tools: [
       {
-        slug: "sleep-calculator",
-        name: "Sleep Calculator",
+        slug: "heart-rate-calculator",
+        name: "Heart Rate Zones Calculator",
         description:
-          "Find optimal bedtimes and wake times based on 90-minute sleep cycles.",
-        icon: "🌙",
+          "Calculate target heart rate training zones based on age and resting HR.",
+        icon: "❤️",
       },
       {
-        slug: "recovery-tracker",
-        name: "Recovery Tracker",
+        slug: "running-pace-calculator",
+        name: "Running Pace Calculator",
         description:
-          "Monitor post-workout recovery with sleep, soreness, energy, and mood scores.",
-        icon: "💓",
+          "Calculate pace, finish time, or distance with race projections.",
+        icon: "🏃‍♂️",
+      },
+      {
+        slug: "vo2-max-calculator",
+        name: "VO2 Max Estimator",
+        description:
+          "Estimate aerobic fitness using the Cooper run or Rockport walk test.",
+        icon: "🫁",
+      },
+      {
+        slug: "running-calorie-calculator",
+        name: "Running Calorie Calculator",
+        description:
+          "Calculate calories burned running based on speed, distance, and terrain.",
+        icon: "👟",
+      },
+      {
+        slug: "cycling-calorie-calculator",
+        name: "Cycling Calorie Calculator",
+        description:
+          "Calculate calories burned cycling by type, speed, and duration.",
+        icon: "🚴",
+      },
+      {
+        slug: "swimming-calorie-calculator",
+        name: "Swimming Calorie Calculator",
+        description:
+          "Calculate calories burned swimming by stroke, intensity, and duration.",
+        icon: "🏊",
+      },
+      {
+        slug: "walking-calorie-calculator",
+        name: "Walking Calorie Calculator",
+        description:
+          "Calculate calories burned walking based on speed, distance, and terrain.",
+        icon: "🚶",
+      },
+      {
+        slug: "steps-to-calories-calculator",
+        name: "Steps to Calories Calculator",
+        description:
+          "Convert your daily step count into estimated calories burned.",
+        icon: "🚶",
       },
     ],
   },
   {
-    name: "Fitness & Movement",
+    name: "Strength & Fitness",
     tools: [
+      {
+        slug: "one-rep-max-calculator",
+        name: "One Rep Max (1RM) Calculator",
+        description:
+          "Estimate your max lift using Epley, Brzycki, and Lombardi formulas.",
+        icon: "🏋️",
+      },
       {
         slug: "flexibility-tracker",
         name: "Flexibility Tracker",
@@ -102,19 +191,38 @@ const TOOL_CATEGORIES: ToolCategory[] = [
           "Build a weekly conditioning program tailored to your martial arts discipline.",
         icon: "🥋",
       },
+    ],
+  },
+  {
+    name: "Sleep & Recovery",
+    tools: [
       {
-        slug: "bmi-calculator",
-        name: "BMI Calculator",
+        slug: "sleep-calculator",
+        name: "Sleep Calculator",
         description:
-          "Calculate your Body Mass Index using height and weight.",
-        icon: "⚖️",
+          "Find optimal bedtimes and wake times based on 90-minute sleep cycles.",
+        icon: "🌙",
       },
       {
-        slug: "heart-rate-calculator",
-        name: "Heart Rate Zones Calculator",
+        slug: "nap-calculator",
+        name: "Nap Calculator",
         description:
-          "Calculate target heart rate training zones based on age and resting HR.",
-        icon: "❤️",
+          "Find the ideal nap duration and timing to boost alertness without grogginess.",
+        icon: "😴",
+      },
+      {
+        slug: "caffeine-calculator",
+        name: "Caffeine Calculator",
+        description:
+          "Track caffeine half-life and find your latest safe coffee cutoff time.",
+        icon: "☕",
+      },
+      {
+        slug: "recovery-tracker",
+        name: "Recovery Tracker",
+        description:
+          "Monitor post-workout recovery with sleep, soreness, energy, and mood scores.",
+        icon: "💓",
       },
     ],
   },
@@ -145,7 +253,7 @@ const TOOL_CATEGORIES: ToolCategory[] = [
     ],
   },
   {
-    name: "Habits & Tracking",
+    name: "Habits & Lifestyle",
     tools: [
       {
         slug: "habit-tracker",
@@ -153,6 +261,13 @@ const TOOL_CATEGORIES: ToolCategory[] = [
         description:
           "Track up to 10 daily habits with streak counters and progress bars.",
         icon: "✅",
+      },
+      {
+        slug: "pregnancy-due-date-calculator",
+        name: "Pregnancy Due Date Calculator",
+        description:
+          "Estimate your delivery date, trimester timeline, and pregnancy milestones.",
+        icon: "👶",
       },
     ],
   },
