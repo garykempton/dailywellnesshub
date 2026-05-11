@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CATEGORIES } from "@/lib/constants";
+import { TOOL_CATEGORIES } from "@/lib/tools";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,12 +36,31 @@ export function Header() {
               </div>
             </div>
           </div>
-          <Link
-            href="/tools"
-            className="hover:text-primary transition-colors"
-          >
-            Tools
-          </Link>
+          <div className="relative group">
+            <button className="hover:text-primary transition-colors font-medium">
+              Tools
+            </button>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div className="bg-white border border-border rounded-lg shadow-lg p-4 grid grid-cols-2 gap-2 w-[420px]">
+                {TOOL_CATEGORIES.map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/tools/${cat.slug}`}
+                    className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-stone-50 text-sm transition-colors"
+                  >
+                    <span>{cat.emoji}</span>
+                    <span>{cat.name}</span>
+                  </Link>
+                ))}
+                <Link
+                  href="/tools"
+                  className="col-span-2 text-center text-sm font-medium text-primary hover:text-primary-dark pt-2 border-t border-border mt-1 transition-colors"
+                >
+                  View All Tools
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link
             href="/about"
             className="hover:text-primary transition-colors"
@@ -108,9 +128,23 @@ export function Header() {
               </Link>
             ))}
           </div>
+          <p className="text-xs font-semibold text-muted uppercase tracking-wide pt-3 border-t border-border">Tools</p>
+          <div className="grid grid-cols-2 gap-2 py-3">
+            {TOOL_CATEGORIES.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/tools/${cat.slug}`}
+                className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-stone-50 text-sm"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>{cat.emoji}</span>
+                <span>{cat.shortName}</span>
+              </Link>
+            ))}
+          </div>
           <div className="flex flex-col gap-2 pt-2 border-t border-border">
             <Link href="/tools" onClick={() => setMenuOpen(false)}>
-              Tools
+              View All Tools
             </Link>
             <Link href="/about" onClick={() => setMenuOpen(false)}>
               About

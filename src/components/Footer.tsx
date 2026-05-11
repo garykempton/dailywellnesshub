@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CATEGORIES, SITE_NAME } from "@/lib/constants";
+import { TOOL_CATEGORIES } from "@/lib/tools";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -36,18 +37,26 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-white font-semibold mb-3">More Topics</p>
+            <p className="text-white font-semibold mb-3">Free Tools</p>
             <ul className="space-y-1 text-sm">
-              {CATEGORIES.slice(6).map((cat) => (
+              {TOOL_CATEGORIES.map((cat) => (
                 <li key={cat.slug}>
                   <Link
-                    href={`/${cat.slug}`}
+                    href={`/tools/${cat.slug}`}
                     className="hover:text-white transition-colors"
                   >
                     {cat.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/tools"
+                  className="hover:text-white transition-colors font-medium"
+                >
+                  View All Tools
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { CATEGORIES, SITE_URL } from "@/lib/constants";
 import { prisma } from "@/lib/db";
-import { TOOLS_REGISTRY } from "@/lib/tools";
+import { TOOLS_REGISTRY, TOOL_CATEGORIES } from "@/lib/tools";
 
 // Next.js supports generateSitemaps() for index-based splitting.
 // Each sitemap can hold up to 50,000 URLs. We split by:
@@ -61,7 +61,14 @@ export default async function sitemap({
       priority: 0.8,
     }));
 
-    return [...staticPages, ...toolPages, ...categoryPages];
+    const toolCategoryPages: MetadataRoute.Sitemap = TOOL_CATEGORIES.map((cat) => ({
+      url: `${SITE_URL}/tools/${cat.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }));
+
+    return [...staticPages, ...toolPages, ...toolCategoryPages, ...categoryPages];
   }
 
   // Sitemap 1+: article pages in chunks

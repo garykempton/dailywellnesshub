@@ -2,16 +2,18 @@
 
 import Link from "next/link";
 import { NewsletterInlineBlock } from "@/components/NewsletterInlineBlock";
+import { ToolShareBar } from "@/components/ToolShareBar";
 import { AdSlot } from "@/components/AdSlot";
 import type { ToolDefinition } from "@/lib/tools";
-import { getRelatedTools } from "@/lib/tools";
+import { getRelatedTools, getToolCategoryForTool, getToolsByCategory } from "@/lib/tools";
+import { SITE_URL } from "@/lib/constants";
 
 interface Props {
   tool: ToolDefinition;
   children: React.ReactNode;
 }
 
-const ICON_MAP: Record<string, string> = {
+export const ICON_MAP: Record<string, string> = {
   moon: "🌙",
   droplets: "💧",
   flame: "🔥",
@@ -44,11 +46,26 @@ const ICON_MAP: Record<string, string> = {
 
 export function ToolPageLayout({ tool, children }: Props) {
   const relatedTools = getRelatedTools(tool.slug);
+  const category = getToolCategoryForTool(tool);
   const icon = ICON_MAP[tool.icon] || "🔧";
+  const toolUrl = `${SITE_URL}/tools/${tool.slug}`;
+
+  // Other tools in the same category (excluding this one)
+  const categoryTools = category
+    ? getToolsByCategory(category.slug).filter((t) => t.slug !== tool.slug)
+    : [];
+
+  // Category-specific newsletter copy
+  const newsletterHeading = category
+    ? `More free ${category.shortName.toLowerCase()} tools coming soon`
+    : `Like the ${tool.shortName}?`;
+  const newsletterBody = category
+    ? `Subscribe to get notified when we add new ${category.shortName.toLowerCase()} tools, plus weekly wellness tips and guides.`
+    : "Get free wellness tools, tips, and evidence-based guides delivered weekly.";
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      {/* Breadcrumbs */}
+      {/* Breadcrumbs — Home > Tools > Category > Tool */}
       <nav aria-label="Breadcrumb" className="text-sm text-stone-400 mb-6">
         <ol className="flex flex-wrap items-center gap-1">
           <li>
@@ -62,6 +79,19 @@ export function ToolPageLayout({ tool, children }: Props) {
               Tools
             </Link>
           </li>
+          {category && (
+            <>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link
+                  href={`/tools/${category.slug}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {category.shortName}
+                </Link>
+              </li>
+            </>
+          )}
           <li aria-hidden="true">/</li>
           <li className="text-stone-600 font-medium">{tool.shortName}</li>
         </ol>
@@ -77,7 +107,14 @@ export function ToolPageLayout({ tool, children }: Props) {
             {tool.shortName}
           </h1>
         </div>
-        <p className="text-lg text-stone-600 max-w-2xl">{tool.longDescription}</p>
+        <p className="text-lg text-stone-600 max-w-2xl mb-4">{tool.longDescription}</p>
+
+        {/* Share bar */}
+        <ToolShareBar
+          url={toolUrl}
+          title={`${tool.shortName} - Free Online Tool`}
+          description={tool.description}
+        />
       </header>
 
       {/* Top ad slot */}
@@ -91,10 +128,7 @@ export function ToolPageLayout({ tool, children }: Props) {
 
       {/* Newsletter CTA */}
       <div className="my-10">
-        <NewsletterInlineBlock
-          heading={`Like the ${tool.shortName}?`}
-          body="Get free wellness tools, tips, and evidence-based guides delivered weekly."
-        />
+        <NewsletterInlineBlock heading={newsletterHeading} body={newsletterBody} />
       </div>
 
       {/* Affiliate-ready section */}
@@ -152,7 +186,47 @@ export function ToolPageLayout({ tool, children }: Props) {
         </section>
       )}
 
-      {/* Related Tools */}
+      {/* More tools in this category */}
+      {categoryTools.length > 0 && (
+        <section className="my-10">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold">
+              More {category?.shortName} Tools
+            </h2>
+            {category && (
+              <Link
+                href={`/tools/${category.slug}`}
+                className="text-sm text-primary hover:underline font-medium"
+              >
+                View all &rarr;
+              </Link>
+            )}
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {categoryTools.slice(0, 4).map((ct) => (
+              <Link
+                key={ct.slug}
+                href={`/tools/${ct.slug}`}
+                className="flex items-center gap-3 bg-white border border-stone-200 rounded-xl p-4 hover:shadow-md hover:border-primary/30 transition-all group"
+              >
+                <span className="text-2xl">
+                  {ICON_MAP[ct.icon] || "🔧"}
+                </span>
+                <div>
+                  <p className="font-semibold group-hover:text-primary transition-colors">
+                    {ct.shortName}
+                  </p>
+                  <p className="text-xs text-stone-500 line-clamp-1">
+                    {ct.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Related Tools (cross-category) */}
       {relatedTools.length > 0 && (
         <section className="my-10">
           <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
@@ -198,6 +272,15 @@ export function ToolPageLayout({ tool, children }: Props) {
           </ul>
         </section>
       )}
+
+      {/* Bottom share bar */}
+      <div className="my-8 py-4 border-t border-stone-200">
+        <ToolShareBar
+          url={toolUrl}
+          title={`${tool.shortName} - Free Online Tool`}
+          description={tool.description}
+        />
+      </div>
 
       {/* Bottom ad */}
       <AdSlot

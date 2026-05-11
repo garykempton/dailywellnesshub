@@ -1,6 +1,187 @@
 import { SITE_URL, SITE_NAME } from "./constants";
 import type { FaqItem } from "./seo";
 
+// ─── Tool Category System ───────────────────────────────────────────
+
+export interface ToolCategoryDef {
+  slug: string;
+  name: string;
+  shortName: string;
+  description: string;
+  longDescription: string;
+  icon: string;
+  emoji: string;
+  keywords: string[];
+  /** Slug of the matching article category (for cross-linking) */
+  articleCategory?: string;
+  affiliateHeading?: string;
+  affiliateText?: string;
+  pinterestDescription?: string;
+}
+
+export const TOOL_CATEGORIES: ToolCategoryDef[] = [
+  {
+    slug: "sleep",
+    name: "Sleep & Rest Tools",
+    shortName: "Sleep",
+    description:
+      "Free sleep calculators and rest optimisation tools. Find your ideal bedtime, plan the perfect nap, and track caffeine to protect your sleep quality.",
+    longDescription:
+      "Quality sleep is the foundation of every wellness goal. Our free sleep tools help you align your schedule with your natural sleep cycles, time naps for maximum benefit without grogginess, and understand how caffeine affects your rest. Use these tools regularly to build a sleep routine that supports your energy, mood, and long-term health.",
+    icon: "moon",
+    emoji: "🌙",
+    keywords: [
+      "sleep calculator", "bedtime calculator", "nap calculator", "sleep cycle calculator",
+      "caffeine and sleep", "sleep tools", "how much sleep do I need", "sleep optimisation",
+    ],
+    articleCategory: "sleep",
+    affiliateHeading: "Sleep Better Tonight",
+    affiliateText: "Weighted blankets, blue-light glasses, white noise machines, and sleep trackers to support deeper, more restorative sleep.",
+    pinterestDescription: "Free sleep tools: calculate your ideal bedtime, plan power naps, and find your caffeine cutoff time. Pin for better sleep tonight!",
+  },
+  {
+    slug: "recovery",
+    name: "Recovery & Mobility Tools",
+    shortName: "Recovery",
+    description:
+      "Free recovery trackers and mobility assessments. Monitor post-workout recovery, track flexibility progress, and test joint mobility across 8 key areas.",
+    longDescription:
+      "Recovery is where fitness gains are made. Whether you are tracking soreness after a tough workout, working on your hamstring flexibility, or assessing joint mobility limitations, these tools help you make smarter training decisions. Consistent tracking reveals patterns that prevent overtraining and keep you moving pain-free as you age.",
+    icon: "heart-pulse",
+    emoji: "💓",
+    keywords: [
+      "recovery tracker", "mobility assessment", "flexibility tracker", "post-workout recovery",
+      "mobility test", "range of motion tracker", "stretching progress", "joint mobility",
+    ],
+    articleCategory: "fitness",
+    affiliateHeading: "Recovery Essentials",
+    affiliateText: "Foam rollers, massage guns, resistance bands, and compression gear for faster recovery between workouts.",
+    pinterestDescription: "Track your recovery, test your mobility, and monitor flexibility progress with these free wellness tools. Pin to stay on top of your recovery!",
+  },
+  {
+    slug: "fitness",
+    name: "Fitness & Strength Tools",
+    shortName: "Fitness",
+    description:
+      "Free fitness calculators for strength training, heart rate zones, and body metrics. Estimate your one-rep max, calculate training zones, and plan conditioning workouts.",
+    longDescription:
+      "Whether you lift weights, train martial arts, or simply want to understand your fitness metrics, these tools give you the data you need to train smarter. Calculate your one-rep max to programme effective workouts, find your heart rate training zones for optimal cardio, and build structured conditioning plans for any discipline.",
+    icon: "barbell",
+    emoji: "🏋️",
+    keywords: [
+      "one rep max calculator", "heart rate zones calculator", "BMI calculator",
+      "martial arts conditioning", "fitness calculator", "strength calculator",
+      "training zones", "workout planner",
+    ],
+    articleCategory: "fitness",
+    affiliateHeading: "Strength Training Gear",
+    affiliateText: "Lifting belts, wrist wraps, heart rate monitors, and training journals to level up your fitness.",
+    pinterestDescription: "Calculate your 1RM, find your heart rate zones, and plan conditioning workouts with these free fitness tools. Pin for your next gym session!",
+  },
+  {
+    slug: "nutrition",
+    name: "Nutrition & Diet Tools",
+    shortName: "Nutrition",
+    description:
+      "Free nutrition calculators for calories, macros, protein, hydration, and fasting. Get personalised daily targets based on your body and goals.",
+    longDescription:
+      "Nutrition is personal. Our free calculators help you find your daily calorie needs using the Mifflin-St Jeor equation, split macros for your specific goal, calculate protein requirements by activity level, estimate hydration needs, and track intermittent fasting windows. Science-based formulas, no guesswork.",
+    icon: "flame",
+    emoji: "🔥",
+    keywords: [
+      "calorie calculator", "macro calculator", "protein calculator", "TDEE calculator",
+      "water intake calculator", "fasting tracker", "nutrition calculator", "how many calories",
+    ],
+    articleCategory: "nutrition",
+    affiliateHeading: "Nutrition Essentials",
+    affiliateText: "Digital food scales, meal prep containers, protein supplements, and hydration bottles to hit your daily nutrition targets.",
+    pinterestDescription: "Calculate your calories, macros, protein needs, and hydration targets with these free nutrition tools. Pin to bookmark for meal planning!",
+  },
+  {
+    slug: "body-composition",
+    name: "Body Composition Tools",
+    shortName: "Body Composition",
+    description:
+      "Free body composition calculators: body fat percentage, ideal weight, lean body mass, and waist-to-hip ratio. Understand your body beyond the scale.",
+    longDescription:
+      "The number on the scale tells you very little about your health. These tools help you understand what your body is actually made of — how much is fat versus lean mass, whether your weight is in a healthy range for your height, and whether your body fat distribution puts you at cardiovascular risk. Track changes over time to see real progress.",
+    icon: "ruler",
+    emoji: "📏",
+    keywords: [
+      "body fat calculator", "ideal weight calculator", "lean body mass calculator",
+      "waist to hip ratio", "body composition", "body fat percentage",
+      "healthy weight calculator", "fat free mass",
+    ],
+    articleCategory: "weight-loss",
+    affiliateHeading: "Body Composition Tools",
+    affiliateText: "Body fat callipers, smart scales with composition analysis, and measuring tapes for accurate at-home tracking.",
+    pinterestDescription: "Measure your body fat, find your ideal weight, and assess health risks with these free body composition tools. Pin to track your progress!",
+  },
+  {
+    slug: "cardio",
+    name: "Cardio & Endurance Tools",
+    shortName: "Cardio",
+    description:
+      "Free running, cycling, swimming, and walking calorie calculators. Calculate your pace, estimate VO2 max, convert steps to calories, and plan endurance training.",
+    longDescription:
+      "From couch to marathon, these tools support every stage of your cardio journey. Calculate your running pace and get race projections, estimate your VO2 max to track aerobic fitness, and see exactly how many calories your runs, rides, swims, and walks burn. Whether you are a beginner counting steps or an athlete optimising training, these tools deliver the data you need.",
+    icon: "running",
+    emoji: "🏃‍♂️",
+    keywords: [
+      "running pace calculator", "calories burned running", "VO2 max calculator",
+      "cycling calorie calculator", "swimming calorie calculator", "walking calorie calculator",
+      "steps to calories", "cardio calculator",
+    ],
+    articleCategory: "fitness",
+    affiliateHeading: "Cardio & Running Gear",
+    affiliateText: "GPS running watches, cycling computers, swim trackers, and heart rate monitors for tracking your cardio training.",
+    pinterestDescription: "Calculate your running pace, calories burned, and VO2 max with these free cardio tools. Pin for your next training session!",
+  },
+  {
+    slug: "stress",
+    name: "Stress & Mindfulness Tools",
+    shortName: "Stress",
+    description:
+      "Free breathing timers, guided breathwork, and stress management checklists. Reduce stress, lower anxiety, and build a daily mindfulness practice.",
+    longDescription:
+      "Chronic stress undermines every aspect of health. These tools give you practical, evidence-based techniques to activate your parasympathetic nervous system and calm your body in minutes. Follow guided box breathing or 4-7-8 patterns, explore Tai Chi breathwork, and use our daily checklist to build a comprehensive stress management routine.",
+    icon: "wind",
+    emoji: "🌬️",
+    keywords: [
+      "breathing timer", "box breathing", "4-7-8 breathing", "stress reduction",
+      "guided breathing", "mindfulness tools", "anxiety relief", "stress management checklist",
+    ],
+    articleCategory: "stress",
+    affiliateHeading: "Stress Relief Products",
+    affiliateText: "Meditation cushions, aromatherapy diffusers, weighted blankets, and mindfulness journals to support your practice.",
+    pinterestDescription: "Guided breathing exercises, Tai Chi breathwork, and stress management checklists. Pin these free tools for instant calm!",
+  },
+  {
+    slug: "habits",
+    name: "Habits & Lifestyle Tools",
+    shortName: "Habits",
+    description:
+      "Free habit trackers and lifestyle planning tools. Build daily routines with streak tracking, and plan key life milestones with our due date calculator.",
+    longDescription:
+      "Lasting health improvements come from consistent daily habits, not dramatic overhauls. Our habit tracker helps you build and maintain up to 10 daily habits with visual streak counters that keep you motivated. We also offer practical lifestyle planning tools like our pregnancy due date calculator for key life moments.",
+    icon: "check-square",
+    emoji: "✅",
+    keywords: [
+      "habit tracker", "daily habit tracker", "habit streak counter", "routine tracker",
+      "pregnancy due date calculator", "due date calculator", "habit building",
+      "daily routine planner",
+    ],
+    articleCategory: "habits",
+    affiliateHeading: "Habit-Building Essentials",
+    affiliateText: "Journals, planners, habit-tracking notebooks, and prenatal vitamins to support your daily routines and life milestones.",
+    pinterestDescription: "Build better daily habits with streak tracking and plan life milestones. Pin these free tools to start your journey!",
+  },
+];
+
+export type ToolCategorySlug = (typeof TOOL_CATEGORIES)[number]["slug"];
+
+// ─── Tool Definitions ───────────────────────────────────────────────
+
 export interface ToolDefinition {
   slug: string;
   name: string;
@@ -210,7 +391,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     longDescription:
       "Walking is one of the most accessible forms of exercise. Whether you take a brisk morning walk or a long weekend hike, our walking calorie calculator estimates your energy expenditure using MET (Metabolic Equivalent of Task) values adjusted for your speed, weight, and terrain.",
     icon: "footprints",
-    category: "fitness",
+    category: "cardio",
     keywords: [
       "walking calorie calculator",
       "calories burned walking",
@@ -270,7 +451,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     longDescription:
       "Improving flexibility takes consistency. Our free flexibility tracker helps you log stretching sessions for key muscle groups, rate your range of motion over time, and stay motivated with a visual progress log. Whether you are working on hamstring flexibility, hip mobility, or shoulder range, this tool keeps you accountable.",
     icon: "stretch",
-    category: "fitness",
+    category: "recovery",
     keywords: [
       "flexibility tracker",
       "stretching tracker",
@@ -325,7 +506,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     longDescription:
       "Good mobility is the foundation of pain-free movement. This free mobility assessment guides you through simple self-tests for your ankles, hips, thoracic spine, shoulders, and more. Rate each area and receive an overall mobility score along with targeted suggestions to address any limitations.",
     icon: "activity",
-    category: "fitness",
+    category: "recovery",
     keywords: [
       "mobility assessment",
       "joint mobility test",
@@ -381,7 +562,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     longDescription:
       "Recovery is where fitness gains are made. Our free recovery tracker helps you log daily metrics — sleep quality, muscle soreness, energy levels, mood, and resting heart rate — to generate a recovery score. Use it to decide whether to train hard, do active recovery, or take a full rest day.",
     icon: "heart-pulse",
-    category: "fitness",
+    category: "recovery",
     keywords: [
       "recovery tracker",
       "workout recovery",
@@ -1679,7 +1860,7 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
     longDescription:
       "Knowing your estimated due date helps you plan prenatal care and prepare for your baby's arrival. Our due date calculator uses Naegele's rule — the standard method used by healthcare providers — to estimate your delivery date based on the first day of your last menstrual period (LMP) or your estimated conception date. It also shows your trimester breakdown and pregnancy week.",
     icon: "baby",
-    category: "wellness",
+    category: "habits",
     keywords: [
       "due date calculator",
       "pregnancy due date calculator",
@@ -1734,6 +1915,8 @@ export const TOOLS_REGISTRY: ToolDefinition[] = [
   },
 ];
 
+// ─── Lookup Helpers ─────────────────────────────────────────────────
+
 export function getToolBySlug(slug: string): ToolDefinition | undefined {
   return TOOLS_REGISTRY.find((t) => t.slug === slug);
 }
@@ -1746,8 +1929,23 @@ export function getRelatedTools(slug: string): ToolDefinition[] {
     .filter((t): t is ToolDefinition => !!t);
 }
 
-/** Build SoftwareApplication + FAQPage JSON-LD for a tool page */
+export function getToolCategory(slug: string): ToolCategoryDef | undefined {
+  return TOOL_CATEGORIES.find((c) => c.slug === slug);
+}
+
+export function getToolsByCategory(categorySlug: string): ToolDefinition[] {
+  return TOOLS_REGISTRY.filter((t) => t.category === categorySlug);
+}
+
+export function getToolCategoryForTool(tool: ToolDefinition): ToolCategoryDef | undefined {
+  return TOOL_CATEGORIES.find((c) => c.slug === tool.category);
+}
+
+// ─── JSON-LD Builders ───────────────────────────────────────────────
+
+/** Build SoftwareApplication + FAQPage + BreadcrumbList JSON-LD for a tool page */
 export function toolJsonLd(tool: ToolDefinition) {
+  const category = getToolCategoryForTool(tool);
   const schemas: object[] = [
     {
       "@context": "https://schema.org",
@@ -1756,6 +1954,7 @@ export function toolJsonLd(tool: ToolDefinition) {
       description: tool.description,
       url: `${SITE_URL}/tools/${tool.slug}`,
       applicationCategory: "HealthApplication",
+      applicationSubCategory: category?.name,
       operatingSystem: "Web",
       offers: {
         "@type": "Offer",
@@ -1785,20 +1984,69 @@ export function toolJsonLd(tool: ToolDefinition) {
     });
   }
 
+  const breadcrumbItems = [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
+  ];
+  if (category) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 3,
+      name: category.shortName,
+      item: `${SITE_URL}/tools/${category.slug}`,
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 4,
+      name: tool.shortName,
+      item: `${SITE_URL}/tools/${tool.slug}`,
+    });
+  } else {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 3,
+      name: tool.shortName,
+      item: `${SITE_URL}/tools/${tool.slug}`,
+    });
+  }
+
   schemas.push({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: tool.shortName,
-        item: `${SITE_URL}/tools/${tool.slug}`,
-      },
-    ],
+    itemListElement: breadcrumbItems,
   });
 
   return schemas;
+}
+
+/** Build CollectionPage JSON-LD for a tool category page */
+export function toolCategoryJsonLd(category: ToolCategoryDef) {
+  const tools = getToolsByCategory(category.slug);
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: category.name,
+    description: category.description,
+    url: `${SITE_URL}/tools/${category.slug}`,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: tools.length,
+      itemListElement: tools.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: t.shortName,
+        url: `${SITE_URL}/tools/${t.slug}`,
+      })),
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
+        { "@type": "ListItem", position: 3, name: category.shortName, item: `${SITE_URL}/tools/${category.slug}` },
+      ],
+    },
+    inLanguage: "en-US",
+  };
 }

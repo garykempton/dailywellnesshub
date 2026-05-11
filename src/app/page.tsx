@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CATEGORIES, SITE_NAME } from "@/lib/constants";
+import { TOOL_CATEGORIES } from "@/lib/tools";
 import { websiteJsonLd, organizationJsonLd } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { NewsletterForm } from "@/components/NewsletterForm";
@@ -55,6 +56,41 @@ export default function HomePage() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Free Wellness Tools */}
+      <section className="max-w-6xl mx-auto px-4 py-12">
+        <h2 className="text-2xl font-bold mb-2 text-center">
+          Free Wellness Tools &amp; Calculators
+        </h2>
+        <p className="text-muted text-center mb-8">
+          31 free tools to support your health and fitness journey. No signup required.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {TOOL_CATEGORIES.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/tools/${cat.slug}`}
+              className="bg-card border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/30 transition-all group text-center"
+            >
+              <span className="text-3xl block mb-2">{cat.emoji}</span>
+              <h3 className="font-semibold group-hover:text-primary transition-colors">
+                {cat.shortName}
+              </h3>
+              <p className="text-xs text-muted mt-1 line-clamp-2">
+                {cat.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/tools"
+            className="inline-block bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors"
+          >
+            Browse All Tools
+          </Link>
         </div>
       </section>
 
